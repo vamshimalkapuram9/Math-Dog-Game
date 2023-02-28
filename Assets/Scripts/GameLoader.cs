@@ -39,6 +39,12 @@ public class GameLoader : MonoBehaviour
     {
         SceneManager.LoadScene(sceneIndex);
     }
+
+    public void IntermediateLevel(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+
+    }
     // Start is called before the first frame update
     void Start()
     {
