@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameLoader : MonoBehaviour
 {
@@ -28,10 +29,10 @@ public class GameLoader : MonoBehaviour
         onScreenTMP.text = onScreenText;
     }
 
-    public void PracticeLevel()
+    public void PracticeLevel(int sceneIndex)
     {
-        onScreenText = "Practice Level Coming Soon";
-        onScreenTMP.text = onScreenText;
+        SceneManager.LoadScene(sceneIndex);
+
     }
     // Start is called before the first frame update
     void Start()
