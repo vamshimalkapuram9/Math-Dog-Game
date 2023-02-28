@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class Sub_beginner : MonoBehaviour
 
 {
+    public void navigate_back()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
 }
 
 
