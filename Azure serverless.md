@@ -1,6 +1,6 @@
 | DATE  | UPDATES |
 | ------------- | ------------- |
-| 05-03-2023 | AZURE SERVERLESS |
+| 03-06-2023 | 1)Implementing HTTP API in azure function |
 | 02-26-2023 | 1)writing azure function code<BR>2)Testing Azure function portal |
 | 02-19-2023  | 	1)In function app ,i created Azure for students subscription and ADDED mathkid as a resource groupand created a web api link<BR>2) https://mathkidapi.azurewebsites.net  |
 | 02/12/2023 | 	1)Creating a function app in Microsoft azure<BR>2)Execute event-driven serverless code functions with an end-to-end development experience.<BR>3)analyzing four durable function types in Azure Functions.<BR>4)getting familiar with azure functions|
