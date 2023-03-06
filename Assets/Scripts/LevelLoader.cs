@@ -10,6 +10,7 @@ public class LevelLoader : MonoBehaviour
 {
 
 
+
     public void LoadHomeScreen (int sceneIndex)
     {
         StartCoroutine(LoadAsynchronously(sceneIndex));
@@ -22,6 +23,9 @@ public class LevelLoader : MonoBehaviour
 
         while (!operation.isDone)
         {
+            //The following float is just for the loading to go from 0 to 1.
+            float progress = Mathf.Clamp01(operation/.9f);
+
             yield return null;
         }
     }
