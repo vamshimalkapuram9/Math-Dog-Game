@@ -1,6 +1,6 @@
 | Date  | Updates |
 | ------------- | ------------- |
-| Mar 06 2023 |	Modified screens of subtraction Fun <br> Added Random number generation and also implemented subtraction functionality for correct answers to be displayed |
+| Mar 06 2023 |	Modified animations i.e., buttons and background image for subtraction Fun and also forwarded the assests to all the team for updating their screens <br> Added Random number generation and also implemented subtraction functionality for correct answers to be displayed |
 | Feb 27 2023  |  Added some of the animations needed to the screen|
 | Feb 20 2023 | Added a github branch and repository <br>	Working on subtracting Fun <br> Created a sample screen of Subtracting Fun |
 | Feb 13 2023 |	Working on moving from Splash screen to Home screen <br>	Getting familiar with Unity for the above task |
