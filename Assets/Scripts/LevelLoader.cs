@@ -25,5 +25,43 @@ public class LevelLoader : MonoBehaviour
             yield return null;
         }
     }
-    
+
+
+    public void LoadPuzzleLevel(int sceneIndex)
+    {
+
+    }
+
+
+    public void LoadFunLevel(int sceneIndex)
+    {
+    }
+
+    public void LoadQuizLevel(int sceneIndex)
+    {
+    }
+
+    public void LoadPracticeLevel(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+
+    }
+
+    public void LoadBeginnerLevel(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void LoadIntermediateLevel(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+
+    }
+
+
+    public void NavigateToPreviousScreen()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
 }
