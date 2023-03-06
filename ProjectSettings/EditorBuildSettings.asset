@@ -11,13 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HomeScreen.unity
     guid: 6d4285809cc1b4d8e9856d96cee0837c
-  - enabled: 1
-    path: Assets/Scenes/Subraction_Practice.unity
-    guid: 4c3e3540717a34743836cbdb76294f7f
-  - enabled: 1
-    path: Assets/Scenes/SubPractice_Beginner.unity
-    guid: a67cade4e556b78458848da3dcf0179d
-  - enabled: 1
-    path: Assets/Scenes/SubIntermediate.unity
-    guid: 1f7fa7ddd46eb43779d12d657a73737f
   m_configObjects: {}
