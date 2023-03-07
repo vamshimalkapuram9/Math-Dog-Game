@@ -56,11 +56,11 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/MathSubtraction.cs" />
     <Compile Include="Assets/Scripts/Random_number.cs" />
     <Compile Include="Assets/Scripts/SeamlessMusic.cs" />
     <Compile Include="Assets/Scripts/DragandDrop.cs" />
     <Compile Include="Assets/Scripts/LevelLoader.cs" />
-    <Compile Include="Assets/Scripts/MathSubtraction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro.cginc" />
