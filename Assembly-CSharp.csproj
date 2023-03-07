@@ -61,6 +61,7 @@
     <Compile Include="Assets/Scripts/SeamlessMusic.cs" />
     <Compile Include="Assets/Scripts/DragandDrop.cs" />
     <Compile Include="Assets/Scripts/LevelLoader.cs" />
+    <Compile Include="Assets/Scripts/Drag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro.cginc" />
