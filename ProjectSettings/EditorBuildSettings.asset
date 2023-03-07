@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HomeScreen.unity
     guid: 6d4285809cc1b4d8e9856d96cee0837c
+  - enabled: 1
+    path: Assets/Scenes/Sub-Puzzle.unity
+    guid: fab04a0ab6e301c4282485757a43103e
+  - enabled: 1
+    path: Assets/Scenes/Sub-Fun.unity
+    guid: 4d6da002fe41142439a884a81eb3dffc
   m_configObjects: {}
