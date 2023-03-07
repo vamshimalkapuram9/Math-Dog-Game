@@ -60,8 +60,8 @@
     <Compile Include="Assets/Scripts/Random_number.cs" />
     <Compile Include="Assets/Scripts/SeamlessMusic.cs" />
     <Compile Include="Assets/Scripts/DragandDrop.cs" />
-    <Compile Include="Assets/Scripts/LevelLoader.cs" />
     <Compile Include="Assets/Scripts/Drag.cs" />
+    <Compile Include="Assets/Scripts/LevelLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro.cginc" />

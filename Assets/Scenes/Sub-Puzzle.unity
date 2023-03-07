@@ -2033,7 +2033,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1282283004}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: GoToHomeScreen
+        m_MethodName: GoToHomePage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
