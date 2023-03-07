@@ -7,9 +7,9 @@ public class Random_number : MonoBehaviour
 {
     public List<int> easyMathList = new List<int>();
 
-    private int easyLevelLimit = 10;
-    private int mediumLevelLimit = 25;
-    private int hardLevelLimit = 99;
+    //private int easyLevelLimit = 10;
+    //private int mediumLevelLimit = 25;
+    //private int hardLevelLimit = 99;
 
     public int randomFirstNumber;
     public int randomSecondNumber;
