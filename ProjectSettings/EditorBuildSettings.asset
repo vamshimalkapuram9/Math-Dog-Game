@@ -17,4 +17,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sub-Fun.unity
     guid: 4d6da002fe41142439a884a81eb3dffc
+  - enabled: 1
+    path: Assets/Scenes/Sub-Quiz.unity
+    guid: 4830d9ab524b342239bb0a36fec10274
+  - enabled: 1
+    path: Assets/Scenes/Sub-Practice-Levels.unity
+    guid: 60e6ba75d41644101a149a005f61d15a
+  - enabled: 1
+    path: Assets/Scenes/Sub-Beginner.unity
+    guid: 70235f9b0226c45cfb35efe21688d18c
+  - enabled: 1
+    path: Assets/Scenes/Sub-Intermediate.unity
+    guid: 337c7f752d1624ad58d85b0d473a3fda
+  - enabled: 1
+    path: Assets/Scenes/Sub-Advanced.unity
+    guid: 5613c1ccfeefd411c8ff7a90ff4d89a4
   m_configObjects: {}
