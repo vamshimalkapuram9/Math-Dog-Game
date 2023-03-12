@@ -56,10 +56,11 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\MathPuzzle.cs" />
+    <Compile Include="Assets\Drag.cs" />
     <Compile Include="Assets\Scripts\SeamlessMusic.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
-    <Compile Include="Assets\Drag.cs" />
-    <Compile Include="Assets\Scenes\DragdropH.cs" />
+    <Compile Include="Assets\Scenes\KidMathd.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

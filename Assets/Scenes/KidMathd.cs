@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class DragdropH : MonoBehaviour, IDragHandler
+public class KidMathd : MonoBehaviour, IDragHandler
 {
     private Vector2 mousePosition = new Vector2();
     private Vector2 startPosition = new Vector2();
