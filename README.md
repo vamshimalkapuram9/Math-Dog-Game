@@ -1,7 +1,6 @@
 | DATE  | UPDATES |
 | ------------- | ------------- |
-| 03-13-2023 | 1.	Updated System Features <br>
-| 03-13-2023 | 2.	Updated Performance requirements | 
+| 03-13-2023 | 1.	Updated System Features <br> 2.	Updated Performance requirements | 
 | 03-06-2023 | 1.	Updated the content on User Classes and Characteristics <br>
 | 03-06-2023 | 2.	Design and Implementation Constraints <br>
 | 03-06-2023 | 3.	Added the UML Use Case and Sequence and Class Diagrams <br>
