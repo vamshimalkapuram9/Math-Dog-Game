@@ -12,3 +12,4 @@
 | 02-20-2023 | 	1.	Updated Splash Screen |
 | 02-13-2023 | Updated Introduction <br> ●	Purpose <br> ●	Intended audience and reading suggestions <br> ●	Product scope <br>
 | 02-06-2023 | Created initial version of document <br> Updated SRS with Table of contents
+| 01-30-2023 |	Started working on UML Diagrams <br> 2.	Started working on Splash screen
