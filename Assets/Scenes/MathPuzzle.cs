@@ -1,3 +1,4 @@
+using Mono.Cecil;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,13 +9,19 @@ public class MathPuzzle : MonoBehaviour
     public Text num1;
     public Text num2;
     public Text Ans1;
+    public Text num3;
+    public Text num4;
+    public Text Ans2;
+    //public Text equal;
+    //public Text minus;
 
     public List<int> easyMathList = new List<int>();
 
     public int randomFirstNumber;
     public int randomSecondNumber;
 
-    int answerOne;
+    int answerOne, answerTwo, answerThree;
+    //int answerTwo, answerThree, answerFour, answerFive;
     public int currentAnswer;
     // Start is called before the first frame update
     void Start()
@@ -28,9 +35,10 @@ public class MathPuzzle : MonoBehaviour
 
         return (firstNum, nextNum);
     }
-    private (int, int) GetDiffOptions(int firstNum, int nextNum) // Return 3 random options between 1 and 9, one of which is the correct difference
+    private (int, int,int) GetDiffOptions(int firstNum, int nextNum) 
     {
         int answer = firstNum - nextNum;
+        //char minus1= '-', equal1 = '=';
 
         if (answer < 1 || answer > 10)
         {
@@ -38,22 +46,21 @@ public class MathPuzzle : MonoBehaviour
         }
 
         var possibilities = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        //var another = new List<char>() { '-', '=' };
         possibilities.Remove(answer); // Ensure only one correct answer offered
 
-        // Get first incorrect option
-        int firstOptionIndex = Random.Range(0, possibilities.Count);
-        int firstOption = possibilities[firstOptionIndex];
-
-        // Ensure next incorrect option is different from the first one
-        possibilities.Remove(firstOption);
-
-        // Get next incorrect option
-        int nextOptionIndex = Random.Range(0, possibilities.Count);
-        int nextOption = possibilities[nextOptionIndex];
+       
+        //int firstOptionIndex = Random.Range(0, possibilities.Count);
+        int firstOption = firstNum;
+         //int nextOptionIndex = Random.Range(0, possibilities.Count);
+        int nextOption = nextNum;
 
         // Shuffle options before returning them
         var options = new List<int>() { answer, firstOption, nextOption };
+        //var charoptions = new List<char>() {minus1, equal1 };
         int count = options.Count;
+      
+             
         for (int i = 0; i < count - 1; ++i)
         {
             int rand = Random.Range(i, count);
@@ -62,7 +69,15 @@ public class MathPuzzle : MonoBehaviour
             options[rand] = tmp;
         }
 
-        return (options[0], options[1]);
+        //for (int j = 0; j < 2; ++j){
+        //int rand = Random.Range(j, count);
+        //char tmp = charoptions[j];
+        //charoptions[j] = charoptions[rand];
+        //charoptions[rand] = tmp;
+        //}
+
+        return (options[0], options[1], options[2]);
+           // return(charoptions[3], charoptions[4]);
     }
     public void DisplayMathProblem()
     {
@@ -71,22 +86,23 @@ public class MathPuzzle : MonoBehaviour
         randomFirstNumber = nums.Item1;
         randomSecondNumber = nums.Item2;
         int randomSub = randomFirstNumber - randomSecondNumber;
-
+        
         var options = GetDiffOptions(randomFirstNumber, randomSecondNumber);
         answerOne = options.Item1;
+        answerTwo = options.Item2;
+        answerThree = options.Item3;
+        //answerFour = options.Item4;
+        //answerFive = options.Item5;
 
-        if (randomFirstNumber != randomSecondNumber)
-        {
-            num1.text = "" + randomFirstNumber;
-            num2.text = "" + randomSecondNumber;
-            Ans1.text = "" + answerOne;
-        }
-        // Set which option is the correct answer (counting from 0)
-        currentAnswer = 0;
-        if (answerOne == randomSub)
-        {
-            currentAnswer = 1;
-        }
+        num1.text = "" + randomFirstNumber;
+        num2.text = "" + randomSecondNumber;
+        Ans1.text = "" + randomSub;
+        num3.text = "" + answerOne;
+        num4.text = "" + answerTwo;
+        Ans2.text = "" + answerThree;
+        //Ans2.text = "" + answerThree;
+        //equal.text = "" + answerFour;
+        //minus.text = "" + answerFive; 
 
     }
 }
