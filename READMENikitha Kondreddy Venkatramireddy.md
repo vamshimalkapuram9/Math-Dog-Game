@@ -1,5 +1,6 @@
 | Date  | Updates |
 | ------------- | ------------- |
+| Mar 13 2023 | Updated wiki with screens,Features,links<br>did modifications in class diagram|
 | Mar 06 2023 |	Created class diagram for math kids<br> Updated wiki with features,links,screens|
 | Feb 27 2023  | Completed with adding screenshots of screens<br>Adding features to software used, about this app<br>Will work on animated features|
 | Feb 20 2023 | Done with algorithm and gaming features<br>Completed with game features<br>Will work on adding screens screenshots|
