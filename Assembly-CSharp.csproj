@@ -63,6 +63,7 @@
     <Compile Include="Assets/Scripts/LoadingScript.cs" />
     <Compile Include="Assets/Scripts/Drag.cs" />
     <Compile Include="Assets/Scripts/LevelLoader.cs" />
+    <Compile Include="Assets/Scripts/SubHarish.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro.cginc" />

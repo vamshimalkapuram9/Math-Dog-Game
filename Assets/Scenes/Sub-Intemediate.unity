@@ -3108,7 +3108,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ans1
+  m_Text: 10
 --- !u!222 &1035551512
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3801,7 +3801,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ans2
+  m_Text: 35
 --- !u!222 &1192112396
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5637,7 +5637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 43ea01cbaf956914e80dab4cb82ab708, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0df1ca92d05d143a5953713a92e1dce8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
