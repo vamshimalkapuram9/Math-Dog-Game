@@ -10,8 +10,5 @@
 |02-27-2023  | UML Sequence diagram
 |02-27-2023  | Added Initial Screen, Home Screen, Puzzle Screen, Store Screen to the user interface
 | 02-20-2023 | 	1.	Updated Splash Screen |
-| 02-13-2023 | Updated Introduction <br>
-●	Purpose <br>
-●	Intended audience and reading suggestions <br>
-●	Product scope <br>
+| 02-13-2023 | Updated Introduction <br> ●	Purpose <br> ●	Intended audience and reading suggestions <br> ●	Product scope <br>
 | 02-06-2023 | Created initial version of document <br> Updated SRS with Table of contents
