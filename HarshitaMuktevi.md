@@ -1,5 +1,6 @@
 | Date  | Updates |
 | ------------- | ------------- |
+| Mar 13 2023 |	Created Random number generation for Subtraction Puzzle screen <br> Modified the background for Subtraction Puzzle screen |
 | Mar 06 2023 |	Working on Random number generation for Subtraction Puzzle screen |
 | Feb 27 2023  | Creating drag and drop buttons for the Subtracting Puzzle screen|
 | Feb 20 2023 | Added a github branch and repository <br>	Created a sample screen of subtraction practice <br> Working on Subtraction Puzzle screen UI|
