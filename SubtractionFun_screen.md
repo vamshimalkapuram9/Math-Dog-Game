@@ -1,5 +1,6 @@
 | Date  | Updates |
 | ------------- | ------------- |
+| Mar 13 2023 | Added loading slider to splash screen, and redirected it to homepage after certain pause <br> Working on adding animations displayed on Subrating_Fun screen when it opened <br> Helped Harshitha and Navitha with Random Number geerations, which are different from mine screen|
 | Mar 06 2023 |	Modified animations i.e., buttons and background image for subtraction Fun and also forwarded the assests to all the team for updating their screens <br> Added Random number generation and also implemented subtraction functionality for correct answers to be displayed |
 | Feb 27 2023 |  Added some of the animations needed to the screen|
 | Feb 20 2023 | Added a github branch and repository <br>	Working on subtracting Fun <br> Created a sample screen of Subtracting Fun |
