@@ -25,8 +25,6 @@ public class LoadingScript : MonoBehaviour
         while (!gameLevel.isDone)
         {
             float progress = Mathf.Clamp01(gameLevel.progress / .9f);
-            loadingSlider.value = progress;
-
             // progressText.text = progress * 100 + "%";
 
             yield return null;
