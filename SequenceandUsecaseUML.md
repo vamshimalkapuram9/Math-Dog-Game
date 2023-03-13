@@ -12,6 +12,9 @@
 <b> Other Updates</b>
 13/03/2023
 ![Azure update](https://user-images.githubusercontent.com/127143699/224799039-6e510f06-33cd-4866-8d28-42c91872cfd4.png)
+![Screenshot 2023-03-06](https://user-images.githubusercontent.com/127143699/224807123-63eb2a58-df85-4792-af08-816a496d2110.png)
+![Use Case 2023-03-06 234101](https://user-images.githubusercontent.com/127143699/224807196-42370505-f3e8-40de-97c2-c9139c0f8b4e.png)
+
 
 06/03/2023
 ![Use Case](https://user-images.githubusercontent.com/127143699/223217441-01f28c6b-f0bc-4634-9cff-5434369e8092.png)
