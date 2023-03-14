@@ -80,14 +80,11 @@ public class MathSubtraction : MonoBehaviour
         answerOne = options.Item1;
         answerTwo = options.Item2;
         answerThree = options.Item3;
-        if (randomFirstNumber != randomSecondNumber)
-        {
-            num1.text = "" + randomFirstNumber;
-            num2.text = "" + randomSecondNumber;
-            Ans1.text = "" + answerOne;
-            Ans2.text = "" + answerTwo;
-            Ans3.text = "" + answerThree;
-        }
+        num1.text = "" + randomFirstNumber;
+        num2.text = "" + randomSecondNumber;
+        Ans1.text = "" + answerOne;
+        Ans2.text = "" + answerTwo;
+        Ans3.text = "" + answerThree;
         // Set which option is the correct answer (counting from 0)
         currentAnswer = 0;
         if (answerTwo == randomSub)
