@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\MathPuzzle.cs" />
-    <Compile Include="Assets\Drag.cs" />
     <Compile Include="Assets\Scripts\SeamlessMusic.cs" />
     <Compile Include="Assets\Scenes\KidMathd.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
