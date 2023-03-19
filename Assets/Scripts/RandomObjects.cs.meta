@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 040554a119d92b24e9483a0a63b93db4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - firstNumber: {instanceID: 0}
+  - secondNumber: {instanceID: 0}
+  - answer1Button: {instanceID: 0}
+  - answer2Button: {instanceID: 0}
+  - answer3Button: {instanceID: 0}
+  - nextButton: {instanceID: 0}
+  - ObjectSprite1: {fileID: 21300000, guid: bac278a536d054d52bbac93ca523c17b, type: 3}
+  - ObjectSprite2: {fileID: 21300000, guid: c5a5c9af2982f4b5d8d0dbef15cded89, type: 3}
+  - ObjectSprite3: {fileID: 21300000, guid: e15c747cc430643dfa4425a3059f64df, type: 3}
+  - ObjectSprite4: {fileID: 21300000, guid: 2ebc775d915e44252b7b10bb19bae197, type: 3}
+  - ObjectSprite5: {fileID: 21300000, guid: bd8cfd324dc894d97892a9a6fbf62d1d, type: 3}
+  - ObjectSprite6: {fileID: 21300000, guid: ddabdfafe460547878641801c009cb11, type: 3}
+  - Left1Object: {instanceID: 0}
+  - Left2Object: {instanceID: 0}
+  - Left3Object: {instanceID: 0}
+  - Left4Object: {instanceID: 0}
+  - Right1Object: {instanceID: 0}
+  - Right2Object: {instanceID: 0}
+  - Right3Object: {instanceID: 0}
+  - Right4Object: {instanceID: 0}
+  - RandomAddGameObjects: {instanceID: 0}
+  - rightorwrong_Text: {instanceID: 0}
+  - correctAnswerAudio: {instanceID: 0}
+  - incorrectAnswerAudio: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

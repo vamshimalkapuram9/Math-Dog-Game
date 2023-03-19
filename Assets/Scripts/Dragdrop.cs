@@ -30,7 +30,7 @@ public class Dragdrop : MonoBehaviour
     {
         if (!islocked)
         {
-            AnsB.transform.position = Input.mousePosition;
+            AnsB.transform.position = Input.mousePosition; // To move with mouse position
         }
     }
     public void DropObject() 
@@ -39,15 +39,15 @@ public class Dragdrop : MonoBehaviour
         int b = Convert.ToInt32(num2.text);
         int c = Convert.ToInt32(Ans.text);
         float Distance = Vector3.Distance(AnsB.transform.position, Crt_ans.transform.position);
-        if (c == a - b)
+        if (c == a - b) // Check to idenfity correct answer
         {
             islocked = true;
-            AnsB.transform.position = Crt_ans.transform.position;
+            AnsB.transform.position = Crt_ans.transform.position; // Correct answer will be fixed in answer panel
         }
-        else 
+        else
         {
             islocked = false;
-            AnsB.transform.position = objectInitPos;
+            AnsB.transform.position = objectInitPos; // Worng answer will be pulled to it's original position
         }
     }
 }
