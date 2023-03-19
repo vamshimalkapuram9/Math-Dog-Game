@@ -1,5 +1,6 @@
 | Date  | Updates |
 | ------------- | ------------- |
+| Mar 20 2023 |	Added drag and drop of buttons to the right panel |
 | Mar 13 2023 |	Created Random number generation for Subtraction Puzzle screen <br> Modified the background for Subtraction Puzzle screen |
 | Mar 06 2023 |	Working on Random number generation for Subtraction Puzzle screen |
 | Feb 27 2023  | Creating drag and drop buttons for the Subtracting Puzzle screen|
