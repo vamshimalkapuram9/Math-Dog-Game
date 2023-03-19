@@ -59,6 +59,8 @@
     <Compile Include="Assets/Scripts/MathSubtraction.cs" />
     <Compile Include="Assets/Scripts/Random_number.cs" />
     <Compile Include="Assets/Scripts/SeamlessMusic.cs" />
+    <Compile Include="Assets/Quirky Series - Birds Bundle/_Scripts/Demo.cs" />
+    <Compile Include="Assets/Scripts/Sparrow.cs" />
     <Compile Include="Assets/Scripts/DragandDrop.cs" />
     <Compile Include="Assets/Scripts/LoadingScript.cs" />
     <Compile Include="Assets/Scripts/Drag.cs" />
@@ -69,6 +71,7 @@
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro.cginc" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+    <None Include="Assets/Quirky Series - Birds Bundle/_Shader/SoftSurface.shader" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
@@ -85,6 +88,7 @@
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+    <None Include="Assets/Quirky Series - Birds Bundle/_Shader/ToonRamp.shader" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
   </ItemGroup>
