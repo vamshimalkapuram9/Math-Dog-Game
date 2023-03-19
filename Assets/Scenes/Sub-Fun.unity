@@ -256,7 +256,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 346482464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7230cde9d4d38e847b613e1db059284d, type: 3}
+  m_Script: {fileID: 11500000, guid: 052d870bb96fa4d419d78e1c95f3eeac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Crt_ans: {fileID: 779058302}
@@ -264,7 +264,7 @@ MonoBehaviour:
   Ans: {fileID: 811317184}
   num1: {fileID: 1771647934}
   num2: {fileID: 1871095988}
-  dropdistance: 40
+  dropdistance: 0
   islocked: 0
 --- !u!114 &346482470
 MonoBehaviour:
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 743182447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7230cde9d4d38e847b613e1db059284d, type: 3}
+  m_Script: {fileID: 11500000, guid: 052d870bb96fa4d419d78e1c95f3eeac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Crt_ans: {fileID: 779058302}
@@ -656,7 +656,7 @@ MonoBehaviour:
   Ans: {fileID: 1654592886}
   num1: {fileID: 1771647934}
   num2: {fileID: 1871095988}
-  dropdistance: 40
+  dropdistance: 0
   islocked: 0
 --- !u!1 &779058302
 GameObject:
@@ -1868,7 +1868,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1735419727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7230cde9d4d38e847b613e1db059284d, type: 3}
+  m_Script: {fileID: 11500000, guid: 052d870bb96fa4d419d78e1c95f3eeac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Crt_ans: {fileID: 779058302}
@@ -1876,7 +1876,7 @@ MonoBehaviour:
   Ans: {fileID: 2104270732}
   num1: {fileID: 1771647934}
   num2: {fileID: 1871095988}
-  dropdistance: 40
+  dropdistance: 0
   islocked: 0
 --- !u!1 &1771647932
 GameObject:
