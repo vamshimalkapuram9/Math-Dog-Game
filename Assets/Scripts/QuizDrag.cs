@@ -5,7 +5,7 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Dragdrop : MonoBehaviour
+public class QuizDrag : MonoBehaviour
 {
 
     public GameObject Crt_ans;
