@@ -34,9 +34,18 @@ public class Dragdrop : MonoBehaviour
     {
         if (!islocked)
         {
-            AnsB.transform.position = Input.mousePosition;
+            Vector3 mousePos = Input.mousePosition;
+            RectTransform rectTransform = AnsB.GetComponent<RectTransform>();
+            Vector3[] corners = new Vector3[4];
+            rectTransform.GetWorldCorners(corners);
+            Rect buttonRect = new Rect(corners[0].x, corners[0].y, rectTransform.rect.width, rectTransform.rect.height);
+            if (buttonRect.Contains(mousePos))
+            {
+                AnsB.transform.position = mousePos;
+            }
         }
     }
+
 
     public void DropObject()
     {
@@ -69,6 +78,11 @@ public class Dragdrop : MonoBehaviour
         islocked = false;
         AnsB.transform.position = objectInitPos;
         nextButton.gameObject.SetActive(false);
+    }
+
+    public void MoveObjectToPosition(Vector2 position)
+    {
+        AnsB.transform.position = position;
     }
 
     public void NextProblem()

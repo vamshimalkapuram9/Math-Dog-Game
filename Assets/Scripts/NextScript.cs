@@ -88,6 +88,15 @@ public class NextScript : MonoBehaviour
 
     void NextQuestion()
     {
+        StartCoroutine(GenerateNextQuestionWithDelay(1f));
+    }
+
+    IEnumerator GenerateNextQuestionWithDelay(float delayTime)
+    {
+        // Wait for the specified delay time
+        yield return new WaitForSeconds(delayTime);
+
+        // Generate the next question
         GenerateQuestion();
     }
 
@@ -98,7 +107,7 @@ public class NextScript : MonoBehaviour
             // Enable the next button if the selected answer is correct
             nextButton.gameObject.SetActive(true);
 
-            
+
         }
     }
 
