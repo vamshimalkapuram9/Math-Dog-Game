@@ -33,7 +33,7 @@ public class Dragdrop : MonoBehaviour
             AnsB.transform.position = Input.mousePosition; // To move with mouse position
         }
     }
-    public void DropObject() 
+    public void DropObject()
     {
         int a = Convert.ToInt32(num1.text);
         int b = Convert.ToInt32(num2.text);
