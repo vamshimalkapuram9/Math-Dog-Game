@@ -134,10 +134,10 @@ GameObject:
   - component: {fileID: 402455116}
   - component: {fileID: 402455120}
   - component: {fileID: 402455119}
-  - component: {fileID: 402455118}
-  - component: {fileID: 402455117}
+  - component: {fileID: 402455121}
+  - component: {fileID: 402455122}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: panelTwoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,53 +160,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.015856, y: 0.34422}
-  m_SizeDelta: {x: 65.032, y: 59.312}
+  m_AnchoredPosition: {x: -0.000054121, y: 0.000054359}
+  m_SizeDelta: {x: 80, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &402455117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402455115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 9
-  randomSecondNumber: 5
-  currentAnswer: 4
---- !u!114 &402455118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402455115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 0
-  randomSecondNumber: 0
-  currentAnswer: 0
 --- !u!114 &402455119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +205,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402455115}
   m_CullTransparentMesh: 1
+--- !u!114 &402455121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402455115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 0}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
+--- !u!114 &402455122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402455115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
 --- !u!1 &494484902
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 318, y: 116.33331}
+  m_AnchoredPosition: {x: 502, y: 171}
   m_SizeDelta: {x: 51.0689, y: 39.7916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &503526955
@@ -406,8 +417,9 @@ GameObject:
   - component: {fileID: 503526956}
   - component: {fileID: 503526958}
   - component: {fileID: 503526957}
+  - component: {fileID: 503526959}
   m_Layer: 5
-  m_Name: Equals
+  m_Name: EqualsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -431,8 +443,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 92.5498, y: 55.683}
-  m_SizeDelta: {x: 65, y: 60}
+  m_AnchoredPosition: {x: 163, y: 72.173}
+  m_SizeDelta: {x: 90, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &503526957
 MonoBehaviour:
@@ -472,6 +484,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503526955}
   m_CullTransparentMesh: 1
+--- !u!114 &503526959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503526955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
 --- !u!1 &512453574
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +519,7 @@ GameObject:
   - component: {fileID: 512453578}
   - component: {fileID: 512453577}
   - component: {fileID: 512453576}
+  - component: {fileID: 512453581}
   m_Layer: 5
   m_Name: Canvasdynamic
   m_TagString: Untagged
@@ -595,6 +630,39 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &512453581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512453574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 0}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
 --- !u!1 &587043098
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +676,7 @@ GameObject:
   - component: {fileID: 587043100}
   - component: {fileID: 587043102}
   m_Layer: 5
-  m_Name: NumberOne
+  m_Name: NumberOnePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -632,8 +700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170, y: 53.183}
-  m_SizeDelta: {x: 65, y: 65}
+  m_AnchoredPosition: {x: -271.1728, y: 72.172775}
+  m_SizeDelta: {x: 90, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &587043100
 MonoBehaviour:
@@ -685,12 +753,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
   easyMathList: 
   randomFirstNumber: 0
   randomSecondNumber: 0
@@ -707,7 +775,7 @@ GameObject:
   - component: {fileID: 653339523}
   - component: {fileID: 653339522}
   m_Layer: 5
-  m_Name: Text (Legacy) (2)
+  m_Name: MinusButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -730,8 +798,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
-  m_SizeDelta: {x: 52.4482, y: 48.5035}
+  m_AnchoredPosition: {x: 3.8912, y: -0.000002861}
+  m_SizeDelta: {x: 82.217, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &653339522
 MonoBehaviour:
@@ -756,7 +824,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 30
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
@@ -786,8 +854,9 @@ GameObject:
   - component: {fileID: 675957206}
   - component: {fileID: 675957208}
   - component: {fileID: 675957207}
+  - component: {fileID: 675957209}
   m_Layer: 5
-  m_Name: Answer
+  m_Name: AnswerPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -811,8 +880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 174.9978, y: 55.683}
-  m_SizeDelta: {x: 65, y: 60}
+  m_AnchoredPosition: {x: 305, y: 72.173}
+  m_SizeDelta: {x: 90, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675957207
 MonoBehaviour:
@@ -852,6 +921,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675957205}
   m_CullTransparentMesh: 1
+--- !u!114 &675957209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675957205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
 --- !u!1 &723119294
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +955,7 @@ GameObject:
   - component: {fileID: 723119297}
   - component: {fileID: 723119296}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: OneButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -887,8 +978,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0000030994}
-  m_SizeDelta: {x: 52.4482, y: 48.5035}
+  m_AnchoredPosition: {x: -0.000062466, y: 1.8322}
+  m_SizeDelta: {x: 90, y: 68.0133}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &723119296
 MonoBehaviour:
@@ -912,8 +1003,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
+    m_FontSize: 24
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 300
@@ -922,7 +1013,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: First No
 --- !u!222 &723119297
 CanvasRenderer:
@@ -978,8 +1069,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_SizeDelta: {x: 0.00012207, y: -0.000061035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &748016017
 MonoBehaviour:
@@ -1031,7 +1122,7 @@ GameObject:
   - component: {fileID: 1062239071}
   - component: {fileID: 1062239070}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: TwoButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1054,8 +1145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5132, y: 0.62637}
-  m_SizeDelta: {x: 56.135, y: 47.251}
+  m_AnchoredPosition: {x: -0.000097275, y: 0.6264}
+  m_SizeDelta: {x: 90, y: 72.9022}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1062239070
 MonoBehaviour:
@@ -1079,8 +1170,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
-    m_FontStyle: 0
+    m_FontSize: 22
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -1147,10 +1238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1212,8 +1303,9 @@ GameObject:
   - component: {fileID: 1117009782}
   - component: {fileID: 1117009784}
   - component: {fileID: 1117009783}
+  - component: {fileID: 1117009785}
   m_Layer: 5
-  m_Name: Minus
+  m_Name: MinusPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1237,8 +1329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -81.843, y: 55.683}
-  m_SizeDelta: {x: 65, y: 60}
+  m_AnchoredPosition: {x: -129, y: 72.173}
+  m_SizeDelta: {x: 90, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1117009783
 MonoBehaviour:
@@ -1278,6 +1370,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117009781}
   m_CullTransparentMesh: 1
+--- !u!114 &1117009785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117009781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
 --- !u!1 &1142520760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,7 +1404,7 @@ GameObject:
   - component: {fileID: 1142520763}
   - component: {fileID: 1142520762}
   m_Layer: 5
-  m_Name: Text (Legacy) (3)
+  m_Name: EqualButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1313,8 +1427,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 52.4482, y: 48.5035}
+  m_AnchoredPosition: {x: 0.000020621, y: 0.0000038147}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142520762
 MonoBehaviour:
@@ -1339,7 +1453,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 30
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
@@ -1369,10 +1483,10 @@ GameObject:
   - component: {fileID: 1154320605}
   - component: {fileID: 1154320609}
   - component: {fileID: 1154320608}
-  - component: {fileID: 1154320607}
-  - component: {fileID: 1154320606}
+  - component: {fileID: 1154320610}
+  - component: {fileID: 1154320611}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: EqualPanelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1395,53 +1509,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076294, y: -0.000025272}
-  m_SizeDelta: {x: 59.243, y: 55.584}
+  m_AnchoredPosition: {x: -2.5002, y: 5.7683}
+  m_SizeDelta: {x: 85, y: 74.463}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1154320606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154320604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 9
-  randomSecondNumber: 5
-  currentAnswer: 4
---- !u!114 &1154320607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154320604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 0
-  randomSecondNumber: 0
-  currentAnswer: 0
 --- !u!114 &1154320608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1484,6 +1554,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154320604}
   m_CullTransparentMesh: 1
+--- !u!114 &1154320610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154320604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 0}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
+--- !u!114 &1154320611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154320604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
 --- !u!1 &1159848852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,10 +1620,10 @@ GameObject:
   - component: {fileID: 1159848853}
   - component: {fileID: 1159848857}
   - component: {fileID: 1159848856}
-  - component: {fileID: 1159848855}
-  - component: {fileID: 1159848854}
+  - component: {fileID: 1159848858}
+  - component: {fileID: 1159848859}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: MinusPanelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1521,53 +1646,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076294, y: -0.000025272}
-  m_SizeDelta: {x: 59.243, y: 55.584}
+  m_AnchoredPosition: {x: 0.00014639, y: 0.000012398}
+  m_SizeDelta: {x: 80, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1159848854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159848852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 9
-  randomSecondNumber: 5
-  currentAnswer: 4
---- !u!114 &1159848855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159848852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 0
-  randomSecondNumber: 0
-  currentAnswer: 0
 --- !u!114 &1159848856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1610,6 +1691,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159848852}
   m_CullTransparentMesh: 1
+--- !u!114 &1159848858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159848852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 0}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
+--- !u!114 &1159848859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159848852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
 --- !u!1 &1167324707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,9 +1759,9 @@ GameObject:
   - component: {fileID: 1167324710}
   - component: {fileID: 1167324709}
   - component: {fileID: 1167324713}
-  - component: {fileID: 1167324712}
   - component: {fileID: 1167324715}
-  - component: {fileID: 1167324714}
+  - component: {fileID: 1167324716}
+  - component: {fileID: 1167324717}
   m_Layer: 5
   m_Name: NoOneButton
   m_TagString: Untagged
@@ -1651,8 +1787,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -68.9257, y: -15.098}
-  m_SizeDelta: {x: 70.9076, y: 63.775}
+  m_AnchoredPosition: {x: -102.000046, y: -56}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1167324709
 MonoBehaviour:
@@ -1736,18 +1872,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167324707}
   m_CullTransparentMesh: 1
---- !u!114 &1167324712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167324707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5600843b9dce2744ba27fba7e508fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1167324713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1760,28 +1884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5600843b9dce2744ba27fba7e508fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1167324714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167324707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 0
-  randomSecondNumber: 0
-  currentAnswer: 0
 --- !u!114 &1167324715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,16 +1896,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
   easyMathList: 
   randomFirstNumber: 0
   randomSecondNumber: 0
   currentAnswer: 0
+--- !u!114 &1167324716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167324707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 0}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
+--- !u!114 &1167324717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167324707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1167324716}
+          m_TargetAssemblyTypeName: PuzzleRightdragdrop, Assembly-CSharp
+          m_MethodName: DragObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1167324707}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1167324716}
+          m_TargetAssemblyTypeName: PuzzleRightdragdrop, Assembly-CSharp
+          m_MethodName: DropObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1167324707}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1200920480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,9 +2065,9 @@ GameObject:
   - component: {fileID: 1232358576}
   - component: {fileID: 1232358575}
   - component: {fileID: 1232358579}
-  - component: {fileID: 1232358578}
   - component: {fileID: 1232358581}
-  - component: {fileID: 1232358580}
+  - component: {fileID: 1232358582}
+  - component: {fileID: 1232358583}
   m_Layer: 5
   m_Name: AnswerButton
   m_TagString: Untagged
@@ -1913,8 +2093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166.52805, y: -77.799446}
-  m_SizeDelta: {x: 64.3687, y: 61.6279}
+  m_AnchoredPosition: {x: 297, y: -123}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1232358575
 MonoBehaviour:
@@ -1998,18 +2178,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232358573}
   m_CullTransparentMesh: 1
---- !u!114 &1232358578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232358573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5600843b9dce2744ba27fba7e508fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1232358579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2022,28 +2190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5600843b9dce2744ba27fba7e508fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1232358580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232358573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 0
-  randomSecondNumber: 0
-  currentAnswer: 0
 --- !u!114 &1232358581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2056,16 +2202,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
   easyMathList: 
   randomFirstNumber: 0
   randomSecondNumber: 0
   currentAnswer: 0
+--- !u!114 &1232358582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232358573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 1373923124}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
+--- !u!114 &1232358583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232358573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1232358582}
+          m_TargetAssemblyTypeName: PuzzleRightdragdrop, Assembly-CSharp
+          m_MethodName: DragObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1232358573}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1232358582}
+          m_TargetAssemblyTypeName: PuzzleRightdragdrop, Assembly-CSharp
+          m_MethodName: DropObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1232358573}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1322158363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,7 +2386,7 @@ GameObject:
   - component: {fileID: 1373923125}
   - component: {fileID: 1373923124}
   m_Layer: 5
-  m_Name: Text (Legacy) (4)
+  m_Name: AnswerButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2185,8 +2409,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.11663, y: 0.0000019073}
-  m_SizeDelta: {x: 64.602, y: 52.027}
+  m_AnchoredPosition: {x: -0.0001173, y: -0.00010014}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373923124
 MonoBehaviour:
@@ -2210,8 +2434,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
+    m_FontSize: 22
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -2243,9 +2467,9 @@ GameObject:
   - component: {fileID: 1389607498}
   - component: {fileID: 1389607497}
   - component: {fileID: 1389607501}
-  - component: {fileID: 1389607500}
   - component: {fileID: 1389607503}
-  - component: {fileID: 1389607502}
+  - component: {fileID: 1389607504}
+  - component: {fileID: 1389607505}
   m_Layer: 5
   m_Name: NoTwoButton
   m_TagString: Untagged
@@ -2271,8 +2495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146.96153, y: -75.657}
-  m_SizeDelta: {x: 65.2377, y: 53.759}
+  m_AnchoredPosition: {x: -254, y: -123}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389607497
 MonoBehaviour:
@@ -2356,18 +2580,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389607495}
   m_CullTransparentMesh: 1
---- !u!114 &1389607500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389607495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5600843b9dce2744ba27fba7e508fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1389607501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,28 +2592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5600843b9dce2744ba27fba7e508fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1389607502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389607495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 0
-  randomSecondNumber: 0
-  currentAnswer: 0
 --- !u!114 &1389607503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2414,16 +2604,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
   easyMathList: 
   randomFirstNumber: 0
   randomSecondNumber: 0
   currentAnswer: 0
+--- !u!114 &1389607504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389607495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 1062239070}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
+--- !u!114 &1389607505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389607495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1389607504}
+          m_TargetAssemblyTypeName: PuzzleRightdragdrop, Assembly-CSharp
+          m_MethodName: DragObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1389607495}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1389607504}
+          m_TargetAssemblyTypeName: PuzzleRightdragdrop, Assembly-CSharp
+          m_MethodName: DropObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1389607495}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1585115545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,10 +2703,10 @@ GameObject:
   - component: {fileID: 1585115546}
   - component: {fileID: 1585115550}
   - component: {fileID: 1585115549}
-  - component: {fileID: 1585115548}
-  - component: {fileID: 1585115547}
+  - component: {fileID: 1585115551}
+  - component: {fileID: 1585115552}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: AnswerPanelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2461,53 +2729,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4392, y: 1.104}
-  m_SizeDelta: {x: 62.122, y: 57.792}
+  m_AnchoredPosition: {x: 0.0000083447, y: 0.000011444}
+  m_SizeDelta: {x: 80, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1585115547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585115545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 9
-  randomSecondNumber: 5
-  currentAnswer: 4
---- !u!114 &1585115548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585115545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 0
-  randomSecondNumber: 0
-  currentAnswer: 0
 --- !u!114 &1585115549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2550,6 +2774,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585115545}
   m_CullTransparentMesh: 1
+--- !u!114 &1585115551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585115545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 0}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
+--- !u!114 &1585115552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585115545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
 --- !u!1 &1718933506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,8 +2864,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.869812, y: -8}
-  m_SizeDelta: {x: -234.5504, y: -44.3784}
+  m_AnchoredPosition: {x: 36.788727, y: -15.098022}
+  m_SizeDelta: {x: -247.6351, y: -51.7213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1718933508
 MonoBehaviour:
@@ -2639,7 +2918,9 @@ GameObject:
   - component: {fileID: 1758547459}
   - component: {fileID: 1758547458}
   - component: {fileID: 1758547462}
-  - component: {fileID: 1758547461}
+  - component: {fileID: 1758547463}
+  - component: {fileID: 1758547464}
+  - component: {fileID: 1758547465}
   m_Layer: 5
   m_Name: EqualButton
   m_TagString: Untagged
@@ -2665,8 +2946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.908, y: -77.799}
-  m_SizeDelta: {x: 66.87, y: 61.628}
+  m_AnchoredPosition: {x: 32.999996, y: -123.00001}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1758547458
 MonoBehaviour:
@@ -2750,18 +3031,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758547456}
   m_CullTransparentMesh: 1
---- !u!114 &1758547461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758547456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5600843b9dce2744ba27fba7e508fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1758547462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2774,6 +3043,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5600843b9dce2744ba27fba7e508fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1758547463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758547456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
+--- !u!114 &1758547464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758547456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 1142520762}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
+--- !u!114 &1758547465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758547456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1758547464}
+          m_TargetAssemblyTypeName: PuzzleRightdragdrop, Assembly-CSharp
+          m_MethodName: DragObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1758547456}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1758547464}
+          m_TargetAssemblyTypeName: PuzzleRightdragdrop, Assembly-CSharp
+          m_MethodName: DropObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1758547456}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1828855168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,8 +3154,9 @@ GameObject:
   - component: {fileID: 1828855169}
   - component: {fileID: 1828855171}
   - component: {fileID: 1828855170}
+  - component: {fileID: 1828855172}
   m_Layer: 5
-  m_Name: NumberTwo
+  m_Name: NumberTwoPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2810,8 +3180,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.8698, y: 55.683}
-  m_SizeDelta: {x: 65, y: 60}
+  m_AnchoredPosition: {x: 15, y: 72.173}
+  m_SizeDelta: {x: 90, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1828855170
 MonoBehaviour:
@@ -2851,6 +3221,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828855168}
   m_CullTransparentMesh: 1
+--- !u!114 &1828855172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828855168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
 --- !u!1 &1936450690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,10 +3254,10 @@ GameObject:
   - component: {fileID: 1936450691}
   - component: {fileID: 1936450695}
   - component: {fileID: 1936450694}
-  - component: {fileID: 1936450693}
-  - component: {fileID: 1936450692}
+  - component: {fileID: 1936450696}
+  - component: {fileID: 1936450697}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: PanelOneText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2888,53 +3280,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000046969, y: 0}
-  m_SizeDelta: {x: 65, y: 65}
+  m_AnchoredPosition: {x: 0.000045776, y: -0.000015259}
+  m_SizeDelta: {x: 80, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1936450692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936450690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 9
-  randomSecondNumber: 5
-  currentAnswer: 4
---- !u!114 &1936450693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936450690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  Ans1: {fileID: 0}
-  num3: {fileID: 0}
-  num4: {fileID: 0}
-  Ans2: {fileID: 0}
-  easyMathList: 
-  randomFirstNumber: 0
-  randomSecondNumber: 0
-  currentAnswer: 0
 --- !u!114 &1936450694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2957,10 +3305,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2977,6 +3325,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936450690}
   m_CullTransparentMesh: 1
+--- !u!114 &1936450696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936450690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 0}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
+--- !u!114 &1936450697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936450690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
 --- !u!1 &2143733246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2990,7 +3393,9 @@ GameObject:
   - component: {fileID: 2143733249}
   - component: {fileID: 2143733248}
   - component: {fileID: 2143733252}
-  - component: {fileID: 2143733251}
+  - component: {fileID: 2143733253}
+  - component: {fileID: 2143733254}
+  - component: {fileID: 2143733255}
   m_Layer: 5
   m_Name: MinusButton
   m_TagString: Untagged
@@ -3016,8 +3421,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.03933, y: -15.695}
-  m_SizeDelta: {x: 64.8505, y: 62.581}
+  m_AnchoredPosition: {x: 163, y: -56}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143733248
 MonoBehaviour:
@@ -3101,18 +3506,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143733246}
   m_CullTransparentMesh: 1
---- !u!114 &2143733251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143733246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5600843b9dce2744ba27fba7e508fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2143733252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3125,3 +3518,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5600843b9dce2744ba27fba7e508fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2143733253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143733246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be095fe5ad1f6242a3a0b4b632482f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num1: {fileID: 1936450694}
+  num2: {fileID: 402455119}
+  Ans1: {fileID: 1585115549}
+  num3: {fileID: 723119296}
+  num4: {fileID: 1062239070}
+  Ans2: {fileID: 1373923124}
+  easyMathList: 
+  randomFirstNumber: 0
+  randomSecondNumber: 0
+  currentAnswer: 0
+--- !u!114 &2143733254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143733246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d53086fae2a2479715ce0fa22920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOne: {fileID: 1167324707}
+  NumberTwo: {fileID: 1389607495}
+  Minus: {fileID: 2143733246}
+  Equal: {fileID: 1758547456}
+  Answer: {fileID: 1232358573}
+  NumberOneText: {fileID: 1936450694}
+  NumberTwoText: {fileID: 402455119}
+  MinusText: {fileID: 1159848856}
+  EqualText: {fileID: 1154320608}
+  AnswerText: {fileID: 1585115549}
+  NumberOneButtonText: {fileID: 723119296}
+  NumberTwoButtonText: {fileID: 1062239070}
+  MinusButtonText: {fileID: 653339522}
+  EqualButtonText: {fileID: 1142520762}
+  AnswerButtonText: {fileID: 1373923124}
+  CurrentTextLoc: {fileID: 653339522}
+  NumberOneInitialPos: {x: 0, y: 0}
+  NumberTwoIntialPos: {x: 0, y: 0}
+  MinusInitialPos: {x: 0, y: 0}
+  EqualInitialPos: {x: 0, y: 0}
+  AnswerInitialPos: {x: 0, y: 0}
+--- !u!114 &2143733255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143733246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2143733254}
+          m_TargetAssemblyTypeName: PuzzleRightdragdrop, Assembly-CSharp
+          m_MethodName: DragObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2143733246}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2143733254}
+          m_TargetAssemblyTypeName: PuzzleRightdragdrop, Assembly-CSharp
+          m_MethodName: DropObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2143733246}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

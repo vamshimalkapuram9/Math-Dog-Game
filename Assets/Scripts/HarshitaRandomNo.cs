@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MathPuzzle : MonoBehaviour
+public class HarshitaRandomNo : MonoBehaviour
 {
     public Text num1;
     public Text num2;
@@ -31,36 +31,43 @@ public class MathPuzzle : MonoBehaviour
     private (int, int) GetTwoRandomDiff() // Return tuple of two random numbers
     {
         int firstNum = Random.Range(1, 10); // Random integer between 1 and 10
-        int nextNum = Random.Range(1, firstNum); // Ensure the difference is not negative integer
+        int nextNum = Random.Range(1, 10); // Ensure the difference is not negative integer
+
+        if (nextNum > firstNum)
+        {
+            int temp = firstNum;
+            firstNum = nextNum;
+            nextNum = temp;
+        }
 
         return (firstNum, nextNum);
     }
-    private (int, int,int) GetDiffOptions(int firstNum, int nextNum) 
+    private (int, int, int) GetDiffOptions(int firstNum, int nextNum)
     {
         int answer = firstNum - nextNum;
         //char minus1= '-', equal1 = '=';
 
-        if (answer < 1 || answer > 10)
-        {
-            throw new System.Exception("GetDiffOptions received invalid values to perform difference");
-        }
+     //   if (answer < 1 || answer > 10)
+       // {
+         //   throw new System.Exception("GetDiffOptions received invalid values to perform difference");
+        // }
 
         var possibilities = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         //var another = new List<char>() { '-', '=' };
         possibilities.Remove(answer); // Ensure only one correct answer offered
 
-       
+
         //int firstOptionIndex = Random.Range(0, possibilities.Count);
         int firstOption = firstNum;
-         //int nextOptionIndex = Random.Range(0, possibilities.Count);
+        //int nextOptionIndex = Random.Range(0, possibilities.Count);
         int nextOption = nextNum;
 
         // Shuffle options before returning them
         var options = new List<int>() { answer, firstOption, nextOption };
         //var charoptions = new List<char>() {minus1, equal1 };
         int count = options.Count;
-      
-             
+
+
         for (int i = 0; i < count - 1; ++i)
         {
             int rand = Random.Range(i, count);
@@ -77,7 +84,7 @@ public class MathPuzzle : MonoBehaviour
         //}
 
         return (options[0], options[1], options[2]);
-           // return(charoptions[3], charoptions[4]);
+        // return(charoptions[3], charoptions[4]);
     }
     public void DisplayMathProblem()
     {
@@ -86,7 +93,7 @@ public class MathPuzzle : MonoBehaviour
         randomFirstNumber = nums.Item1;
         randomSecondNumber = nums.Item2;
         int randomSub = randomFirstNumber - randomSecondNumber;
-        
+
         var options = GetDiffOptions(randomFirstNumber, randomSecondNumber);
         answerOne = options.Item1;
         answerTwo = options.Item2;
