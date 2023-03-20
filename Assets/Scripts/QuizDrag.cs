@@ -26,67 +26,31 @@ public class QuizDrag : MonoBehaviour
     void Start()
     {
         objectInitPos = AnsB.transform.position;
-        nextButton.gameObject.SetActive(false);
-        GenerateProblem();
     }
-
     public void DragObject()
     {
         if (!islocked)
         {
-            Vector3 mousePos = Input.mousePosition;
-            RectTransform rectTransform = AnsB.GetComponent<RectTransform>();
-            Vector3[] corners = new Vector3[4];
-            rectTransform.GetWorldCorners(corners);
-            Rect buttonRect = new Rect(corners[0].x, corners[0].y, rectTransform.rect.width, rectTransform.rect.height);
-            if (buttonRect.Contains(mousePos))
-            {
-                AnsB.transform.position = mousePos;
-            }
+            AnsB.transform.position = Input.mousePosition; // To move with mouse position
         }
     }
-
-
     public void DropObject()
     {
         int a = Convert.ToInt32(num1.text);
         int b = Convert.ToInt32(num2.text);
         int c = Convert.ToInt32(Ans.text);
-        float Distance = Vector3.Distance(AnsB.transform.position, Crt_ans.transform.position);
-        if (c == a - b)
+        dropdistance = Vector3.Distance(AnsB.transform.position, Crt_ans.transform.position);
+        if (c == a - b) // Check to idenfity correct answer
         {
             islocked = true;
-            AnsB.transform.position = Crt_ans.transform.position;
+            AnsB.transform.position = Crt_ans.transform.position; // Correct answer will be fixed in answer panel
             nextButton.gameObject.SetActive(true);
         }
         else
         {
             islocked = false;
-            AnsB.transform.position = objectInitPos;
+            AnsB.transform.position = objectInitPos; // Worng answer will be pulled to it's original position
             nextButton.gameObject.SetActive(false);
         }
-    }
-
-    public void GenerateProblem()
-    {
-        int maxNumber = 10;
-        int numA = UnityEngine.Random.Range(1, maxNumber);
-        int numB = UnityEngine.Random.Range(1, maxNumber);
-        num1.text = numA.ToString();
-        num2.text = numB.ToString();
-        Ans.text = "";
-        islocked = false;
-        AnsB.transform.position = objectInitPos;
-        nextButton.gameObject.SetActive(false);
-    }
-
-    public void MoveObjectToPosition(Vector2 position)
-    {
-        AnsB.transform.position = position;
-    }
-
-    public void NextProblem()
-    {
-        GenerateProblem();
     }
 }

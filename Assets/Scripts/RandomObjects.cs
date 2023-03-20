@@ -10,10 +10,10 @@ public class RandomObjects : MonoBehaviour
 {
     public Text num1;
     public Text num2;
-    //public Button answer1Button;
-    //public Button answer2Button;
-    //public Button answer3Button;
-    //public Button nextButton; // button to go to next problem
+    public Button answer1Button;
+    public Button answer2Button;
+    public Button answer3Button;
+    public Button nextButton; // button to go to next problem
 
     public Sprite ObjectSprite1;
     public Sprite ObjectSprite2;
@@ -31,7 +31,7 @@ public class RandomObjects : MonoBehaviour
     public GameObject Object8;
     public GameObject Object9;
     public GameObject Object10;
-    //public GameObject RandomAddGameObjects; // parent of all the game objects for this game
+    public GameObject RandomAddGameObjects; // parent of all the game objects for this game
 
 
     public void Start()

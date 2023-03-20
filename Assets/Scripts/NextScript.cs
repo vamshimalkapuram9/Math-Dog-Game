@@ -29,7 +29,7 @@ public class NextScript : MonoBehaviour
         ansButton3Pos = ansButton3.GetComponent<RectTransform>().anchoredPosition;
 
         // Disable the next button initially
-        nextButton.gameObject.SetActive(false);
+        nextButton.gameObject.SetActive(true);
 
         GenerateQuestion();
 
@@ -88,6 +88,7 @@ public class NextScript : MonoBehaviour
 
     void NextQuestion()
     {
+        ResetButtonPositions();
         StartCoroutine(GenerateNextQuestionWithDelay(1f));
     }
 
