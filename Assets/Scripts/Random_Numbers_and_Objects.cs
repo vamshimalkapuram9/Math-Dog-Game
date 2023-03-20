@@ -43,9 +43,21 @@ public class Random_Numbers_and_Objects : MonoBehaviour
     int answerThree;
     public int correctAnswer;
 
+    public GameObject Ans1;
+    public GameObject Ans2;
+    public GameObject Ans3;
+
+    Vector2 objectInitPos1;
+    Vector2 objectInitPos2;
+    Vector2 objectInitPos3;
+    UnityEngine.Vector3 originalRotation1;
 
     public void Start()
     {
+        nextButton.gameObject.SetActive(false);
+        objectInitPos1 = Ans1.transform.position;
+        objectInitPos2 = Ans2.transform.position;
+        objectInitPos3 = Ans3.transform.position;
         DisplayMathProblem();
     }
 
@@ -299,28 +311,28 @@ public class Random_Numbers_and_Objects : MonoBehaviour
     public void ButtonAnswer1()
     {
         bool isButton1Correct = answer1Button.GetComponentInChildren<Text>().text.Equals(correctAnswer.ToString());
-        showResults(isButton1Correct);
+        //showResults(isButton1Correct);
     }
 
     public void ButtonAnswer2()
     {
         bool isButton2Correct = answer2Button.GetComponentInChildren<Text>().text.Equals(correctAnswer.ToString());
-        showResults(isButton2Correct);
+        //showResults(isButton2Correct);
     }
 
     public void ButtonAnswer3()
     {
         bool isButton3Correct = answer3Button.GetComponentInChildren<Text>().text.Equals(correctAnswer.ToString());
-        showResults(isButton3Correct);
+        //showResults(isButton3Correct);
     }
 
-    public void showResults(bool isCorrectAnswer)
-    {
-        if (isCorrectAnswer)
-        {
-            nextButton.gameObject.SetActive(true);
-        }
-    }
+    //public void showResults(bool isCorrectAnswer)
+    //{
+    //    if (isCorrectAnswer)
+    //    {
+    //        nextButton.gameObject.SetActive(true);
+    //    }
+    //}
 
     public void refreshPuzzle()
     {
@@ -338,23 +350,29 @@ public class Random_Numbers_and_Objects : MonoBehaviour
         Object10.SetActive(false);
         // animated transition
         StartCoroutine(NewProblem());
+        
     }
 
     private IEnumerator NewProblem()
     {
+
+        Ans1.transform.position = objectInitPos1;
+        Ans2.transform.position = objectInitPos2;
+        Ans3.transform.position = objectInitPos3;
         Vector3 originalPos = RandomAddGameObjects.transform.position;
-        Vector3 OffScreen = originalPos + new Vector3(Screen.width, 0, 0);
+        Vector3 leftOffScreen = originalPos + new Vector3(-1 * Screen.width, 0, 0);
+        Vector3 rightOffScreen = originalPos + new Vector3(Screen.width, 0, 0);
         float elapsedTime = 0;
         int moveSpeed = 8;
 
         while (elapsedTime < 1)
         {
-            RandomAddGameObjects.transform.position = Vector3.Lerp(RandomAddGameObjects.transform.position, OffScreen, Time.deltaTime * moveSpeed);
+            RandomAddGameObjects.transform.position = Vector3.Lerp(RandomAddGameObjects.transform.position, leftOffScreen, Time.deltaTime * moveSpeed);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        RandomAddGameObjects.transform.position = OffScreen;
+        RandomAddGameObjects.transform.position = rightOffScreen;
         DisplayMathProblem();
 
         while (elapsedTime < 2)
@@ -365,6 +383,7 @@ public class Random_Numbers_and_Objects : MonoBehaviour
         }
 
         RandomAddGameObjects.transform.position = originalPos; // ensure end at original position since Lerp is inexact
+
 
         yield return null;
     }
