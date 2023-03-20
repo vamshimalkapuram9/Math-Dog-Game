@@ -4,23 +4,17 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class Dragdrop : MonoBehaviour
 {
-
     public GameObject Crt_ans;
     public GameObject AnsB;
     public Text Ans;
-    public Text num1;
-    public Text num2;
-
+    public TextMeshProUGUI num1;
+    public TextMeshProUGUI num2;
     public float dropdistance;
-
     public bool islocked;
-
     Vector2 objectInitPos;
-
-
     // Start is called before the first frame update
     void Start()
     {
