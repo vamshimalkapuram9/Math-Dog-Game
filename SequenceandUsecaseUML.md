@@ -1,5 +1,6 @@
 | Date  | Progress |
 | ------------- | ------------- |
+| 20/03/2023 | created a mysql database in azure using the resource of mockap and deploy the mockap |
 | 13/03/2023 | Working on c# program for a application and also working on azure features for store the state <br>Also worked on UML diagram and check below for updates|
 | 06/03/2023 | Compeleted Use Case for Subtracting practice for beginners and also squence UML <br> Check below for Updates and working on scenerio to store data in azure app service|
 | 27/02/2023 |  Completed Use case UML for the all functionalities with self-call <br> Check below for updates  |
@@ -8,8 +9,12 @@
 | 05/02/2023  | Installed game and looked into the interface and played thoroughly to get an idea of the number of screens and buttons<br>Found different functionalities like cross button and popups<br>Downloaded unity, .Net and visual studio and tried programming for various algorithms and successfully completed|
 | 02/02/2023 | Connected with different teams to get an idea of the project workflow<br>Verified appendix and gone through the textbook for a better understanding|
 
+<br>Other Updates</br>
+20/03/2023
 
-<b> Other Updates</b>
+![Azure update 2](https://user-images.githubusercontent.com/127143699/226415672-6cbbb5a8-d800-40ba-95af-afcfe4910b29.png)
+
+
 13/03/2023
 ![Azure update](https://user-images.githubusercontent.com/127143699/224799039-6e510f06-33cd-4866-8d28-42c91872cfd4.png)
 ![Screenshot 2023-03-06](https://user-images.githubusercontent.com/127143699/224807123-63eb2a58-df85-4792-af08-816a496d2110.png)
