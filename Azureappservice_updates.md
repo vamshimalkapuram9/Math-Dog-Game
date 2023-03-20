@@ -1,5 +1,6 @@
 | Date  | Content |
 |--------| ---------|
+|(03/20/2023)|Tried to host the web app in app service using visual studio code but getting build related error while publishing to azure
 |(02/26/2023)|I have created an Azure app Service Account <br> Published the code through the deployment center in Azure app services from Azure repository.
 | (02/20/2023)| To store the status of a mobile game in Azure App Service, but one common approach is to use a database service such as Azure SQL Database. So I have created a sample SQL database in Azure (mentioned screenshot below)  and planning to create the required SQL database as per requirements after creating Azure App service account|
 | (02/12/2023)  |Learning about azure app service portal features and getting familiar with the following <br> What an App Service is <br> Why we use Azure App Service <br> Types of App Service Application  <br> App Service Plans <br> Pricing Tier|
