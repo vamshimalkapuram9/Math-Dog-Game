@@ -3,6 +3,7 @@ Math Dog Game Using Unity
 
 | DATE | UPDATE  |
 |----------|----------|
+| (03/26/2023) | 	Created the Google Admob account, I also got the publisher id. To proceed further I need the game .apk file to get the verification from Google Admob.|
 | (03/19/2023) | 	Created interstitial ad  |
 | (03/11/2023) | 	Successfully integrated the Ad Banner into the game.  |
 | (03/05/2023) | Fixed all the bugs for GoogleAdMob. Now getting errors from the screen and packages may be because of the wrong merge of code on Github. |
