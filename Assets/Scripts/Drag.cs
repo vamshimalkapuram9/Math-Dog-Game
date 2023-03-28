@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
+//Harish Drag Script
 public class Drag : MonoBehaviour, IDragHandler
 {
     private Vector2 mousePosition = new Vector2();

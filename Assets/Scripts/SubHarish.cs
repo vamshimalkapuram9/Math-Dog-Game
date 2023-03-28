@@ -13,20 +13,20 @@ public class SubHarish : MonoBehaviour
 
     public Text[] answerTexts;
 
-
+    public int[] finalAnswers;
     // Start is called before the first frame update
     void Start()
     {
-        GenerateRandomNumbers();
+        finalAnswers = GenerateRandomNumbers();
     }
 
-    public void GenerateRandomNumbers()
+    public int[] GenerateRandomNumbers()
     {
         int[] firstNosList = new int[6];
         int[] secondNosList = new int[6];
         int randomNumber;
 
-        int[] correstAnswersList = new int[6];
+        int[] correctAnswersList = new int[6];
 
         for (int i =0; i < 6; i ++)
         {
@@ -45,14 +45,20 @@ public class SubHarish : MonoBehaviour
 
         for (int i = 0; i < 6; i++)
         {
-            correstAnswersList[i] = firstNosList[i] - secondNosList[i];
+            correctAnswersList[i] = firstNosList[i] - secondNosList[i];
         }
 
-        GenerateAnswers(correstAnswersList[0]);
+        GenerateAnswerButtons(correctAnswersList[0]);
+
+        return correctAnswersList;
         
     }
 
-    public void GenerateAnswers(int correctAnswer)
+
+
+
+
+    public void GenerateAnswerButtons(int correctAnswer)
     {
         int[] answerChoices = new int[7];
 
