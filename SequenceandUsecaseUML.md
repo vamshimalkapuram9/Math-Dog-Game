@@ -1,5 +1,6 @@
 | Date  | Progress |
 | ------------- | ------------- |
+| 03/04/2023 | Completed the usecase and sequence uml diagrams |
 | 20/03/2023 | created a mysql database in azure using the resource of mockap and deploy the mockap |
 | 13/03/2023 | Working on c# program for a application and also working on azure features for store the state <br>Also worked on UML diagram and check below for updates|
 | 06/03/2023 | Compeleted Use Case for Subtracting practice for beginners and also squence UML <br> Check below for Updates and working on scenerio to store data in azure app service|
@@ -10,7 +11,15 @@
 | 02/02/2023 | Connected with different teams to get an idea of the project workflow<br>Verified appendix and gone through the textbook for a better understanding|
 
 <br>Other Updates</br>
+03/04/2023
+
+![Use Case final](https://user-images.githubusercontent.com/127143699/229575920-0cbee792-59f1-4a33-b17c-aea442942fba.png)
+
+![sequence final](https://user-images.githubusercontent.com/127143699/229575992-527a8cd2-57db-44cf-80b4-a346f48837d6.png)
+
+
 20/03/2023
+
 
 ![Azure update 2](https://user-images.githubusercontent.com/127143699/226415672-6cbbb5a8-d800-40ba-95af-afcfe4910b29.png)
 
