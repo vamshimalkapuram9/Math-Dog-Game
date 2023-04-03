@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class QuizDrag : MonoBehaviour
@@ -44,6 +45,7 @@ public class QuizDrag : MonoBehaviour
         {
             islocked = true;
             AnsB.transform.position = Crt_ans.transform.position; // Correct answer will be fixed in answer panel
+            OnMouseUp();
             nextButton.gameObject.SetActive(true);
         }
         else
@@ -52,5 +54,10 @@ public class QuizDrag : MonoBehaviour
             AnsB.transform.position = objectInitPos; // Worng answer will be pulled to it's original position
             nextButton.gameObject.SetActive(false);
         }
+    }
+
+    private void OnMouseUp()
+    {
+        SceneManager.LoadScene("Confetti");
     }
 }
