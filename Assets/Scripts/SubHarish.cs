@@ -14,7 +14,6 @@ public class SubHarish : MonoBehaviour
     public Text[] answerTexts;
 
     public int[] finalAnswers;
-
     // Start is called before the first frame update
     void Start()
     {

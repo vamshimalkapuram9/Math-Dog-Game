@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameMusic
-  - AnswerPanel
   layers:
   - Default
   - TransparentFX
@@ -43,14 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< HEAD
   - name: Foreground
     uniqueID: 1154605485
-=======
-  - name: Canvas
-    uniqueID: 1698559379
-    locked: 0
-  - name: New Layer 2
-    uniqueID: 2868534999
->>>>>>> cd842b1af08100c52d38380872052c921be3b818
     locked: 0

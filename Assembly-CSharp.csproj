@@ -108,6 +108,7 @@
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\Advanced_BtnPractice.cs" />
     <Compile Include="Assets\Scripts\Random_Numbers_and_Objects.cs" />
+    <Compile Include="Assets\Scripts\Drag.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\NextScript.cs" />
@@ -116,13 +117,10 @@
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\DragDrop.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
+    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\SubHarish.cs" />
     <Compile Include="Assets\Scripts\Confetti.cs" />
-    <Compile Include="Assets\FallingLeaves.cs" />
-    <Compile Include="Assets\Scripts\Harish-Code\AnswerPanel.cs" />
-    <Compile Include="Assets\Scripts\Hscript.cs" />
-    <Compile Include="Assets\Scripts\Harish-Code\DraggableButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Image-Assets\TextMesh Pro\Shaders\TMPro.cginc" />

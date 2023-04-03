@@ -1,6 +1,6 @@
-//using Mono.Cecil;
-using System.Collections;   // used when working with collection of data arrays or lists
-using System.Collections.Generic; 
+using Mono.Cecil;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,16 +12,15 @@ public class HarshitaRandomNo : MonoBehaviour
     public Text num3;
     public Text num4;
     public Text Ans2;
-    public Text equal;
-    public Text minus;
+    //public Text equal;
+    //public Text minus;
 
-    public List<int> easyMathList = new List<int>(); // 
-    //public List<char> easyMathListTwo = new List<char>();
+    public List<int> easyMathList = new List<int>();
 
     public int randomFirstNumber;
     public int randomSecondNumber;
 
-    int answerOne, answerTwo, answerThree, answerFour, answerFive;
+    int answerOne, answerTwo, answerThree;
     //int answerTwo, answerThree, answerFour, answerFive;
     public int currentAnswer;
     // Start is called before the first frame update
@@ -29,7 +28,7 @@ public class HarshitaRandomNo : MonoBehaviour
     {
         DisplayMathProblem();
     }
-    private (int, int) GetTwoRandomDifference() // Return tuple of two random numbers
+    private (int, int) GetTwoRandomDiff() // Return tuple of two random numbers
     {
         int firstNum = Random.Range(1, 10); // Random integer between 1 and 10
         int nextNum = Random.Range(1, 10); // Ensure the difference is not negative integer
@@ -43,17 +42,31 @@ public class HarshitaRandomNo : MonoBehaviour
 
         return (firstNum, nextNum);
     }
-    private (int, int, int, int, int) GetDifferentOptions(int firstNum, int nextNum)
+    private (int, int, int) GetDiffOptions(int firstNum, int nextNum)
     {
         int answer = firstNum - nextNum;
+        //char minus1= '-', equal1 = '=';
+
+     //   if (answer < 1 || answer > 10)
+       // {
+         //   throw new System.Exception("GetDiffOptions received invalid values to perform difference");
+        // }
+
+        var possibilities = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        //var another = new List<char>() { '-', '=' };
+        possibilities.Remove(answer); // Ensure only one correct answer offered
+
+
+        //int firstOptionIndex = Random.Range(0, possibilities.Count);
         int firstOption = firstNum;
+        //int nextOptionIndex = Random.Range(0, possibilities.Count);
         int nextOption = nextNum;
-        int thirdOption = '-';
-        int fourthOption = '=';
 
         // Shuffle options before returning them
-        var options = new List<int>() {answer, firstOption, nextOption, thirdOption, fourthOption};
+        var options = new List<int>() { answer, firstOption, nextOption };
+        //var charoptions = new List<char>() {minus1, equal1 };
         int count = options.Count;
+
 
         for (int i = 0; i < count - 1; ++i)
         {
@@ -63,93 +76,40 @@ public class HarshitaRandomNo : MonoBehaviour
             options[rand] = tmp;
         }
 
-        return (options[0], options[1], options[2], options[3], options[4]);
+        //for (int j = 0; j < 2; ++j){
+        //int rand = Random.Range(j, count);
+        //char tmp = charoptions[j];
+        //charoptions[j] = charoptions[rand];
+        //charoptions[rand] = tmp;
+        //}
+
+        return (options[0], options[1], options[2]);
+        // return(charoptions[3], charoptions[4]);
     }
     public void DisplayMathProblem()
     {
         //generate a random number as the first and second numbers
-        var nums = GetTwoRandomDifference();
+        var nums = GetTwoRandomDiff();
         randomFirstNumber = nums.Item1;
         randomSecondNumber = nums.Item2;
         int randomSub = randomFirstNumber - randomSecondNumber;
-        
 
-        var options = GetDifferentOptions(randomFirstNumber, randomSecondNumber);
+        var options = GetDiffOptions(randomFirstNumber, randomSecondNumber);
         answerOne = options.Item1;
         answerTwo = options.Item2;
         answerThree = options.Item3;
-        answerFour = options.Item4;
-        answerFive = options.Item5;
+        //answerFour = options.Item4;
+        //answerFive = options.Item5;
 
         num1.text = "" + randomFirstNumber;
         num2.text = "" + randomSecondNumber;
         Ans1.text = "" + randomSub;
-
-        if(answerOne < 10)
-        {
-            num3.text = "" + answerOne;
-        }
-        else if(answerOne == 61)
-        {
-            num3.text =  "=";
-        }
-        else
-        {
-            num3.text = "-";
-        }
-
-        if (answerTwo < 10)
-        {
-            num4.text = "" + answerTwo;
-        }
-        else if (answerTwo == 61)
-        {
-            num4.text = "=";
-        }
-        else
-        {
-            num4.text = "-";
-        }
-
-        if (answerThree < 10)
-        {
-            Ans2.text = "" + answerThree;
-        }
-        else if (answerThree == 61)
-        {
-            Ans2.text  = "="; 
-        }
-        else
-        {
-            Ans2.text = "-";
-        }
-
-        if (answerFour < 10)
-        {
-            equal.text = "" + answerFour;
-        }
-        else if (answerFour == 61)
-        {
-            equal.text  = "="; 
-        }
-        else
-        {
-            equal.text = "-";
-        }
-
-        if (answerFive < 10)
-        {
-            minus.text = "" + answerFive;
-        }
-        else if (answerFive == 61)
-        {
-            minus.text  = "=";
-        }
-        else
-        {
-            minus.text = "-";
-        }
-
+        num3.text = "" + answerOne;
+        num4.text = "" + answerTwo;
+        Ans2.text = "" + answerThree;
+        //Ans2.text = "" + answerThree;
+        //equal.text = "" + answerFour;
+        //minus.text = "" + answerFive; 
 
     }
 }
