@@ -1,7 +1,6 @@
 | DATE  | UPDATES |
 | ------------- | ------------- |
 | 04-03-2023 | Updated <br> 1.System Features <br> 2.Description and Priorities <br> 3.Stimulus/Response <br> 4.Functional Requirements <br> 5.External Interface Requirements <br> 6.Other Non-Functional Requirements <br> 7.Updated UML Use case, class, sequence diagrams <br> 8.Updated new screens
-<br> Added Interfaces <br> Updated new screens <br> Class and Sequence Diagrams | 
 | 03-20-2023 | Added Safety Requirements <br> Added Interfaces <br> Updated new screens <br> Update Class and Sequence Diagrams | 
 | 03-13-2023 | Updated Performance requirements <br> Updated class diagram <br> Updated the new screens | 
 | 03-06-2023 | 1.	Updated the content on User Classes and Characteristics <br> 2.	Design and Implementation Constraints <br> 3.	Added the UML Use Case and Sequence and Class Diagrams <br> 4.	Updated the screens like Difficulty Level Screen |
