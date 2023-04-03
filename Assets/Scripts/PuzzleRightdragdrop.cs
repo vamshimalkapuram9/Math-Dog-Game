@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PuzzleRightdragdrop : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PuzzleRightdragdrop : MonoBehaviour
     public GameObject Minus;
     public GameObject Equal;
     public GameObject Answer;
+    public Button nextButton;
 
     public Text NumberOneText;
     public Text NumberTwoText;
@@ -21,11 +23,17 @@ public class PuzzleRightdragdrop : MonoBehaviour
     public Text EqualText;
     public Text AnswerText;
 
+    static bool EqualLocked;
+    static bool NumberOneLocked;
+    static bool NumberTwoLocked;
+    static bool AnswerLocked;
+    static bool MinusLocked;
+
     public Text NumberOneButtonText, NumberTwoButtonText, MinusButtonText, EqualButtonText, AnswerButtonText;
 
     const float PROXIMITY_SENSITIVITY = 20;
 
-    public Text CurrentTextLoc;
+    private Text CurrentTextLoc;
     public Vector2 NumberOneInitialPos, NumberTwoIntialPos, MinusInitialPos, EqualInitialPos, AnswerInitialPos;
 
     // Start is called before the first frame update
@@ -37,8 +45,13 @@ public class PuzzleRightdragdrop : MonoBehaviour
         MinusInitialPos = Minus.transform.position;
         EqualInitialPos = Equal.transform.position;
         AnswerInitialPos = Answer.transform.position;
+        nextButton.gameObject.SetActive(false);
     }
 
+    public void restartPuzzle()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     public void DragObject(GameObject obj)
     {
@@ -81,15 +94,15 @@ public class PuzzleRightdragdrop : MonoBehaviour
         {
             Text TextTxt;
             TextTxt = WhichTextIsNearToThisObject(Obj);
-            Debug.Log(TextTxt.text);
-            Debug.Log(ButtonText.text);
+            //Debug.Log(TextTxt.text);
+            //Debug.Log(ButtonText.text);
             if (TextTxt == null || ButtonText == null || (TextTxt.text != ButtonText.text))
             {
-                Debug.Log("WrongMatch");
+              //  Debug.Log("WrongMatch");
                 return false;
             }
             CurrentTextLoc = TextTxt;
-            Debug.Log("RightMatch");
+            //Debug.Log("RightMatch");
             return true;
         }
 
@@ -101,6 +114,16 @@ public class PuzzleRightdragdrop : MonoBehaviour
 
     }
 
+    private void check_if_all_objects_are_locked()
+    {
+        Debug.Log("satus " + EqualLocked + NumberOneLocked + NumberTwoLocked + AnswerLocked + MinusLocked);
+        if (EqualLocked && NumberOneLocked && NumberTwoLocked && AnswerLocked && MinusLocked)
+        {
+            Debug.Log("All Locked");
+            EqualLocked = NumberOneLocked = NumberTwoLocked = AnswerLocked = MinusLocked = false;
+            nextButton.gameObject.SetActive(true);
+        }
+    }
 
     public void DropObject(GameObject obj)
     {
@@ -109,6 +132,9 @@ public class PuzzleRightdragdrop : MonoBehaviour
             if (AreObjectsNear(obj, NumberOneButtonText))
             {
                 obj.transform.position = CurrentTextLoc.transform.position;
+                NumberOneLocked = true;
+                Debug.Log("NumberOneLocked");
+                check_if_all_objects_are_locked();
             }
             else
             {
@@ -122,6 +148,9 @@ public class PuzzleRightdragdrop : MonoBehaviour
             if (AreObjectsNear(obj, NumberTwoButtonText))
             {
                 obj.transform.position = CurrentTextLoc.transform.position;
+                NumberTwoLocked = true;
+                Debug.Log("NumberTwoLocked");
+                check_if_all_objects_are_locked();
             }
             else
             {
@@ -135,6 +164,9 @@ public class PuzzleRightdragdrop : MonoBehaviour
             if (AreObjectsNear(obj, AnswerButtonText))
             {
                 obj.transform.position = CurrentTextLoc.transform.position;
+                AnswerLocked = true;
+                Debug.Log("AnswerLocked");
+                check_if_all_objects_are_locked();
             }
             else
             {
@@ -148,6 +180,9 @@ public class PuzzleRightdragdrop : MonoBehaviour
             if (AreObjectsNear(obj, MinusButtonText))
             {
                 obj.transform.position = CurrentTextLoc.transform.position;
+                MinusLocked = true;
+                Debug.Log("MinusLocked");
+                check_if_all_objects_are_locked();
             }
             else
             {
@@ -161,6 +196,9 @@ public class PuzzleRightdragdrop : MonoBehaviour
             if (AreObjectsNear(obj, EqualButtonText))
             {
                 obj.transform.position = CurrentTextLoc.transform.position;
+                EqualLocked = true;
+                Debug.Log("EqualLocked");
+                check_if_all_objects_are_locked();
             }
             else
             {
@@ -169,4 +207,5 @@ public class PuzzleRightdragdrop : MonoBehaviour
             return;
         }
     }
+
 }
