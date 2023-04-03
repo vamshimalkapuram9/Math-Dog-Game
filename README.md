@@ -1,6 +1,7 @@
 | Date          | Updates |
 | ------------- | ------------- |
-| March 20 2022| Worked and implemented the test plans for the coding team|
+|April 2 2023| Created another test plan and worked on piplines|
+| March 20 2023| Worked and implemented the test plans for the coding team|
 | March 12 2023| Started working on test plans and artifacts|
 | March 06 2023 |  Created the tables in the github and imported into azure repo  |
 | Feb 27 2023  | Worked on pipelines and test results  |
