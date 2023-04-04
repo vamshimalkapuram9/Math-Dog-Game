@@ -12,11 +12,12 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public SubHarish subHarishScript;
 
-    public GameObject answerPanelObject;
+    GameObject answerPanelObject;
 
+  
     TextMeshProUGUI FirstNumberText;
     TextMeshProUGUI SecondNumberText;
-   public TextMeshProUGUI TextInAnswerPanel;
+    TextMeshProUGUI TextInAnswerPanel;
     public Text buttonText;
 
 
@@ -26,7 +27,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     void Start()
     {
-        TextInAnswerPanel.enabled = false;
+        
     }
 
    // void CheckPanel()
@@ -58,6 +59,20 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         //SecondNumberText TMP
         SecondNumberText = secondChild.GetComponent<TextMeshProUGUI>();
 
+        //Debug.Log(" "+cPanel.transform.GetChild(4).tag);
+
+        answerPanelObject = cPanel.transform.GetChild(4).gameObject;
+
+
+        //TIA Code
+        Transform TIATransform = answerPanelObject.transform.GetChild(0);
+
+        TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
+        TextInAnswerPanel.enabled = false;
+
+        Debug.Log("TIA " + TextInAnswerPanel.text);
+
+        
 
     }
 
@@ -67,6 +82,8 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         initTextsAndVariables();
 
         originalPosition = transform.position;
+
+       
    
     }
 
