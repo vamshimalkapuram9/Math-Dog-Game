@@ -60,7 +60,6 @@
     <Compile Include="Assets/Scripts/PuzzleRightdragdrop.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
     <Compile Include="Assets/Scripts/HarshitaRandomNo.cs" />
-    <Compile Include="Assets/Scripts/Divya-Code/Divya_randomnumbers.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
     <Compile Include="Assets/Scripts/MathSubtraction.cs" />
     <Compile Include="Assets/Scripts/Beginner_PracticeRandom.cs" />
@@ -122,7 +121,9 @@
     <Compile Include="Assets/NewBehaviourScript.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/Scripts/SubHarish.cs" />
-    <Compile Include="Assets/Scripts/Divya-Code/DivyaDragDrop.cs" />
+    <Compile Include="Assets/Scripts/Divya_randomnumbers.cs" />
+    <Compile Include="Assets/Scripts/Divya-Code/Random_numbers.cs" />
+    <Compile Include="Assets/Scripts/Divya-Code/Drag_Drop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro.cginc" />
