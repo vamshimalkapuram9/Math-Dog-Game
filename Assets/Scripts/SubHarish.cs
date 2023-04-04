@@ -8,8 +8,8 @@ using TMPro;
 public class SubHarish : MonoBehaviour
 {
 
-    public TextMeshProUGUI[] firstRandomNumbers;
-    public TextMeshProUGUI[] secondRandomNumbers;
+     List<TextMeshProUGUI> firstRandomNumbers;
+     List<TextMeshProUGUI> secondRandomNumbers;
 
     public Text[] answerTexts;
 
@@ -30,7 +30,6 @@ public class SubHarish : MonoBehaviour
     void Start()
     {
         finalAnswers = GenerateRandomNumbers();
-        initPanelsAndVariables();
     }
 
     //Here is the function to generate the Answer Panels Queue
@@ -39,8 +38,6 @@ public class SubHarish : MonoBehaviour
         
 
         panelsQueue = new Queue<GameObject>();
-
-
         panelsQueue.Enqueue(GameObject.FindWithTag("FirstPanel"));
         panelsQueue.Enqueue(GameObject.FindWithTag("SecondPanel"));
         panelsQueue.Enqueue(GameObject.FindWithTag("ThirdPanel"));
@@ -49,11 +46,47 @@ public class SubHarish : MonoBehaviour
         panelsQueue.Enqueue(GameObject.FindWithTag("SixthPanel"));
 
 
-        presentlyActivePanel = panelsQueue.Dequeue();
 
+        // Initialise @param firstRandomNumbers
+        firstRandomNumbers = new List<TextMeshProUGUI>();
+
+        //Intialise @param secondRandomNumbers
+        secondRandomNumbers = new List<TextMeshProUGUI>();
+
+
+        foreach(GameObject panel in panelsQueue)
+        {
+            Transform leftSideNumber = panel.transform.GetChild(0);
+
+            //Get the TMP Text from the currentChild
+            TextMeshProUGUI firstNumberTMP = leftSideNumber.GetComponent<TextMeshProUGUI>();
+
+            //Add it to our @param firstRandomNumbers
+            firstRandomNumbers.Add(firstNumberTMP);
+
+            //Now let's focus on the right side Numbers
+            Transform rightSideNumber = panel.transform.GetChild(2);
+
+            //Get the TMP Text from the currentChild
+            TextMeshProUGUI secondNumberTMP = rightSideNumber.GetComponent<TextMeshProUGUI>();
+
+            //Add the @param secondNumberTMP to @param secondRandomNumbers
+            secondRandomNumbers.Add(secondNumberTMP);
+
+
+        }
+
+
+
+
+        presentlyActivePanel = panelsQueue.Dequeue();
 
         changePanelTransparency(presentlyActivePanel);
 
+    }
+    
+    void checkFirstChild()
+    {
 
         //Transform firstChild = PresentlyActivePanel.transform.GetChild(0);
 
@@ -61,7 +94,6 @@ public class SubHarish : MonoBehaviour
 
         //Debug.Log(firstText.text);
         ////Debug.Log(PresentlyActivePanel.transform.childCount);
-
 
     }
 
@@ -83,6 +115,9 @@ public class SubHarish : MonoBehaviour
 
     public int[] GenerateRandomNumbers()
     {
+        //First Initialise the panels and Variables
+        initPanelsAndVariables();
+
         int[] firstNosList = new int[6];
         int[] secondNosList = new int[6];
         int randomNumber;
