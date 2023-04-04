@@ -28,27 +28,27 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     }
 
-    void CheckPanel()
-    {
+    //void CheckPanel()
+    //{
 
 
 
-        Transform firstChild = PresentlyActivePanel.transform.GetChild(0);
+    //    Transform firstChild = PresentlyActivePanel.transform.GetChild(0);
 
-        TextMeshProUGUI firstText = firstChild.GetComponent<TextMeshProUGUI>();
+    //    TextMeshProUGUI firstText = firstChild.GetComponent<TextMeshProUGUI>();
 
-        Debug.Log("drag " + firstText.text);
-        //Debug.Log(PresentlyActivePanel.transform.childCount);
+    //    Debug.Log("drag " + firstText.text);
+    //    //Debug.Log(PresentlyActivePanel.transform.childCount);
 
 
 
-    }
+    //}
 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         originalPosition = transform.position;
-        CheckPanel();
+   
     }
 
     public void OnDrag(PointerEventData eventData)
