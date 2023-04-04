@@ -15,7 +15,11 @@ public class SubHarish : MonoBehaviour
 
     public int[] finalAnswers;
 
-    
+    public int panelCount = 0;
+
+    int[] correctAnswersList;
+
+
     //Initialise an Answer Panel Queue
     Queue<GameObject> panelsQueue;
 
@@ -161,6 +165,9 @@ public class SubHarish : MonoBehaviour
         presentlyActivePanel = panelsQueue.Dequeue();
 
         changePanelTransparency(presentlyActivePanel);
+        panelCount++;
+        GenerateAnswerButtons(correctAnswersList[panelCount]);
+
     }
 
     public int[] GenerateRandomNumbers()
@@ -172,7 +179,7 @@ public class SubHarish : MonoBehaviour
         int[] secondNosList = new int[6];
         int randomNumber;
 
-        int[] correctAnswersList = new int[6];
+        correctAnswersList = new int[6];
 
         for (int i =0; i < 6; i ++)
         {
@@ -195,7 +202,7 @@ public class SubHarish : MonoBehaviour
         }
 
        
-        GenerateAnswerButtons(correctAnswersList[0]);
+        GenerateAnswerButtons(correctAnswersList[panelCount]);
 
         
 

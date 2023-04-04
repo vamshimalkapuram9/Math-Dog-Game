@@ -745,8 +745,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
-  answerPanelObject: {fileID: 712593057}
-  TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 1471217827}
 --- !u!1 &223153980
 GameObject:
@@ -1231,8 +1229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
-  answerPanelObject: {fileID: 712593057}
-  TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 1035551511}
 --- !u!1 &268889823
 GameObject:
@@ -1856,8 +1852,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
-  answerPanelObject: {fileID: 712593057}
-  TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 1508945374}
 --- !u!1 &341211465
 GameObject:
@@ -2200,7 +2194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 23
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2514,8 +2508,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
-  answerPanelObject: {fileID: 0}
-  TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 2028373610}
 --- !u!1 &712593057
 GameObject:
@@ -2925,6 +2917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalAnswers: 
+  panelCount: 0
 --- !u!1 &825743037
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,8 +5209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
-  answerPanelObject: {fileID: 712593057}
-  TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 884132561}
 --- !u!1 &1432318161
 GameObject:
@@ -5652,8 +5643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
-  answerPanelObject: {fileID: 712593057}
-  TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 1840458436}
 --- !u!1 &1543513705
 GameObject:
@@ -6129,8 +6118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
-  answerPanelObject: {fileID: 712593057}
-  TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 1192112395}
 --- !u!1 &1773168886
 GameObject:
@@ -6710,6 +6697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalAnswers: 
+  panelCount: 0
 --- !u!1 &1840458434
 GameObject:
   m_ObjectHideFlags: 0
