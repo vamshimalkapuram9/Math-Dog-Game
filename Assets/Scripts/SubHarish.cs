@@ -14,11 +14,72 @@ public class SubHarish : MonoBehaviour
     public Text[] answerTexts;
 
     public int[] finalAnswers;
+
+    
+    //Initialise an Answer Panel Queue
+    Queue<GameObject> panelsQueue;
+
+    //This is the panel that is being answered at the moment
+    GameObject presentlyActivePanel;
+
+    //I have added this in order to change the Alpha of the @param presentlyActivePanel
+    Image panelImage;
+
+
     // Start is called before the first frame update
     void Start()
     {
         finalAnswers = GenerateRandomNumbers();
+        initPanelsAndVariables();
     }
+
+    //Here is the function to generate the Answer Panels Queue
+    void initPanelsAndVariables()
+    {
+        
+
+        panelsQueue = new Queue<GameObject>();
+
+
+        panelsQueue.Enqueue(GameObject.FindWithTag("FirstPanel"));
+        panelsQueue.Enqueue(GameObject.FindWithTag("SecondPanel"));
+        panelsQueue.Enqueue(GameObject.FindWithTag("ThirdPanel"));
+        panelsQueue.Enqueue(GameObject.FindWithTag("FourthPanel"));
+        panelsQueue.Enqueue(GameObject.FindWithTag("FifthPanel"));
+        panelsQueue.Enqueue(GameObject.FindWithTag("SixthPanel"));
+
+
+        presentlyActivePanel = panelsQueue.Dequeue();
+
+
+        changePanelTransparency(presentlyActivePanel);
+
+
+        //Transform firstChild = PresentlyActivePanel.transform.GetChild(0);
+
+        //TextMeshProUGUI firstText = firstChild.GetComponent<TextMeshProUGUI>();
+
+        //Debug.Log(firstText.text);
+        ////Debug.Log(PresentlyActivePanel.transform.childCount);
+
+
+    }
+
+
+    void changePanelTransparency(GameObject currentPanel)
+    {
+        //Generating Transparency
+        panelImage = currentPanel.GetComponent<Image>();
+        Color panelColor = panelImage.color;
+        panelColor.a = 0.3f;
+
+        panelImage.color = panelColor;
+
+    }
+
+
+
+
 
     public int[] GenerateRandomNumbers()
     {
