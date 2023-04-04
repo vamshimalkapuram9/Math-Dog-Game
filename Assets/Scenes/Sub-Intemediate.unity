@@ -745,6 +745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
+  answerPanelObject: {fileID: 712593057}
   TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 1471217827}
 --- !u!1 &223153980
@@ -1230,6 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
+  answerPanelObject: {fileID: 712593057}
   TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 1035551511}
 --- !u!1 &268889823
@@ -1854,6 +1856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
+  answerPanelObject: {fileID: 712593057}
   TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 1508945374}
 --- !u!1 &341211465
@@ -2511,6 +2514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
+  answerPanelObject: {fileID: 0}
   TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 2028373610}
 --- !u!1 &712593057
@@ -5212,6 +5216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
+  answerPanelObject: {fileID: 712593057}
   TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 884132561}
 --- !u!1 &1432318161
@@ -5647,6 +5652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
+  answerPanelObject: {fileID: 712593057}
   TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 1840458436}
 --- !u!1 &1543513705
@@ -6123,6 +6129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subHarishScript: {fileID: 817777120}
+  answerPanelObject: {fileID: 712593057}
   TextInAnswerPanel: {fileID: 557964562}
   buttonText: {fileID: 1192112395}
 --- !u!1 &1773168886
