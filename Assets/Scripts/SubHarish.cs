@@ -8,10 +8,10 @@ using TMPro;
 public class SubHarish : MonoBehaviour
 {
 
-     List<TextMeshProUGUI> firstRandomNumbers;
-     List<TextMeshProUGUI> secondRandomNumbers;
-
-    public Text[] answerTexts;
+    List<TextMeshProUGUI> firstRandomNumbers;
+    List<TextMeshProUGUI> secondRandomNumbers;
+  
+    List<Text> answerTexts;
 
     public int[] finalAnswers;
 
@@ -25,6 +25,8 @@ public class SubHarish : MonoBehaviour
     //I have added this in order to change the Alpha of the @param presentlyActivePanel
     Image panelImage;
 
+    //Answer Buttons Panel
+    GameObject buttonsPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +37,7 @@ public class SubHarish : MonoBehaviour
     //Here is the function to generate the Answer Panels Queue
     void initPanelsAndVariables()
     {
-        
-
+  
         panelsQueue = new Queue<GameObject>();
         panelsQueue.Enqueue(GameObject.FindWithTag("FirstPanel"));
         panelsQueue.Enqueue(GameObject.FindWithTag("SecondPanel"));
@@ -46,13 +47,11 @@ public class SubHarish : MonoBehaviour
         panelsQueue.Enqueue(GameObject.FindWithTag("SixthPanel"));
 
 
-
         // Initialise @param firstRandomNumbers
         firstRandomNumbers = new List<TextMeshProUGUI>();
 
         //Intialise @param secondRandomNumbers
         secondRandomNumbers = new List<TextMeshProUGUI>();
-
 
         foreach(GameObject panel in panelsQueue)
         {
@@ -76,6 +75,30 @@ public class SubHarish : MonoBehaviour
 
         }
 
+        /**
+         * Answer Buttons Panel
+         */
+        buttonsPanel = GameObject.FindWithTag("AnswerButtonsPanel");
+
+        //Initialise the Answers Texts List
+        answerTexts = new List<Text>();
+
+        //Transform component of the panel game object
+        Transform panelTransform = buttonsPanel.GetComponent<Transform>();
+
+        //Loop through all the children of the panel
+
+        for(int i = 0; i < panelTransform.childCount; i++)
+        {
+            Transform childTransform = panelTransform.GetChild(i);
+
+            //Convert the child Transform into Button
+            Button currentAnsButton = childTransform.GetComponent<Button>();
+
+            Text currentAnsText = currentAnsButton.GetComponentInChildren<Text>();
+
+            answerTexts.Add(currentAnsText);
+        }
 
 
 
