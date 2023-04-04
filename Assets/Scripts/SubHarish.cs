@@ -19,6 +19,8 @@ public class SubHarish : MonoBehaviour
 
     int[] correctAnswersList;
 
+    public Button nextBtn;
+
 
     //Initialise an Answer Panel Queue
     Queue<GameObject> panelsQueue;
@@ -110,6 +112,8 @@ public class SubHarish : MonoBehaviour
 
         changePanelTransparency(presentlyActivePanel);
 
+
+        
     }
     
     void checkFirstChild()

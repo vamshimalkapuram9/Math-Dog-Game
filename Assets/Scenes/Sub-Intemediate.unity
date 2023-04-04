@@ -3040,6 +3040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalAnswers: 
   panelCount: 0
+  nextBtn: {fileID: 0}
 --- !u!1 &825743037
 GameObject:
   m_ObjectHideFlags: 0
@@ -6956,6 +6957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalAnswers: 
   panelCount: 0
+  nextBtn: {fileID: 393951691}
 --- !u!1 &1840458434
 GameObject:
   m_ObjectHideFlags: 0
