@@ -6665,14 +6665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cb0da4cd9edc4eedaeec1c304ad7ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  answerTexts:
-  - {fileID: 1035551511}
-  - {fileID: 1192112395}
-  - {fileID: 1471217827}
-  - {fileID: 2028373610}
-  - {fileID: 1840458436}
-  - {fileID: 884132561}
-  - {fileID: 1508945374}
   finalAnswers: 
 --- !u!1 &1840458434
 GameObject:

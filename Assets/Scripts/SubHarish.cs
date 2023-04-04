@@ -134,8 +134,6 @@ public class SubHarish : MonoBehaviour
 
 
 
-
-
     public int[] GenerateRandomNumbers()
     {
         //First Initialise the panels and Variables
@@ -167,7 +165,10 @@ public class SubHarish : MonoBehaviour
             correctAnswersList[i] = firstNosList[i] - secondNosList[i];
         }
 
+       
         GenerateAnswerButtons(correctAnswersList[0]);
+
+        
 
         return correctAnswersList;
         
