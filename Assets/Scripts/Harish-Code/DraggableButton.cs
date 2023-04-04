@@ -26,7 +26,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     void Start()
     {
-     
+        TextInAnswerPanel.enabled = false;
     }
 
    // void CheckPanel()
