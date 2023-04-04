@@ -560,6 +560,7 @@ GameObject:
   - component: {fileID: 229640809}
   - component: {fileID: 229640811}
   - component: {fileID: 229640810}
+  - component: {fileID: 229640812}
   m_Layer: 0
   m_Name: 1object
   m_TagString: Untagged
@@ -625,6 +626,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229640808}
   m_CullTransparentMesh: 1
+--- !u!95 &229640812
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229640808}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &237894543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3904,7 +3925,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8b6a264da40273e489455b0f1cd46ea7, type: 2}
+  - {fileID: 2100000, guid: 7dc0a514f0283034fa62c907f1535802, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
