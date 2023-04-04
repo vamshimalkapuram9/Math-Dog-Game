@@ -12,7 +12,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public SubHarish subHarishScript;
 
-    GameObject answerPanelObject;
+    public GameObject answerPanelObject;
 
     TextMeshProUGUI FirstNumberText;
     TextMeshProUGUI SecondNumberText;
