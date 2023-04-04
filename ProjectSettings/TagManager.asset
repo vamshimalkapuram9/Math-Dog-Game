@@ -19,6 +19,7 @@ TagManager:
   - Ans6Btn
   - Ans7Btn
   - AnswerButtonsPanel
+  - APanel
   layers:
   - Default
   - TransparentFX

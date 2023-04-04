@@ -132,7 +132,36 @@ public class SubHarish : MonoBehaviour
 
     }
 
+    void resetTransparency(GameObject currentPanel)
+    {
+        //Generating Transparency
+        panelImage = currentPanel.GetComponent<Image>();
+        Color panelColor = panelImage.color;
+        panelColor.a = 0f;
 
+        panelImage.color = panelColor;
+
+    }
+
+    public GameObject getCurrentlyActivePanel()
+    {
+        if(this.presentlyActivePanel == null)
+        {
+            Debug.Log("Panel is null");
+            return null;
+        }
+        return this.presentlyActivePanel;
+    }
+
+    public void changeCurrentlyActivePanel()
+    {
+
+        resetTransparency(presentlyActivePanel);
+
+        presentlyActivePanel = panelsQueue.Dequeue();
+
+        changePanelTransparency(presentlyActivePanel);
+    }
 
     public int[] GenerateRandomNumbers()
     {
