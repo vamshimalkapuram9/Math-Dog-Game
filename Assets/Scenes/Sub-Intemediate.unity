@@ -1960,7 +1960,7 @@ GameObject:
   - component: {fileID: 425582563}
   m_Layer: 5
   m_Name: Buttons-Panel
-  m_TagString: Untagged
+  m_TagString: AnswerButtonsPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6665,20 +6665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cb0da4cd9edc4eedaeec1c304ad7ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstRandomNumbers:
-  - {fileID: 1799861483}
-  - {fileID: 294728454}
-  - {fileID: 444637725}
-  - {fileID: 1797987692}
-  - {fileID: 1201516610}
-  - {fileID: 1432318163}
-  secondRandomNumbers:
-  - {fileID: 1118122953}
-  - {fileID: 1387962865}
-  - {fileID: 899367734}
-  - {fileID: 2083225942}
-  - {fileID: 1892803584}
-  - {fileID: 65778478}
   answerTexts:
   - {fileID: 1035551511}
   - {fileID: 1192112395}
