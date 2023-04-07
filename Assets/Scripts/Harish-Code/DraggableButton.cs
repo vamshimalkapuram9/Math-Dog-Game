@@ -5,6 +5,7 @@ using TMPro;
 using System;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -19,6 +20,8 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     TextMeshProUGUI SecondNumberText;
     TextMeshProUGUI TextInAnswerPanel;
     public Text buttonText;
+
+    List<Button> draggableBtns = new();
 
 
    
@@ -64,13 +67,37 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         //TIA Code
         Transform TIATransform = answerPanelObject.transform.GetChild(0);
-
         TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
         TextInAnswerPanel.enabled = false;
 
-        Debug.Log("TIA " + TextInAnswerPanel.text);
+        /**
+         * ========================================
+         *          Button Panel Code 
+         *=========================================
+        */
 
-        
+        // Get AnswerButtons Panel Object
+
+        getButtons();
+
+
+    }
+
+    void getButtons()
+    {
+        GameObject buttonsPanel = GameObject.FindGameObjectWithTag(Tags.ANSWER_BUTTONS_PANEL);
+
+        Button[] buttons = buttonsPanel.GetComponentsInChildren<Button>();
+
+        foreach(Button button in buttons)
+        {
+            draggableBtns.Add(button);
+        }
+
+        foreach (Button button in draggableBtns)
+        {
+            Debug.Log("Btn Tag: " + button.tag);
+        }
 
     }
 
@@ -108,7 +135,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             transform.position = answerPanelObject.transform.position;
 
-            StartCoroutine(WaitTwoSeconds());
+            StartCoroutine(WaitOneSecond());
 
             TextInAnswerPanel.text = correctAnswerValue.ToString();
 
@@ -124,7 +151,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
 
     }
-    IEnumerator WaitTwoSeconds()
+    IEnumerator WaitOneSecond()
     {
         Debug.Log("Coroutine started");
         yield return new WaitForSeconds(1);
@@ -144,6 +171,17 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 
+
+    /**
+     * =========================================================================
+     *                          Code For Animation
+     * =========================================================================
+     */
+
+    public void ShowButton(int index)
+    {
+
+    }
 
 
 }

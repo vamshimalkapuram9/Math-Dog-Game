@@ -39,7 +39,7 @@ public class SubHarish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start Called");
+        Debug.Log("Sub Harish Start Called");
         finalAnswers = GenerateRandomNumbers();
     }
 
@@ -48,12 +48,12 @@ public class SubHarish : MonoBehaviour
     {
   
         panelsQueue = new Queue<GameObject>();
-        panelsQueue.Enqueue(GameObject.FindWithTag("FirstPanel"));
-        panelsQueue.Enqueue(GameObject.FindWithTag("SecondPanel"));
-        panelsQueue.Enqueue(GameObject.FindWithTag("ThirdPanel"));
-        panelsQueue.Enqueue(GameObject.FindWithTag("FourthPanel"));
-        panelsQueue.Enqueue(GameObject.FindWithTag("FifthPanel"));
-        panelsQueue.Enqueue(GameObject.FindWithTag("SixthPanel"));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FIRST_PANEL));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.SECOND_PANEL));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.THIRD_PANEL));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FOURTH_PANEL));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FIFTH_PANEL));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.SIXTH_PANEL));
 
 
         ////Initialise @param panelsMap
@@ -187,9 +187,6 @@ public class SubHarish : MonoBehaviour
 
         changePanelTransparency(presentlyActivePanel);
         panelCount++;
-
-        Debug.Log("pc: " + panelCount.ToString());
-        Debug.Log("Correct Answers: " + finalAnswers[panelCount]);
         GenerateAnswerButtons(finalAnswers[panelCount]);
 
     }
@@ -229,11 +226,7 @@ public class SubHarish : MonoBehaviour
         GenerateAnswerButtons(correctAnswersList[panelCount]);
 
 
-        for(int i = 0; i < correctAnswersList.Length; i++)
-        {
-            Debug.Log("Answer: " + i + ": " + correctAnswersList[i]);
-        }
-        
+       
 
         return correctAnswersList;
         
