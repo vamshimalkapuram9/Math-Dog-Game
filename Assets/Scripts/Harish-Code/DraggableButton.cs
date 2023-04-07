@@ -8,29 +8,27 @@ using System.Collections;
 
 public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private Vector2 originalPosition;
 
+    //For Drag and Drop
+    private Vector2 originalPosition;
+    
     public SubHarish subHarishScript;
 
     GameObject answerPanelObject;
-
-  
     TextMeshProUGUI FirstNumberText;
     TextMeshProUGUI SecondNumberText;
     TextMeshProUGUI TextInAnswerPanel;
     public Text buttonText;
 
 
-    GameObject PresentlyActivePanel;
-
-
+   
 
     void Start()
     {
         
     }
 
-   // void CheckPanel()
+    // void CheckPanel()
     //{
 
 
@@ -97,11 +95,6 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
 
         //transform.position = eventData.pointerCurrentRaycast.gameObject.transform.position;
-
-        if(transform.position == answerPanelObject.transform.position)
-        {
-            Debug.Log("Trigger Something");
-        }
 
         int firstNo = Convert.ToInt32(FirstNumberText.text);
         int secondNo = Convert.ToInt32(SecondNumberText.text);
