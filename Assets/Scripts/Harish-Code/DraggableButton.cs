@@ -98,6 +98,11 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         //transform.position = eventData.pointerCurrentRaycast.gameObject.transform.position;
 
+        if(transform.position == answerPanelObject.transform.position)
+        {
+            Debug.Log("Trigger Something");
+        }
+
         int firstNo = Convert.ToInt32(FirstNumberText.text);
         int secondNo = Convert.ToInt32(SecondNumberText.text);
 
@@ -129,13 +134,21 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     IEnumerator WaitTwoSeconds()
     {
         Debug.Log("Coroutine started");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         Debug.Log("Two seconds have passed");
 
         transform.position = originalPosition;
 
-        subHarishScript.changeCurrentlyActivePanel();
 
+        if (subHarishScript.panelCount < 5)
+        {
+            subHarishScript.changeCurrentlyActivePanel();
+        }
+
+        else
+        {
+            subHarishScript.nextBtn.gameObject.SetActive(true);
+        }
     }
 
 

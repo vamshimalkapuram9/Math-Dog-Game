@@ -37,6 +37,7 @@ public class SubHarish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Start Called");
         finalAnswers = GenerateRandomNumbers();
     }
 
@@ -170,7 +171,10 @@ public class SubHarish : MonoBehaviour
 
         changePanelTransparency(presentlyActivePanel);
         panelCount++;
-        GenerateAnswerButtons(correctAnswersList[panelCount]);
+
+        Debug.Log("pc: " + panelCount.ToString());
+        Debug.Log("Correct Answers: " + finalAnswers[panelCount]);
+        GenerateAnswerButtons(finalAnswers[panelCount]);
 
     }
 
@@ -208,6 +212,11 @@ public class SubHarish : MonoBehaviour
        
         GenerateAnswerButtons(correctAnswersList[panelCount]);
 
+
+        for(int i = 0; i < correctAnswersList.Length; i++)
+        {
+            Debug.Log("Answer: " + i + ": " + correctAnswersList[i]);
+        }
         
 
         return correctAnswersList;
@@ -222,7 +231,7 @@ public class SubHarish : MonoBehaviour
     {
         int[] answerChoices = new int[7];
 
-        int randomPlace = Random.Range(1, 7);
+        int randomPlace = Random.Range(0, 7);
 
         answerChoices[randomPlace] = correctAnswer;
 
@@ -236,11 +245,11 @@ public class SubHarish : MonoBehaviour
             }
             //Ensure that the new random number isn't repeted and isn't the correct answer
 
-            randomAnswer = Random.Range(1, 10);
+            randomAnswer = Random.Range(1, 9);
 
             while (randomAnswer == correctAnswer || answerChoices.Contains(randomAnswer))
             {
-                randomAnswer = Random.Range(1, 10);
+                randomAnswer = Random.Range(1, 9);
             }
 
             answerChoices[i] = randomAnswer;
