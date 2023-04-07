@@ -25,6 +25,8 @@ public class SubHarish : MonoBehaviour
     //Initialise an Answer Panel Queue
     Queue<GameObject> panelsQueue;
 
+    Dictionary<Vector2, GameObject> panelsMap;
+
     //This is the panel that is being answered at the moment
     GameObject presentlyActivePanel;
 
@@ -52,6 +54,20 @@ public class SubHarish : MonoBehaviour
         panelsQueue.Enqueue(GameObject.FindWithTag("FourthPanel"));
         panelsQueue.Enqueue(GameObject.FindWithTag("FifthPanel"));
         panelsQueue.Enqueue(GameObject.FindWithTag("SixthPanel"));
+
+
+        //Initialise @param panelsMap
+        panelsMap = new Dictionary<Vector2, GameObject>();
+
+        foreach(GameObject tPanel in panelsQueue)
+        {
+
+            GameObject answerPanelObject = tPanel.transform.GetChild(4).gameObject;
+
+
+            panelsMap.Add(answerPanelObject.transform.position, tPanel);
+
+        }
 
 
         // Initialise @param firstRandomNumbers
