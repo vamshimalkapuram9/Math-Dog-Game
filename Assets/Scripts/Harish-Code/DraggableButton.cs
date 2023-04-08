@@ -12,7 +12,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     //For Drag and Drop
     private Vector2 originalPosition;
-    
+
     public SubHarish subHarishScript;
 
     GameObject answerPanelObject;
@@ -24,11 +24,11 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     List<Button> draggableBtns = new();
 
 
-   
+
 
     void Start()
     {
-        
+
     }
 
     // void CheckPanel()
@@ -89,7 +89,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         Button[] buttons = buttonsPanel.GetComponentsInChildren<Button>();
 
-        foreach(Button button in buttons)
+        foreach (Button button in buttons)
         {
             draggableBtns.Add(button);
         }
@@ -108,8 +108,8 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         originalPosition = transform.position;
 
-       
-   
+
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -154,8 +154,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     IEnumerator WaitOneSecond()
     {
         Debug.Log("Coroutine started");
-        yield return new WaitForSeconds(1);
-        Debug.Log("Two seconds have passed");
+        yield return new WaitForSeconds(1f);
 
         transform.position = originalPosition;
 
@@ -178,10 +177,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
      * =========================================================================
      */
 
-    public void ShowButton(int index)
-    {
 
-    }
-
-
+    
+    
 }
