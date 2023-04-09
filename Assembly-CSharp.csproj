@@ -88,6 +88,7 @@
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\LoadingSlider.cs" />
+    <Compile Include="Assets\Scripts\Confetti.cs" />
     <Compile Include="Assets\Scripts\RandNum.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
@@ -120,7 +121,6 @@
     <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\SubHarish.cs" />
-    <Compile Include="Assets\Scripts\Confetti.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Image-Assets\TextMesh Pro\Shaders\TMPro.cginc" />
