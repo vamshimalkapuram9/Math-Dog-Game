@@ -5,6 +5,22 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameMusic
+  - FirstPanel
+  - SecondPanel
+  - ThirdPanel
+  - FourthPanel
+  - FifthPanel
+  - SixthPanel
+  - Ans1Btn
+  - Ans2Btn
+  - Ans3Btn
+  - Ans4Btn
+  - Ans5Btn
+  - Ans6Btn
+  - Ans7Btn
+  - AnswerButtonsPanel
+  - APanel
+  - NextBtn
   layers:
   - Default
   - TransparentFX
