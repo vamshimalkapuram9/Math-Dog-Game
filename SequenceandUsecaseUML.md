@@ -1,5 +1,6 @@
 | Date  | Progress |
 | ------------- | ------------- |
+| 10/04/2023 |   Created the function app project and HTTP trigger function for csharp in visual studio|
 | 03/04/2023 | Completed the usecase and sequence uml diagrams |
 | 20/03/2023 | created a mysql database in azure using the resource of mockap and deploy the mockap |
 | 13/03/2023 | Working on c# program for a application and also working on azure features for store the state <br>Also worked on UML diagram and check below for updates|
