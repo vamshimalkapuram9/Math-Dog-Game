@@ -1,5 +1,7 @@
 |Date  | Content |
 | ------------- | ------------- |
+| Apr 10 2023  | •	Worked on the next button in the practice screen |
+| Apr 03 2023  | •	Implemented moving background <br> •	Implemented a advanced practice screen |
 | Mar 20 2023  | •	Completed the generation of random numbers <br> •	Done with drag and drop |
 | Mar 13 2023  | •	Modified the subraction practice screens <br> •	Working on random number generation, drag and drop |
 | Mar 06 2023  | •	Modified screens of subtraction Practice |
