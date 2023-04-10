@@ -1,5 +1,6 @@
 | Date          | Updates |
 | ------------- | ------------- |
+|April 10 2023| Created pipelines for the main branch code |
 |April 2 2023| Created another test plan and worked on piplines|
 | March 20 2023| Worked and implemented the test plans for the coding team|
 | March 12 2023| Started working on test plans and artifacts|
