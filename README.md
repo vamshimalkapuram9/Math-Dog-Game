@@ -1,6 +1,6 @@
 | DATE  | UPDATES |
 | ------------- | ------------- |
-| 04-10-2023 | Updated <br> Stimulus/Responses<br> Functional Requirements <br> Software quality attributes <br> Business Rules <br> 8.Updated new screens
+| 04-10-2023 | Updated <br> Stimulus/Responses<br> Functional Requirements <br> Software quality attributes <br> Business Rules <br> Updated new screens
 | 04-03-2023 | Updated <br> 1.System Features <br> 2.Description and Priorities <br> 5.External Interface Requirements <br> 6.Other Non-Functional Requirements <br> 8.Updated new screens
 | 03-20-2023 | Added Safety Requirements <br> Added Interfaces <br> Updated new screens <br> Update Class and Sequence Diagrams | 
 | 03-13-2023 | Updated Performance requirements <br> Updated class diagram <br> Updated the new screens | 
