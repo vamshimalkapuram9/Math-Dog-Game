@@ -1,6 +1,7 @@
 | Date  | Updates |
 | ------------- | ------------- |
-| Mar 20 2023 | Updated wiki latest screens, Animations<br>Updated wiki with SRS, links<br>Suggested with Dog logo<br>Updated with relationships in class diagram|
+| Apr 10 2023 | Updated wiki with latest screens and animations<br>Suggested with UI samples<br>Updated with relationsships in class diagram|
+| Mar 20 2023 | Updated wiki latest screens, Animations<br>Updated wiki with SRS, links<br>Suggested with Dog logo|
 | Mar 13 2023 | Updated wiki with screens,Features,links<br>did modifications in class diagram|
 | Mar 06 2023 |	Created class diagram for math kids<br> Updated wiki with features,links,screens|
 | Feb 27 2023  | Completed with adding screenshots of screens<br>Adding features to software used, about this app<br>Will work on animated features|
