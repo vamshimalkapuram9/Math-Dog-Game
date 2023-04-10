@@ -1,5 +1,6 @@
 | DATE  | UPDATES |
 | ------------- | ------------- |
+| 04-10-2023 |deployed the code to azure so that it gets directly updated from git to azure |
 | 03-06-2023 | 1)Implementing HTTP API in azure function |
 | 02-26-2023 | 1)writing azure function code<BR>2)Testing Azure function portal |
 | 02-19-2023  | 	1)In function app ,i created Azure for students subscription and ADDED mathkid as a resource groupand created a web api link<BR>2) https://mathkidapi.azurewebsites.net  |
