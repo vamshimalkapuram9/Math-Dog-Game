@@ -70,7 +70,7 @@
     <Compile Include="Assets/Scripts/Random_number.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
-    <Compile Include="Assets/Scripts/Fadeout.cs" />
+    <Compile Include="Assets/Scripts/Pravallika-Code/Fadeout.cs" />
     <Compile Include="Assets/Scripts/RandomNumberQuiz.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
@@ -112,7 +112,7 @@
     <Compile Include="Assets/Scripts/Beginner_BtnRandom.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
     <Compile Include="Assets/Scripts/Advanced_BtnPractice.cs" />
-    <Compile Include="Assets/Scripts/Random_Numbers_and_Objects.cs" />
+    <Compile Include="Assets/Scripts/Pravallika-Code/Random_Numbers_and_Objects.cs" />
     <Compile Include="Assets/Scripts/Drag.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
@@ -120,10 +120,11 @@
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
-    <Compile Include="Assets/Scripts/DragDrop.cs" />
+    <Compile Include="Assets/Scripts/Pravallika-Code/DragDrop.cs" />
     <Compile Include="Assets/Scripts/LevelLoader.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/Scripts/Harish-Code/SubHarish.cs" />
+    <Compile Include="Assets/Saurabh_Studio/Ex Scene/CreateObj.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro.cginc" />

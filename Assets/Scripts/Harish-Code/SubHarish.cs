@@ -326,7 +326,6 @@ public class SubHarish : MonoBehaviour
 
     public void RefreshPuzzle()
     {
-        greenBoardPanel.gameObject.SetActive(false);
 
         //Start NewBoard Couroutine
 
@@ -338,17 +337,17 @@ public class SubHarish : MonoBehaviour
 
         Debug.Log(greenBoardPanel.tag);
 
-        Vector3 originalPos = greenBoardPanel.transform.position;
+        Vector2 originalPos = greenBoardPanel.transform.position;
 
-        Vector3 leftOffScreen = originalPos + new Vector3(-1 * Screen.width, 0,0);
-        Vector3 rightOffScreen = originalPos + new Vector3(Screen.width, 0,0);
+        Vector2 leftOffScreen = originalPos + new Vector2(-1 * Screen.width, 0);
+        Vector2 rightOffScreen = originalPos + new Vector2(Screen.width, 0);
 
         float elapsedTime = 0;
         int moveSpeed = 8;
 
         while(elapsedTime < 1)
         {
-            greenBoardPanel.transform.position = Vector3.Lerp(greenBoardPanel.transform.position, leftOffScreen, Time.deltaTime * moveSpeed);
+            greenBoardPanel.transform.position = Vector2.Lerp(greenBoardPanel.transform.position, leftOffScreen, Time.deltaTime * moveSpeed);
 
             elapsedTime += Time.deltaTime;
 
@@ -362,13 +361,9 @@ public class SubHarish : MonoBehaviour
         int[] numbers = GenerateRandomNumbers();
         resetPanelsAndButtons();
        
-
-
-        greenBoardPanel.gameObject.SetActive(true);
-
         while(elapsedTime < 2)
         {
-            greenBoardPanel.transform.position = Vector3.Lerp(greenBoardPanel.transform.position, rightOffScreen, Time.deltaTime * moveSpeed);
+            greenBoardPanel.transform.position = Vector2.Lerp(greenBoardPanel.transform.position, originalPos, Time.deltaTime * moveSpeed);
             elapsedTime += Time.deltaTime;
 
             yield return null;
