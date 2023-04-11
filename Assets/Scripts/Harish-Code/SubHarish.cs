@@ -21,6 +21,8 @@ public class SubHarish : MonoBehaviour
 
     public Button nextBtn;
 
+    // Text In Answer Panel List
+
 
     //Initialise an Answer Panel Queue
     Queue<GameObject> panelsQueue;
@@ -55,6 +57,8 @@ public class SubHarish : MonoBehaviour
         panelsQueue = new Queue<GameObject>();
 
         getPanels();
+
+       
 
         ////Initialise @param panelsMap
         //panelsMap = new Dictionary<Vector2, GameObject>();
@@ -135,7 +139,27 @@ public class SubHarish : MonoBehaviour
         panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FOURTH_PANEL));
         panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FIFTH_PANEL));
         panelsQueue.Enqueue(GameObject.FindWithTag(Tags.SIXTH_PANEL));
+
+        resetTIAText(panelsQueue);
     }
+
+
+    void resetTIAText(Queue<GameObject> panelsQueue)
+    {
+        foreach(GameObject panel in panelsQueue)
+        {
+            GameObject answerPanelObject = panel.transform.GetChild(4).gameObject;
+
+
+            //TIA Code
+            Transform TIATransform = answerPanelObject.transform.GetChild(0);
+           TextMeshProUGUI TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
+            TextInAnswerPanel.text = "";
+        }
+    }
+
+
+
 
     void getFirstandSecondTMPList()
     {
@@ -187,7 +211,7 @@ public class SubHarish : MonoBehaviour
 
     }
 
-    void resetTransparency(GameObject currentPanel)
+    public void resetTransparency(GameObject currentPanel)
     {
         //Generating Transparency
         panelImage = currentPanel.GetComponent<Image>();
@@ -311,21 +335,26 @@ public class SubHarish : MonoBehaviour
      */
 
 
-    private void resetPanelsAndButtons()
-    {
-        firstRandomNumbers.Clear();
-        secondRandomNumbers.Clear();
-        getPanels();
+    //private void resetPanelsAndButtons()
+    //{
 
-        presentlyActivePanel = panelsQueue.Dequeue();
 
-        changePanelTransparency(presentlyActivePanel);
 
-       }
+    //    firstRandomNumbers.Clear();
+    //    secondRandomNumbers.Clear();
+    //    getPanels();
+
+    //    presentlyActivePanel = panelsQueue.Dequeue();
+
+    //    changePanelTransparency(presentlyActivePanel);
+
+    //}
 
 
     public void RefreshPuzzle()
     {
+       
+
 
         //Start NewBoard Couroutine
 
@@ -358,10 +387,10 @@ public class SubHarish : MonoBehaviour
 
         //Steps to get the Panels and Buttons Again
 
-        int[] numbers = GenerateRandomNumbers();
-        resetPanelsAndButtons();
-       
-        while(elapsedTime < 2)
+        initPanelsAndVariables();
+
+
+        while (elapsedTime < 2)
         {
             greenBoardPanel.transform.position = Vector2.Lerp(greenBoardPanel.transform.position, originalPos, Time.deltaTime * moveSpeed);
             elapsedTime += Time.deltaTime;

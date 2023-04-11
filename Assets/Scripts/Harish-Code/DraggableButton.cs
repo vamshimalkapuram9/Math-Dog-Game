@@ -23,6 +23,8 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     List<Button> draggableBtns = new();
 
+    public GameObject cPanel;
+
 
     // void CheckPanel()
     //{
@@ -45,7 +47,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     void initTextsAndVariables()
     {
         //First of all I get a currently active panel
-        GameObject cPanel = subHarishScript.getCurrentlyActivePanel();
+        cPanel = subHarishScript.getCurrentlyActivePanel();
 
         Transform firstChild = cPanel.transform.GetChild(0);
 
@@ -163,8 +165,10 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         else
         {
+            subHarishScript.resetTransparency(cPanel);
+           
             subHarishScript.nextBtn.gameObject.SetActive(true);
-
+            
             // Need some code for nextBtn click
         }
     }
