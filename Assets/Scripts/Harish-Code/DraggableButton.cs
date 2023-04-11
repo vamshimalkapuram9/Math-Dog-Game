@@ -24,13 +24,6 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     List<Button> draggableBtns = new();
 
 
-
-
-    void Start()
-    {
-
-    }
-
     // void CheckPanel()
     //{
 
@@ -47,9 +40,13 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     //}
 
+
+    
     void initTextsAndVariables()
     {
+        //First of all I get a currently active panel
         GameObject cPanel = subHarishScript.getCurrentlyActivePanel();
+
         Transform firstChild = cPanel.transform.GetChild(0);
 
         //FirstNumberText TMP
@@ -94,10 +91,10 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             draggableBtns.Add(button);
         }
 
-        foreach (Button button in draggableBtns)
-        {
-            Debug.Log("Btn Tag: " + button.tag);
-        }
+        //foreach (Button button in draggableBtns)
+        //{
+        //    Debug.Log("Btn Tag: " + button.tag);
+        //}
 
     }
 
@@ -167,6 +164,8 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         else
         {
             subHarishScript.nextBtn.gameObject.SetActive(true);
+
+            // Need some code for nextBtn click
         }
     }
 
