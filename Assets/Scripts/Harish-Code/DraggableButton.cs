@@ -154,7 +154,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     IEnumerator WaitOneSecond()
     {
         Debug.Log("Coroutine started");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         transform.position = originalPosition;
 

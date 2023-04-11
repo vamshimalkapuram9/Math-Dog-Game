@@ -22,4 +22,8 @@ public static class Tags
     public const string ANSWER_BUTTONS_PANEL = "AnswerButtonsPanel";
 
 
+    // Game Board Panel
+    public const string GREEN_BOARD_PANEL = "BoardTag";
+
+
 }
