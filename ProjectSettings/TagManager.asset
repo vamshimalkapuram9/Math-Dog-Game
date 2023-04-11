@@ -21,6 +21,7 @@ TagManager:
   - AnswerButtonsPanel
   - APanel
   - NextBtn
+  - BoardTag
   layers:
   - Default
   - TransparentFX

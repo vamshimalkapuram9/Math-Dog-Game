@@ -36,11 +36,16 @@ public class SubHarish : MonoBehaviour
     //Answer Buttons Panel
     GameObject buttonsPanel;
 
+    //Green Board Panel
+    GameObject greenBoardPanel;
+
     // Start is called before the first frame update
     void Start()
     {
+        initPanelsAndVariables();
         Debug.Log("Sub Harish Start Called");
         finalAnswers = GenerateRandomNumbers();
+
     }
 
     //Here is the function to generate the Answer Panels Queue
@@ -48,13 +53,8 @@ public class SubHarish : MonoBehaviour
     {
   
         panelsQueue = new Queue<GameObject>();
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FIRST_PANEL));
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.SECOND_PANEL));
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.THIRD_PANEL));
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FOURTH_PANEL));
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FIFTH_PANEL));
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.SIXTH_PANEL));
 
+        getPanels();
 
         ////Initialise @param panelsMap
         //panelsMap = new Dictionary<Vector2, GameObject>();
@@ -76,28 +76,9 @@ public class SubHarish : MonoBehaviour
         //Intialise @param secondRandomNumbers
         secondRandomNumbers = new List<TextMeshProUGUI>();
 
-        foreach(GameObject panel in panelsQueue)
-        {
-            Transform leftSideNumber = panel.transform.GetChild(0);
+        getFirstandSecondTMPList();
 
-            //Get the TMP Text from the currentChild
-            TextMeshProUGUI firstNumberTMP = leftSideNumber.GetComponent<TextMeshProUGUI>();
-
-            //Add it to our @param firstRandomNumbers
-            firstRandomNumbers.Add(firstNumberTMP);
-
-            //Now let's focus on the right side Numbers
-            Transform rightSideNumber = panel.transform.GetChild(2);
-
-            //Get the TMP Text from the currentChild
-            TextMeshProUGUI secondNumberTMP = rightSideNumber.GetComponent<TextMeshProUGUI>();
-
-            //Add the @param secondNumberTMP to @param secondRandomNumbers
-            secondRandomNumbers.Add(secondNumberTMP);
-
-
-        }
-
+        
         /**
          * Answer Buttons Panel
          */
@@ -130,9 +111,58 @@ public class SubHarish : MonoBehaviour
         changePanelTransparency(presentlyActivePanel);
 
 
+        // Connect the Board to Tag
+
+       greenBoardPanel = GameObject.FindGameObjectWithTag(Tags.GREEN_BOARD_PANEL);
+
+
         
     }
+
     
+
+
+    /**
+     * Since Panels Get Dequeued we need to call them again in the animation function
+     */
+
+    void getPanels()
+    {
+        panelCount = 0;
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FIRST_PANEL));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.SECOND_PANEL));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.THIRD_PANEL));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FOURTH_PANEL));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FIFTH_PANEL));
+        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.SIXTH_PANEL));
+    }
+
+    void getFirstandSecondTMPList()
+    {
+        foreach (GameObject panel in panelsQueue)
+        {
+            Transform leftSideNumber = panel.transform.GetChild(0);
+
+            //Get the TMP Text from the currentChild
+            TextMeshProUGUI firstNumberTMP = leftSideNumber.GetComponent<TextMeshProUGUI>();
+
+            //Add it to our @param firstRandomNumbers
+            firstRandomNumbers.Add(firstNumberTMP);
+
+            //Now let's focus on the right side Numbers
+            Transform rightSideNumber = panel.transform.GetChild(2);
+
+            //Get the TMP Text from the currentChild
+            TextMeshProUGUI secondNumberTMP = rightSideNumber.GetComponent<TextMeshProUGUI>();
+
+            //Add the @param secondNumberTMP to @param secondRandomNumbers
+            secondRandomNumbers.Add(secondNumberTMP);
+
+
+        }
+
+    }
+
     void checkFirstChild()
     {
 
@@ -193,8 +223,8 @@ public class SubHarish : MonoBehaviour
 
     public int[] GenerateRandomNumbers()
     {
-        //First Initialise the panels and Variables
-        initPanelsAndVariables();
+        ////First Initialise the panels and Variables
+        //initPanelsAndVariables();
 
         int[] firstNosList = new int[6];
         int[] secondNosList = new int[6];
@@ -271,6 +301,86 @@ public class SubHarish : MonoBehaviour
         }
 
 
+    }
+
+
+    /**
+     *==========================================
+     *          Code For Animation 
+     *============================================ 
+     */
+
+
+    private void resetPanelsAndButtons()
+    {
+        firstRandomNumbers.Clear();
+        secondRandomNumbers.Clear();
+        getPanels();
+
+        presentlyActivePanel = panelsQueue.Dequeue();
+
+        changePanelTransparency(presentlyActivePanel);
+
+       }
+
+
+    public void RefreshPuzzle()
+    {
+        greenBoardPanel.gameObject.SetActive(false);
+
+        //Start NewBoard Couroutine
+
+        StartCoroutine(newBoardAnimation());
+    }
+
+    private IEnumerator newBoardAnimation()
+    {
+
+        Debug.Log(greenBoardPanel.tag);
+
+        Vector3 originalPos = greenBoardPanel.transform.position;
+
+        Vector3 leftOffScreen = originalPos + new Vector3(-1 * Screen.width, 0,0);
+        Vector3 rightOffScreen = originalPos + new Vector3(Screen.width, 0,0);
+
+        float elapsedTime = 0;
+        int moveSpeed = 8;
+
+        while(elapsedTime < 1)
+        {
+            greenBoardPanel.transform.position = Vector3.Lerp(greenBoardPanel.transform.position, leftOffScreen, Time.deltaTime * moveSpeed);
+
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+
+        greenBoardPanel.transform.position = rightOffScreen;
+
+        //Steps to get the Panels and Buttons Again
+
+        int[] numbers = GenerateRandomNumbers();
+        resetPanelsAndButtons();
+       
+
+
+        greenBoardPanel.gameObject.SetActive(true);
+
+        while(elapsedTime < 2)
+        {
+            greenBoardPanel.transform.position = Vector3.Lerp(greenBoardPanel.transform.position, rightOffScreen, Time.deltaTime * moveSpeed);
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+
+
+
+        greenBoardPanel.transform.position = originalPos;
+
+        yield return null;
+
+             
     }
 
 
