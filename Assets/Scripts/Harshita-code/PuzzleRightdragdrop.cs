@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class NewPuzzleRightdragdrop : MonoBehaviour
+public class PuzzleRightdragdrop : MonoBehaviour
 {
     public GameObject NumberOne;
     public GameObject NumberTwo;
@@ -29,8 +29,6 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
     static bool AnswerLocked;
     static bool MinusLocked;
 
-    static bool showConfetti = false;
-
     public Text NumberOneButtonText, NumberTwoButtonText, MinusButtonText, EqualButtonText, AnswerButtonText;
 
     const float PROXIMITY_SENSITIVITY = 100;
@@ -47,19 +45,27 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
         MinusInitialPos = Minus.transform.position;
         EqualInitialPos = Equal.transform.position;
         AnswerInitialPos = Answer.transform.position;
+
         nextButton.gameObject.SetActive(false);
+
+        nextButton.onClick.AddListener(onMouseClick);
+
     }
 
     public void restartPuzzle()
     {
         StartCoroutine(RestartPuzzleCoroutine());
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     private IEnumerator RestartPuzzleCoroutine()
     {
-        yield return new WaitForSeconds(1f); // wait for 1 second
+        yield return new WaitForSeconds(0.7f); // wait for 1 second
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
+
 
     public void DragObject(GameObject obj)
     {
@@ -125,20 +131,22 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
     private void check_if_all_objects_are_locked()
     {
         Debug.Log("satus " + EqualLocked + NumberOneLocked + NumberTwoLocked + AnswerLocked + MinusLocked);
+        
         if (EqualLocked && NumberOneLocked && NumberTwoLocked && AnswerLocked && MinusLocked)
         {
             Debug.Log("All Locked");
             EqualLocked = NumberOneLocked = NumberTwoLocked = AnswerLocked = MinusLocked = false;
             nextButton.gameObject.SetActive(true);
-            OnMouseClick();
+
         }
     }
 
-    private void OnMouseClick()
+    private void onMouseClick()
     {
-        showConfetti = true;
-        SceneManager.LoadScene("HarshitaConfetti", LoadSceneMode.Additive);
+      
 
+            SceneManager.LoadScene("HarshitaConfetti");
+      
     }
 
     public void DropObject(GameObject obj)
@@ -150,6 +158,9 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
                 obj.transform.position = CurrentTextLoc.transform.position;
                 NumberOneLocked = true;
                 Debug.Log("NumberOneLocked");
+
+                NumberOne.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+
                 check_if_all_objects_are_locked();
             }
             else
@@ -166,6 +177,9 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
                 obj.transform.position = CurrentTextLoc.transform.position;
                 NumberTwoLocked = true;
                 Debug.Log("NumberTwoLocked");
+
+                NumberTwo.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+
                 check_if_all_objects_are_locked();
             }
             else
@@ -182,6 +196,9 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
                 obj.transform.position = CurrentTextLoc.transform.position;
                 AnswerLocked = true;
                 Debug.Log("AnswerLocked");
+
+                Answer.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+
                 check_if_all_objects_are_locked();
             }
             else
@@ -198,6 +215,9 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
                 obj.transform.position = CurrentTextLoc.transform.position;
                 MinusLocked = true;
                 Debug.Log("MinusLocked");
+
+                Minus.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+
                 check_if_all_objects_are_locked();
             }
             else
@@ -214,6 +234,9 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
                 obj.transform.position = CurrentTextLoc.transform.position;
                 EqualLocked = true;
                 Debug.Log("EqualLocked");
+
+                Equal.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+
                 check_if_all_objects_are_locked();
             }
             else
@@ -222,6 +245,7 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
             }
             return;
         }
+
     }
 
 }

@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Confetti.unity
     guid: 7c91ab3f58c4399418040e907f70af2a
+  - enabled: 1
+    path: Assets/Scenes/HarshitaConfetti.unity
+    guid: 5edce6091e5042d418e513d20c2a95f7
   m_configObjects: {}
