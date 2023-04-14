@@ -29,12 +29,21 @@ public class PuzzleRightdragdrop : MonoBehaviour
     static bool AnswerLocked;
     static bool MinusLocked;
 
+    public GameObject NumberOnePanel;
+    public GameObject NumberTwoPanel;
+    public GameObject MinusPanel;
+    public GameObject EqualPanel;
+    public GameObject AnswerPanel;
+   
+
     public Text NumberOneButtonText, NumberTwoButtonText, MinusButtonText, EqualButtonText, AnswerButtonText;
 
-    const float PROXIMITY_SENSITIVITY = 100;
+    const float PROXIMITY_SENSITIVITY = 80;
 
     private Text CurrentTextLoc;
     public Vector2 NumberOneInitialPos, NumberTwoIntialPos, MinusInitialPos, EqualInitialPos, AnswerInitialPos;
+
+    private int count = 0; // used to count number of times the next button is clicked
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +64,8 @@ public class PuzzleRightdragdrop : MonoBehaviour
     public void restartPuzzle()
     {
         StartCoroutine(RestartPuzzleCoroutine());
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
 
@@ -63,7 +73,8 @@ public class PuzzleRightdragdrop : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f); // wait for 1 second
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
+       
+
     }
 
 
@@ -117,6 +128,7 @@ public class PuzzleRightdragdrop : MonoBehaviour
             }
             CurrentTextLoc = TextTxt;
             //Debug.Log("RightMatch");
+
             return true;
         }
 
@@ -131,121 +143,133 @@ public class PuzzleRightdragdrop : MonoBehaviour
     private void check_if_all_objects_are_locked()
     {
         Debug.Log("satus " + EqualLocked + NumberOneLocked + NumberTwoLocked + AnswerLocked + MinusLocked);
-        
+
         if (EqualLocked && NumberOneLocked && NumberTwoLocked && AnswerLocked && MinusLocked)
         {
             Debug.Log("All Locked");
             EqualLocked = NumberOneLocked = NumberTwoLocked = AnswerLocked = MinusLocked = false;
             nextButton.gameObject.SetActive(true);
 
+            // Add the following line to make the panel transparent:
+
+            NumberOnePanel.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+            NumberTwoPanel.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+            AnswerPanel.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+            MinusPanel.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+            EqualPanel.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+
         }
     }
+
 
     private void onMouseClick()
     {
-      
+        SceneManager.LoadScene("HarshitaConfetti");
+        Debug.Log("Confetti loading");
 
-            SceneManager.LoadScene("HarshitaConfetti");
-      
     }
 
     public void DropObject(GameObject obj)
-    {
-        if (obj == NumberOne)
         {
-            if (AreObjectsNear(obj, NumberOneButtonText))
+            if (obj == NumberOne)
             {
-                obj.transform.position = CurrentTextLoc.transform.position;
-                NumberOneLocked = true;
-                Debug.Log("NumberOneLocked");
+                if (AreObjectsNear(obj, NumberOneButtonText))
+                {
+                    obj.transform.position = CurrentTextLoc.transform.position;
+                    NumberOneLocked = true;
+                    Debug.Log("NumberOneLocked");
 
-                NumberOne.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                    NumberOne.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                   
 
                 check_if_all_objects_are_locked();
+                }
+                else
+                {
+                    obj.transform.position = NumberOneInitialPos;
+                }
+                return;
             }
-            else
-            {
-                obj.transform.position = NumberOneInitialPos;
-            }
-            return;
-        }
 
-        if (obj == NumberTwo)
-        {
-            if (AreObjectsNear(obj, NumberTwoButtonText))
+            if (obj == NumberTwo)
             {
-                obj.transform.position = CurrentTextLoc.transform.position;
-                NumberTwoLocked = true;
-                Debug.Log("NumberTwoLocked");
+                if (AreObjectsNear(obj, NumberTwoButtonText))
+                {
+                    obj.transform.position = CurrentTextLoc.transform.position;
+                    NumberTwoLocked = true;
+                    Debug.Log("NumberTwoLocked");
 
-                NumberTwo.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                    NumberTwo.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                
 
                 check_if_all_objects_are_locked();
+                }
+                else
+                {
+                    obj.transform.position = NumberTwoIntialPos;
+                }
+                return;
             }
-            else
+
+            if (obj == Answer)
             {
-                obj.transform.position = NumberTwoIntialPos;
+                if (AreObjectsNear(obj, AnswerButtonText))
+                {
+                    obj.transform.position = CurrentTextLoc.transform.position;
+                    AnswerLocked = true;
+                    Debug.Log("AnswerLocked");
+
+                    Answer.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                
+                check_if_all_objects_are_locked();
+                }
+                else
+                {
+                    obj.transform.position = AnswerInitialPos;
+                }
+                return;
             }
-            return;
-        }
 
-        if (obj == Answer)
-        {
-            if (AreObjectsNear(obj, AnswerButtonText))
+            if (obj == Minus)
             {
-                obj.transform.position = CurrentTextLoc.transform.position;
-                AnswerLocked = true;
-                Debug.Log("AnswerLocked");
+                if (AreObjectsNear(obj, MinusButtonText))
+                {
+                    obj.transform.position = CurrentTextLoc.transform.position;
+                    MinusLocked = true;
+                    Debug.Log("MinusLocked");
 
-                Answer.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                    Minus.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+               
 
                 check_if_all_objects_are_locked();
+                }
+                else
+                {
+                    obj.transform.position = MinusInitialPos;
+                }
+                return;
             }
-            else
-            {
-                obj.transform.position = AnswerInitialPos;
-            }
-            return;
-        }
 
-        if (obj == Minus)
-        {
-            if (AreObjectsNear(obj, MinusButtonText))
+            if (obj == Equal)
             {
-                obj.transform.position = CurrentTextLoc.transform.position;
-                MinusLocked = true;
-                Debug.Log("MinusLocked");
+                if (AreObjectsNear(obj, EqualButtonText))
+                {
+                    obj.transform.position = CurrentTextLoc.transform.position;
+                    EqualLocked = true;
+                    Debug.Log("EqualLocked");
 
-                Minus.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                    Equal.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+
 
                 check_if_all_objects_are_locked();
+                }
+                else
+                {
+                    obj.transform.position = EqualInitialPos;
+                }
+                return;
             }
-            else
-            {
-                obj.transform.position = MinusInitialPos;
-            }
-            return;
-        }
-
-        if (obj == Equal)
-        {
-            if (AreObjectsNear(obj, EqualButtonText))
-            {
-                obj.transform.position = CurrentTextLoc.transform.position;
-                EqualLocked = true;
-                Debug.Log("EqualLocked");
-
-                Equal.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-
-                check_if_all_objects_are_locked();
-            }
-            else
-            {
-                obj.transform.position = EqualInitialPos;
-            }
-            return;
-        }
 
     }
-
 }
+

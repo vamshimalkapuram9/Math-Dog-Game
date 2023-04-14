@@ -98,9 +98,11 @@
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Scripts\RandomObjects.cs" />
     <Compile Include="Assets\Scripts\Harish-Code\DraggableButton.cs" />
+    <Compile Include="Assets\Scripts\PuzzleRightdragdrop.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\Objects_Math_Addition.cs" />
+    <Compile Include="Assets\Scripts\Harshita-code\PuzzleConfetti.cs" />
     <Compile Include="Assets\Scripts\Harshita-code\KidMathd.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Sparrow.cs" />
@@ -125,8 +127,7 @@
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\Harish-Code\SubHarish.cs" />
-    <Compile Include="Assets\Scripts\Harshita-code\PuzzleConfetti.cs" />
-    <Compile Include="Assets\Scripts\PuzzleRightdragdrop.cs" />
+    <Compile Include="Assets\Scripts\Harshita-code\ButtonMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Image-Assets\TextMesh Pro\Shaders\TMPro.cginc" />
