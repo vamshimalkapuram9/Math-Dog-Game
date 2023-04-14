@@ -58,21 +58,6 @@ public class SubHarish : MonoBehaviour
 
         getPanels();
 
-       
-
-        ////Initialise @param panelsMap
-        //panelsMap = new Dictionary<Vector2, GameObject>();
-
-        //foreach(GameObject tPanel in panelsQueue)
-        //{
-
-        //    GameObject answerPanelObject = tPanel.transform.GetChild(4).gameObject;
-
-
-        //    panelsMap.Add(answerPanelObject.transform.position, tPanel);
-
-        //}
-
 
         // Initialise @param firstRandomNumbers
         firstRandomNumbers = new List<TextMeshProUGUI>();
@@ -335,20 +320,15 @@ public class SubHarish : MonoBehaviour
      */
 
 
-    //private void resetPanelsAndButtons()
-    //{
+    private void resetPanelsAndButtons()
+    {
 
 
 
-    //    firstRandomNumbers.Clear();
-    //    secondRandomNumbers.Clear();
-    //    getPanels();
+        firstRandomNumbers.Clear();
+        secondRandomNumbers.Clear();
 
-    //    presentlyActivePanel = panelsQueue.Dequeue();
-
-    //    changePanelTransparency(presentlyActivePanel);
-
-    //}
+    }
 
 
     public void RefreshPuzzle()
@@ -385,9 +365,18 @@ public class SubHarish : MonoBehaviour
 
         greenBoardPanel.transform.position = rightOffScreen;
 
-        //Steps to get the Panels and Buttons Again
+        /**
+         * ================================================
+         *              CODE TO RESTART THE BOARD
+         */
 
+        resetPanelsAndButtons();
         initPanelsAndVariables();
+        finalAnswers = GenerateRandomNumbers();
+
+        /**
+         * ================================================
+         */
 
 
         while (elapsedTime < 2)
