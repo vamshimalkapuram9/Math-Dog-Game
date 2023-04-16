@@ -29,22 +29,21 @@ public class PuzzleRightdragdrop : MonoBehaviour
     static bool AnswerLocked;
     static bool MinusLocked;
 
-    static int count = 0;
-
     public GameObject NumberOnePanel;
     public GameObject NumberTwoPanel;
     public GameObject MinusPanel;
     public GameObject EqualPanel;
     public GameObject AnswerPanel;
    
-    
+
     public Text NumberOneButtonText, NumberTwoButtonText, MinusButtonText, EqualButtonText, AnswerButtonText;
 
     const float PROXIMITY_SENSITIVITY = 80;
 
     private Text CurrentTextLoc;
-    private GameObject panelObject;
     public Vector2 NumberOneInitialPos, NumberTwoIntialPos, MinusInitialPos, EqualInitialPos, AnswerInitialPos;
+
+    private int count = 0; // used to count number of times the next button is clicked
 
     // Start is called before the first frame update
     void Start()
@@ -58,97 +57,78 @@ public class PuzzleRightdragdrop : MonoBehaviour
 
         nextButton.gameObject.SetActive(false);
 
-        //nextButton.onClick.AddListener(onMouseClick);
+        nextButton.onClick.AddListener(onMouseClick);
 
     }
 
     public void restartPuzzle()
     {
-        count++;
-        if (count % 2 == 0)
-        {
-            SceneManager.LoadScene("HarshitaConfetti");
-            Debug.Log("Confetti loading");
-            count = 0;
-        }
-
-        else 
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
+        StartCoroutine(RestartPuzzleCoroutine());
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
 
-    //private IEnumerator RestartPuzzleCoroutine()
-    //{
-    //    yield return new WaitForSeconds(0.7f); // wait for 1 second
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  
-    //}
+    private IEnumerator RestartPuzzleCoroutine()
+    {
+        yield return new WaitForSeconds(0.7f); // wait for 1 second
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+       
+
+    }
+
 
     public void DragObject(GameObject obj)
     {
         obj.transform.position = Input.mousePosition;
     }
 
-    private (Text, GameObject) WhichTextIsNearToThisObject(GameObject obj)
+    private Text WhichTextIsNearToThisObject(GameObject obj)
     {
         if (Vector3.Distance(obj.transform.position, NumberOneText.transform.position) <= PROXIMITY_SENSITIVITY)
         {
-            return (NumberOneText, NumberOnePanel);
+            return (NumberOneText);
         }
 
         if (Vector3.Distance(obj.transform.position, NumberTwoText.transform.position) <= PROXIMITY_SENSITIVITY)
         {
-            return (NumberTwoText, NumberTwoPanel);
+            return (NumberTwoText);
         }
 
         if (Vector3.Distance(obj.transform.position, EqualText.transform.position) <= PROXIMITY_SENSITIVITY)
         {
-            return (EqualText, EqualPanel);
+            return (EqualText);
         }
 
         if (Vector3.Distance(obj.transform.position, MinusText.transform.position) <= PROXIMITY_SENSITIVITY)
         {
-            return (MinusText, MinusPanel);
+            return (MinusText);
         }
 
         if (Vector3.Distance(obj.transform.position, AnswerText.transform.position) <= PROXIMITY_SENSITIVITY)
         {
-            return (AnswerText, AnswerPanel);
+            return (AnswerText);
         }
 
-        //if it reaches here it means that, I am in empty space
-        return (null, null);
+        return (null);
     }
 
-
-    /*
-     * This functions job is if it finds the right match i.e
-     * If the button is dropped on to right panel then it must
-     * return true else for anyother case which is either null 
-     * or wrong object then return false
-     */
     public bool AreObjectsNear(GameObject Obj, Text ButtonText)
     {
         try
         {
             Text TextTxt;
-
-            //This functions job is to give if the button is around an empty space
-            //or near an object
-            var ret = WhichTextIsNearToThisObject(Obj);
-            TextTxt = ret.Item1;
-            panelObject = ret.Item2;
-
-            //If the nearby panel is empty or wrong return false
+            TextTxt = WhichTextIsNearToThisObject(Obj);
+            //Debug.Log(TextTxt.text);
+            //Debug.Log(ButtonText.text);
             if (TextTxt == null || ButtonText == null || (TextTxt.text != ButtonText.text))
             {
+                //  Debug.Log("WrongMatch");
                 return false;
             }
-
-            //if it enter here's it means that the object is in the right place
             CurrentTextLoc = TextTxt;
+            //Debug.Log("RightMatch");
+
             return true;
         }
 
@@ -162,7 +142,7 @@ public class PuzzleRightdragdrop : MonoBehaviour
 
     private void check_if_all_objects_are_locked()
     {
-        Debug.Log("status " + EqualLocked + NumberOneLocked + NumberTwoLocked + AnswerLocked + MinusLocked);
+        Debug.Log("satus " + EqualLocked + NumberOneLocked + NumberTwoLocked + AnswerLocked + MinusLocked);
 
         if (EqualLocked && NumberOneLocked && NumberTwoLocked && AnswerLocked && MinusLocked)
         {
@@ -170,70 +150,42 @@ public class PuzzleRightdragdrop : MonoBehaviour
             EqualLocked = NumberOneLocked = NumberTwoLocked = AnswerLocked = MinusLocked = false;
             nextButton.gameObject.SetActive(true);
 
-            //This is the code to make the panel text transparent after drag and dropping
+            // Add the following line to make the panel transparent:
 
-            NumberOneButtonText.color = new Color(1f, 1f, 1f, 0f);
-            NumberTwoButtonText.color = new Color(1f, 1f, 1f, 0f);
-            AnswerButtonText.color = new Color(1f, 1f, 1f, 0f);
-            MinusButtonText.color = new Color(1f, 1f, 1f, 0f);
-            EqualButtonText.color = new Color(1f, 1f, 1f, 0f);
-
-
-            // this code to move the numbers to the middle of the screen
-
-            NumberOneText.transform.position = new Vector2((Screen.width / 2f) - 225, Screen.height / 2f);
-            NumberOneText.color = new Color(1f, 1f, 1f, 1f);
-
-            MinusText.transform.position = new Vector2((Screen.width / 2f) - 125, Screen.height / 2f);
-            MinusText.color = new Color(1f, 1f, 1f, 1f);
-
-            NumberTwoText.transform.position = new Vector2((Screen.width / 2f), Screen.height / 2f);
-            NumberTwoText.color = new Color(1f, 1f, 1f, 1f);
-
-            EqualText.transform.position = new Vector2((Screen.width / 2f) + 125, Screen.height / 2f);
-            EqualText.color = new Color(1f, 1f, 1f, 1f);
-
-            AnswerText.transform.position = new Vector2((Screen.width / 2f) + 225, Screen.height / 2f);
-            AnswerText.color = new Color(1f, 1f, 1f, 1f);
+            NumberOnePanel.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+            NumberTwoPanel.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+            AnswerPanel.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+            MinusPanel.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+            EqualPanel.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
 
         }
     }
 
 
-/*    private void onMouseClick()
+    private void onMouseClick()
     {
-
+        SceneManager.LoadScene("HarshitaConfetti");
+        Debug.Log("Confetti loading");
 
     }
-*/
+
     public void DropObject(GameObject obj)
         {
             if (obj == NumberOne)
             {
                 if (AreObjectsNear(obj, NumberOneButtonText))
                 {
-                    /*if it enters here it means that we need to lock this object
-                     * and make the pannel, button disappear
-                     */
-
-                    //This will lock the position of button
                     obj.transform.position = CurrentTextLoc.transform.position;
-
-                    //Setting a global variable to indicate that the number one is blocked
                     NumberOneLocked = true;
                     Debug.Log("NumberOneLocked");
-                    
-                    //Change the button and panel transperency 
-                    NumberOne.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-                    panelObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-                    
-                    // check if all objects are locked or not
-                    check_if_all_objects_are_locked();
 
+                    NumberOne.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                   
+
+                check_if_all_objects_are_locked();
                 }
                 else
                 {
-                    //If it enters here it means that return back to same position
                     obj.transform.position = NumberOneInitialPos;
                 }
                 return;
@@ -248,9 +200,9 @@ public class PuzzleRightdragdrop : MonoBehaviour
                     Debug.Log("NumberTwoLocked");
 
                     NumberTwo.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-                    panelObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                
 
-                    check_if_all_objects_are_locked();
+                check_if_all_objects_are_locked();
                 }
                 else
                 {
@@ -268,8 +220,7 @@ public class PuzzleRightdragdrop : MonoBehaviour
                     Debug.Log("AnswerLocked");
 
                     Answer.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-                    panelObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-
+                
                 check_if_all_objects_are_locked();
                 }
                 else
@@ -287,9 +238,8 @@ public class PuzzleRightdragdrop : MonoBehaviour
                     MinusLocked = true;
                     Debug.Log("MinusLocked");
 
-                    //change button transperency 
                     Minus.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-                    panelObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+               
 
                 check_if_all_objects_are_locked();
                 }
@@ -309,9 +259,9 @@ public class PuzzleRightdragdrop : MonoBehaviour
                     Debug.Log("EqualLocked");
 
                     Equal.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-                    panelObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
 
-                    check_if_all_objects_are_locked();
+
+                check_if_all_objects_are_locked();
                 }
                 else
                 {
