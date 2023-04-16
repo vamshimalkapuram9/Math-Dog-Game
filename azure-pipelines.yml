@@ -1,4 +1,13 @@
 # Starter pipeline
+- task: AppCenterDistribute@3
+  inputs:
+    appFile: 
+    releaseNotesOption: 'input'
+    destinationType: 'Environments'
+- task: SSH@0
+  inputs:
+    runOptions: 'script'
+    readyTimeout: '20000'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
