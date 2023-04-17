@@ -1,6 +1,7 @@
 | Date  | Updates |
 | ------------- | ------------- |
-| April 10 2023 |	Completed the business logic for Subtraction Puzzle Screen |
+| April 17 2023 |	Made the panels and buttons transparent after dropping <br> Moved the numbers to the middle of the screen after being dropped|
+| April 10 2023 |	Made the buttons transparent after dropping |
 | April 3 2023 |	Moving to the next screen after dragging and dropping all buttons in the Subtraction Puzzle screen |
 | Mar 20 2023 |	Added drag and drop of buttons to the right panel |
 | Mar 13 2023 |	Created Random number generation for Subtraction Puzzle screen <br> Modified the background for Subtraction Puzzle screen |
