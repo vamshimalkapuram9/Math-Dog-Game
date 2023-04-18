@@ -89,9 +89,9 @@ public class PuzzleRightdragdrop : MonoBehaviour
     public void DragObject(GameObject obj)
     {
         //obj.transform.position = Input.mousePosition;
-        var screenPoint = Input.mousePosition;
+        var screenPoint = Input.mousePosition;  
         screenPoint.z = 10.0f; //distance of the plane from the camera
-        transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
+        obj.transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
     }
 
     private (Text, GameObject) WhichTextIsNearToThisObject(GameObject obj)
@@ -190,24 +190,32 @@ public class PuzzleRightdragdrop : MonoBehaviour
 
 
             // this code to move the numbers to the middle of the screen
-
+            //NumberOneText.transform.position = new Vector3((Screen.width / 2f), Screen.height / 2f, -15f);
+            RectTransform noOneTxtRT = NumberOneText.GetComponent<RectTransform>();
+            noOneTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 600), Screen.height/2f - 350, 10f);
             NumberOneText.color = new Color(1f, 1f, 1f, 1f);
+
+            //MinusText.transform.position = new Vector3((Screen.width / 2f) - 125, Screen.height / 2f, 15f); This is for 2D
+            RectTransform minusTxtRT = MinusText.GetComponent<RectTransform>();
+            minusTxtRT.anchoredPosition = new Vector3((Screen.width / 2f -650), Screen.height / 2f - 350, 10f);
             MinusText.color = new Color(1f, 1f, 1f, 1f);
+
+            //NumberTwoText.transform.position = new Vector3((Screen.width / 2f), Screen.height / 2f, 15f);
+            RectTransform noTwoTxtRT = NumberTwoText.GetComponent<RectTransform>();
+            noTwoTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 680), Screen.height / 2f - 350, 10f);
             NumberTwoText.color = new Color(1f, 1f, 1f, 1f);
+
+            //EqualText.transform.position = new Vector3((Screen.width / 2f) + 125, Screen.height / 2f, 15f);
+            RectTransform equalTxtRT = EqualText.GetComponent<RectTransform>();
+            equalTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 700), Screen.height / 2f - 350, 10f);
             EqualText.color = new Color(1f, 1f, 1f, 1f);
+
+            //AnswerText.transform.position = new Vector3((Screen.width / 2f) + 225, Screen.height / 2f, 15f);
+            RectTransform answerTxtRT = AnswerText.GetComponent<RectTransform>();
+            answerTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 730), Screen.height / 2f - 350, 10f);
             AnswerText.color = new Color(1f, 1f, 1f, 1f);
 
-
-            NumberOneText.transform.position = new Vector2((Screen.width / 2f) - 225, Screen.height / 2f);
-            
-
-            MinusText.transform.position = new Vector2((Screen.width / 2f) - 125, Screen.height / 2f);
-
-            NumberTwoText.transform.position = new Vector2((Screen.width / 2f), Screen.height / 2f);
-
-            EqualText.transform.position = new Vector2((Screen.width / 2f) + 125, Screen.height / 2f);
-
-            AnswerText.transform.position = new Vector2((Screen.width / 2f) + 225, Screen.height / 2f);
+            //Debug.Log("code exec complted " + Screen.width + " "+ Screen.height);
 
         }
     }
