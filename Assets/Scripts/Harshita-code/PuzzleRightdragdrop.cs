@@ -191,20 +191,23 @@ public class PuzzleRightdragdrop : MonoBehaviour
 
             // this code to move the numbers to the middle of the screen
 
-            NumberOneText.transform.position = new Vector2((Screen.width / 2f) - 225, Screen.height / 2f);
             NumberOneText.color = new Color(1f, 1f, 1f, 1f);
+            MinusText.color = new Color(1f, 1f, 1f, 1f);
+            NumberTwoText.color = new Color(1f, 1f, 1f, 1f);
+            EqualText.color = new Color(1f, 1f, 1f, 1f);
+            AnswerText.color = new Color(1f, 1f, 1f, 1f);
+
+
+            NumberOneText.transform.position = new Vector2((Screen.width / 2f) - 225, Screen.height / 2f);
+            
 
             MinusText.transform.position = new Vector2((Screen.width / 2f) - 125, Screen.height / 2f);
-            MinusText.color = new Color(1f, 1f, 1f, 1f);
 
             NumberTwoText.transform.position = new Vector2((Screen.width / 2f), Screen.height / 2f);
-            NumberTwoText.color = new Color(1f, 1f, 1f, 1f);
 
             EqualText.transform.position = new Vector2((Screen.width / 2f) + 125, Screen.height / 2f);
-            EqualText.color = new Color(1f, 1f, 1f, 1f);
 
             AnswerText.transform.position = new Vector2((Screen.width / 2f) + 225, Screen.height / 2f);
-            AnswerText.color = new Color(1f, 1f, 1f, 1f);
 
         }
     }
