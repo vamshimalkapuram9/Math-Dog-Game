@@ -1,5 +1,7 @@
 | Date  | Updates |
 | ------------- | ------------- |
+|April 17 2023 | Added background music for game. </br> Added voiceover for the dog. </br> Added butterfly animation to board. |
+|April 10 2023| Working on button animation and confetti screen |
 | Apr 03 2023 |	Created screen for confetti particles. |
 | Mar 20 2023 |	Created drag and drop for correct option button. <br> Created a next button and on clicking next button it will move to another screen. |
 | Mar 13 2023 |	Created Random number generation for Subtraction Quiz screen. <br> Created background for Subtraction Quiz screen.|
