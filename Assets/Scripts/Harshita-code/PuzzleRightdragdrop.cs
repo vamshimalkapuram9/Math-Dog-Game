@@ -40,7 +40,7 @@ public class PuzzleRightdragdrop : MonoBehaviour
 
     public Text NumberOneButtonText, NumberTwoButtonText, MinusButtonText, EqualButtonText, AnswerButtonText;
 
-    const float PROXIMITY_SENSITIVITY = 80;
+    const float PROXIMITY_SENSITIVITY = 90.01f;
 
     private Text CurrentTextLoc;
     private GameObject panelObject;
@@ -88,18 +88,23 @@ public class PuzzleRightdragdrop : MonoBehaviour
 
     public void DragObject(GameObject obj)
     {
-        obj.transform.position = Input.mousePosition;
+        //obj.transform.position = Input.mousePosition;
+        var screenPoint = Input.mousePosition;
+        screenPoint.z = 10.0f; //distance of the plane from the camera
+        transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
     }
 
     private (Text, GameObject) WhichTextIsNearToThisObject(GameObject obj)
     {
         if (Vector3.Distance(obj.transform.position, NumberOneText.transform.position) <= PROXIMITY_SENSITIVITY)
         {
+            //Debug.Log("NumberOneText" + NumberOneText + "NumberOnePanel" + NumberOnePanel);
             return (NumberOneText, NumberOnePanel);
         }
 
         if (Vector3.Distance(obj.transform.position, NumberTwoText.transform.position) <= PROXIMITY_SENSITIVITY)
         {
+            //Debug.Log("NumberOneText" + NumberTwoText + "NumberOnePanel" + NumberTwoPanel);
             return (NumberTwoText, NumberTwoPanel);
         }
 
@@ -133,23 +138,28 @@ public class PuzzleRightdragdrop : MonoBehaviour
     {
         try
         {
+            //Debug.Log("Sample1");
             Text TextTxt;
 
             //This functions job is to give if the button is around an empty space
             //or near an object
             var ret = WhichTextIsNearToThisObject(Obj);
             TextTxt = ret.Item1;
+            //Debug.Log(TextTxt);
             panelObject = ret.Item2;
+            //Debug.Log(panelObject);
 
             //If the nearby panel is empty or wrong return false
             if (TextTxt == null || ButtonText == null || (TextTxt.text != ButtonText.text))
             {
+                //Debug.Log("TextTxt.text"+TextTxt.text+"ButtonText.text"+ ButtonText.text);
                 return false;
             }
 
             //if it enter here's it means that the object is in the right place
             CurrentTextLoc = TextTxt;
             return true;
+            //Debug.Log("Sample3");
         }
 
         catch (Exception e)
@@ -208,6 +218,8 @@ public class PuzzleRightdragdrop : MonoBehaviour
     {
         if (obj == NumberOne)
         {
+            // Debug.Log("Sample");
+
             if (AreObjectsNear(obj, NumberOneButtonText))
             {
                 /*if it enters here it means that we need to lock this object
@@ -216,6 +228,7 @@ public class PuzzleRightdragdrop : MonoBehaviour
 
                 //This will lock the position of button
                 obj.transform.position = CurrentTextLoc.transform.position;
+                Debug.Log(CurrentTextLoc.transform.position);
 
                 //Setting a global variable to indicate that the number one is blocked
                 NumberOneLocked = true;

@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class NewPuzzleRightdragdrop : MonoBehaviour
 {
@@ -50,6 +51,8 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
         nextButton.gameObject.SetActive(false);
     }
 
+    
+
     public void restartPuzzle()
     {
         StartCoroutine(RestartPuzzleCoroutine());
@@ -63,7 +66,10 @@ public class NewPuzzleRightdragdrop : MonoBehaviour
 
     public void DragObject(GameObject obj)
     {
-        obj.transform.position = Input.mousePosition;
+        //obj.transform.position = Input.mousePosition;
+        var screenPoint = Input.mousePosition;
+        screenPoint.z = 10.0f; //distance of the plane from the camera
+        transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
     }
 
     private Text WhichTextIsNearToThisObject(GameObject obj)
