@@ -1,5 +1,6 @@
 | Date  | Updates |
 | ------------- | ------------- |
+| April 10 2023 | Worked on animations of Home, Splash and also Subtraction Puzzle screens <br> Fixed bugs in puzzle screen code |
 | April 10 2023 | Added a new Dog logo to Home screen <br> Worked on complete UI for all screens |
 | April 03 2023 | Worked on Fade_in and Fade_out part of 2d sprite in Subtraction Fun screen <br> Added character Ruby in Subtraction Fun sreen |
 | Mar 20 2023 | Completed generating random animations when screen is popped with respect to first number <br> Added the check for correct answer to pop next button, when wrong answer is dragged the next button won’t pop up <br> Added the transition to move to next refreshed screen |
