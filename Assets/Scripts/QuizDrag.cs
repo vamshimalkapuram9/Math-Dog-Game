@@ -21,6 +21,7 @@ public class QuizDrag : MonoBehaviour
     public bool islocked;
 
     Vector2 objectInitPos;
+    const float PROXIMITY_SENSITIVITY = 90.01f;
 
 
     // Start is called before the first frame update
@@ -32,7 +33,9 @@ public class QuizDrag : MonoBehaviour
     {
         if (!islocked)
         {
-            AnsB.transform.position = Input.mousePosition; // To move with mouse position
+            var screenPoint = Input.mousePosition;
+            screenPoint.z = 10.0f; //distance of the plane from the camera
+            AnsB.transform.position = Camera.main.ScreenToWorldPoint(screenPoint); // To move with mouse position
         }
     }
     public void DropObject()
