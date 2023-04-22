@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    private int homePageIndex = 1;
+    private int homePageIndex = 0;
 
     public void LoadLevel(int sceneIndex)
     {

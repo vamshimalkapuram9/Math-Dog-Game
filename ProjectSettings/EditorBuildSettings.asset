@@ -6,20 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SplashScreen.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/HomeScreen.unity
     guid: 6d4285809cc1b4d8e9856d96cee0837c
   - enabled: 1
     path: Assets/Scenes/Sub-Puzzle.unity
     guid: dd3bca6c372008a49962210b3b9b7289
   - enabled: 1
-    path: Assets/Scenes/Sub-Fun.unity
-    guid: 4d6da002fe41142439a884a81eb3dffc
-  - enabled: 1
     path: Assets/Scenes/Sub-Quiz.unity
     guid: 86e8d200bdc92ba4f98f61b22e33116f
+  - enabled: 1
+    path: Assets/Scenes/Sub-Fun.unity
+    guid: 4d6da002fe41142439a884a81eb3dffc
   - enabled: 1
     path: Assets/Scenes/Sub-Practice-Levels.unity
     guid: 60e6ba75d41644101a149a005f61d15a
