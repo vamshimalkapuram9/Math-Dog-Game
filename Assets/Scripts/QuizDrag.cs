@@ -16,6 +16,8 @@ public class QuizDrag : MonoBehaviour
     public Text num2;
     public Button nextButton;
 
+    //static int countValue = 0;  
+
     public float dropdistance;
 
     public bool islocked;
@@ -38,29 +40,49 @@ public class QuizDrag : MonoBehaviour
             AnsB.transform.position = Camera.main.ScreenToWorldPoint(screenPoint); // To move with mouse position
         }
     }
+
     public void DropObject()
     {
         int a = Convert.ToInt32(num1.text);
         int b = Convert.ToInt32(num2.text);
         int c = Convert.ToInt32(Ans.text);
         dropdistance = Vector3.Distance(AnsB.transform.position, Crt_ans.transform.position);
+        
         if (c == a - b) // Check to idenfity correct answer
         {
             islocked = true;
             AnsB.transform.position = Crt_ans.transform.position; // Correct answer will be fixed in answer panel
-            OnMouseUp();
             nextButton.gameObject.SetActive(true);
+
+            //OnMouseUp();
+
         }
+
         else
         {
             islocked = false;
             AnsB.transform.position = objectInitPos; // Worng answer will be pulled to it's original position
             nextButton.gameObject.SetActive(false);
         }
+
+       
     }
 
-    private void OnMouseUp()
-    {
-        SceneManager.LoadScene("Confetti");
-    }
+    //private void OnMouseUp()
+    //{
+    //    countValue++;
+    //    if (countValue % 2 == 0)
+    //    {
+    //        SceneManager.LoadScene("Confetti");
+    //        Debug.Log("Confetti loading");
+    //        countValue = 0;
+    //    }
+
+    //    else
+    //    {
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    //    }
+
+        //SceneManager.LoadScene("Confetti");
+    
 }

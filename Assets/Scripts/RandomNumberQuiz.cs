@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class RandomNumberQuiz : MonoBehaviour
@@ -15,7 +16,6 @@ public class RandomNumberQuiz : MonoBehaviour
     public Button answerButton3;
     public Button nextButton; // button to go to next problem
     public GameObject RandomAddGameObjects;
-
 
     public List<int> easyMathList = new List<int>();
 
@@ -30,6 +30,8 @@ public class RandomNumberQuiz : MonoBehaviour
     public GameObject Answer1;
     public GameObject Answer2;
     public GameObject Answer3;
+
+    static int countValue = 0;
 
     Vector2 objectInitPos1;
     Vector2 objectInitPos2;
@@ -49,17 +51,16 @@ public class RandomNumberQuiz : MonoBehaviour
     {
         int firstNum = UnityEngine.Random.Range(1, 11); // Random integer between 1 and 4
         int nextNum = UnityEngine.Random.Range(1, firstNum); // Ensure sum is no more than 5
-
         return (firstNum, nextNum);
     }
     private (int, int, int) GetDiffOptions(int firstNum, int nextNum) // Return 3 random options between 1 and 9, one of which is the correct difference
     {
         int answer = firstNum - nextNum;
 
-        if (answer < 1 || answer > 10)
-        {
-            throw new System.Exception("GetDiffOptions received invalid values to perform difference");
-        }
+        //if (answer < 1 || answer > 10)
+        //{
+        //    throw new System.Exception("GetDiffOptions received invalid values to perform difference");
+        //}
 
         var possibilities = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         possibilities.Remove(answer); // Ensure only one correct answer offered
@@ -88,8 +89,6 @@ public class RandomNumberQuiz : MonoBehaviour
 
         return (options[0], options[1], options[2]);
     }
-
-    
 
     public void DisplayMathProblem()
     {
@@ -134,16 +133,30 @@ public class RandomNumberQuiz : MonoBehaviour
     {
         if (isCorrectAnswer)
         {
-            nextButton.gameObject.SetActive(true);
+           nextButton.gameObject.SetActive(true);
         }
     }
 
     public void refreshPuzzle()
     {
         nextButton.gameObject.SetActive(false); // hide until another correct answer
-         // animated transition
-        StartCoroutine(NewProblem());
+                                                // animated transition
 
+        countValue++;
+        if (countValue % 2 == 0)
+        {
+            SceneManager.LoadScene("Confetti");
+            Debug.Log("Confetti loading");
+            countValue = 0;
+        }
+
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        StartCoroutine(NewProblem());
+        //SceneManager.LoadScene("Sub-Quiz");
     }
 
     private IEnumerator NewProblem()
@@ -176,7 +189,6 @@ public class RandomNumberQuiz : MonoBehaviour
         }
 
         RandomAddGameObjects.transform.position = originalPos; // ensure end at original position since Lerp is inexact
-
 
         yield return null;
     }
