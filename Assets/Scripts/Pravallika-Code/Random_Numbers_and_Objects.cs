@@ -218,12 +218,37 @@ public class Random_Numbers_and_Objects : MonoBehaviour
 
      void displaySprite(GameObject gameObject, int randomFirstNumber,Sprite tSprite)
     {
-        
+
+        List<GameObject> objList = new();
+
+        int objectSize = gameObject.transform.childCount;
+
+        List<GameObject> gameObjects = new();
+
+        for(int i = 0; i < objectSize; i ++)
+        {
+            gameObjects.Add(gameObject.transform.GetChild(i).gameObject);
+        }
         for(int i =0; i < randomFirstNumber; i++)
         {
-            GameObject obj = gameObject.transform.GetChild(i).gameObject;
+            GameObject obj = gameObjects[i].gameObject;
             obj.GetComponentInChildren<Image>().sprite = tSprite;
+
+            objList.Add(obj);
         }
+
+        int j = randomFirstNumber - randomSecondNumber;
+
+
+        Debug.Log("Correct Answer: " + j.ToString());
+        Debug.Log("Second Answer: " + randomSecondNumber.ToString());
+
+        while (j < randomFirstNumber)
+        {
+            changePanelTransparency(gameObjects[j].gameObject);
+            j++;
+        }
+
 
         //GameObject obj1 = gameObject.transform.GetChild(0).gameObject;
         //GameObject obj2 = gameObject.transform.GetChild(1).gameObject;
@@ -260,6 +285,8 @@ public class Random_Numbers_and_Objects : MonoBehaviour
         // Set which option is the correct answer (counting from 0)
         updateObjectSprites();
         correctAnswer = randomSub;
+
+
     }
 
     public void ButtonAnswer1()
@@ -351,7 +378,7 @@ public class Random_Numbers_and_Objects : MonoBehaviour
     void changePanelTransparency(GameObject currentPanel)
     {
         //Generating Transparency
-        panelImage = currentPanel.GetComponent<Image>();
+        panelImage = currentPanel.GetComponentInChildren<Image>();
         Color panelColor = panelImage.color;
         panelColor.a = 0.3f;
 
