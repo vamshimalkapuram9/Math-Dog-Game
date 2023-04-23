@@ -360,7 +360,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 127218885}
-  - component: {fileID: 127218886}
   m_Layer: 0
   m_Name: 4Object
   m_TagString: 4Object
@@ -392,23 +391,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.3, y: -1.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &127218886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127218884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edc639f967ce2a45883ea348021936b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 50
-  fadeOut: 1
-  fadeIn: 0
-  maxFadeIn: 0
-  maxFadeOut: 0
 --- !u!1 &147378888
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +400,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 147378889}
-  - component: {fileID: 147378890}
   m_Layer: 0
   m_Name: 10Object
   m_TagString: 10Object
@@ -456,23 +437,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.3, y: -1.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &147378890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147378888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edc639f967ce2a45883ea348021936b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 50
-  fadeOut: 1
-  fadeIn: 0
-  maxFadeIn: 0
-  maxFadeOut: 0
 --- !u!1 &158366485
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +695,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240746170}
-  - component: {fileID: 240746171}
   m_Layer: 0
   m_Name: 7Object
   m_TagString: 7Object
@@ -766,23 +729,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.3, y: -1.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &240746171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240746169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edc639f967ce2a45883ea348021936b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 50
-  fadeOut: 1
-  fadeIn: 0
-  maxFadeIn: 0
-  maxFadeOut: 0
 --- !u!1 &252128575
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +738,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 252128576}
-  - component: {fileID: 252128577}
   m_Layer: 0
   m_Name: 5Object
   m_TagString: 5Object
@@ -825,23 +770,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.3, y: -1.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &252128577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252128575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edc639f967ce2a45883ea348021936b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 50
-  fadeOut: 1
-  fadeIn: 0
-  maxFadeIn: 0
-  maxFadeOut: 0
 --- !u!1 &256247923
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +779,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 256247924}
-  - component: {fileID: 256247925}
   m_Layer: 0
   m_Name: 8Object
   m_TagString: 8Object
@@ -887,23 +814,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.3, y: -1.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &256247925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256247923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edc639f967ce2a45883ea348021936b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 50
-  fadeOut: 1
-  fadeIn: 0
-  maxFadeIn: 0
-  maxFadeOut: 0
 --- !u!1 &279028814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,7 +1976,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 488567040}
-  - component: {fileID: 488567041}
   m_Layer: 0
   m_Name: 2Object
   m_TagString: 2Object
@@ -2096,23 +2005,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.4, y: -2.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &488567041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488567039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edc639f967ce2a45883ea348021936b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 50
-  fadeOut: 1
-  fadeIn: 0
-  maxFadeIn: 0
-  maxFadeOut: 0
 --- !u!1 &497918906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,7 +2090,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 507629540}
-  - component: {fileID: 507629541}
   m_Layer: 0
   m_Name: 3Object
   m_TagString: 3Object
@@ -2229,23 +2120,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.3, y: -1.8000001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &507629541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507629539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edc639f967ce2a45883ea348021936b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 50
-  fadeOut: 1
-  fadeIn: 0
-  maxFadeIn: 0
-  maxFadeOut: 0
 --- !u!1 &508662364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,7 +5066,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1175968238}
-  - component: {fileID: 1175968239}
   m_Layer: 0
   m_Name: 1Object
   m_TagString: 1Object
@@ -5221,23 +5094,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.3, y: -1.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1175968239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1175968237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edc639f967ce2a45883ea348021936b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 50
-  fadeOut: 1
-  fadeIn: 0
-  maxFadeIn: 0
-  maxFadeOut: 0
 --- !u!1 &1194889477
 GameObject:
   m_ObjectHideFlags: 0
@@ -6052,7 +5908,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1643350835}
-  - component: {fileID: 1643350836}
   m_Layer: 0
   m_Name: 9Object
   m_TagString: 9Object
@@ -6089,23 +5944,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.3, y: -1.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1643350836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643350834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edc639f967ce2a45883ea348021936b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 50
-  fadeOut: 1
-  fadeIn: 0
-  maxFadeIn: 0
-  maxFadeOut: 0
 --- !u!1 &1654592884
 GameObject:
   m_ObjectHideFlags: 0
@@ -6924,7 +6762,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1931736931}
-  - component: {fileID: 1931736932}
   m_Layer: 0
   m_Name: 6Object
   m_TagString: 6Object
@@ -6958,23 +6795,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.3, y: -1.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1931736932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931736930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edc639f967ce2a45883ea348021936b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 50
-  fadeOut: 1
-  fadeIn: 0
-  maxFadeIn: 0
-  maxFadeOut: 0
 --- !u!1 &1955741204
 GameObject:
   m_ObjectHideFlags: 0
