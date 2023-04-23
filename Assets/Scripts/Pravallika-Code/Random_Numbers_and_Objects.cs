@@ -61,10 +61,17 @@ public class Random_Numbers_and_Objects : MonoBehaviour
         DisplayMathProblem();
     }
 
-    private (int, int) GetTwoRandomDiff() // Return tuple of two random numbers that sum to something between 2 and 5
+    private (int, int) GetTwoRandomDiff() // Return tuple of two random numbers
     {
-        int firstNum = UnityEngine.Random.Range(1, 11); // Random integer between 1 and 4
-        int nextNum = UnityEngine.Random.Range(1, firstNum); // Ensure sum is no more than 5
+        int firstNum = UnityEngine.Random.Range(1, 11); // Random integer between 1 and 11
+        int nextNum = UnityEngine.Random.Range(1, firstNum); // Ensure second number is not greater than first one
+
+        if (nextNum > firstNum)
+        {
+            int temp = firstNum;
+            firstNum = nextNum;
+            nextNum = temp;
+        }
 
         return (firstNum, nextNum);
     }

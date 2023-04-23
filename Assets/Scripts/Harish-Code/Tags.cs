@@ -40,5 +40,7 @@ public static class Tags
     // Game Board Panel
     public const string GREEN_BOARD_PANEL = "BoardTag";
 
+    // Game Board Fun
+    public const string GREEN_BOARD_FUN_PANEL = "GreenBoard";
 
 }
