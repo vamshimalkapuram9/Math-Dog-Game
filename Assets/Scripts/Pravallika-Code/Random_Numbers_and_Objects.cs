@@ -33,6 +33,11 @@ public class Random_Numbers_and_Objects : MonoBehaviour
     public GameObject Object10;
     public GameObject RandomAddGameObjects; // parent of all the game objects for this game
 
+    // Green Board and Objects List Declaration
+
+    GameObject greenBoardPanel;
+    List<GameObject> transparentObjects;
+
     public List<int> easyMathList = new List<int>();
 
     public int randomFirstNumber;
@@ -59,6 +64,27 @@ public class Random_Numbers_and_Objects : MonoBehaviour
         objectInitPos2 = Ans2.transform.position;
         objectInitPos3 = Ans3.transform.position;
         DisplayMathProblem();
+    }
+
+
+    void setObjectTags()
+    {
+        // Initialise @param transparent Objects
+
+        transparentObjects = new List<GameObject>();
+
+        greenBoardPanel = GameObject.FindWithTag(Tags.GREEN_BOARD_FUN_PANEL);
+
+        transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_1));
+        transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_2));
+        transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_3));
+        transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_4));
+        transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_5));
+        transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_6));
+        transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_7));
+        transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_8));
+        transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_9));
+        transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_10));
     }
 
     private (int, int) GetTwoRandomDiff() // Return tuple of two random numbers
