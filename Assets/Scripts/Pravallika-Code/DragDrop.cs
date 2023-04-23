@@ -64,7 +64,7 @@ public class DragDrop : MonoBehaviour
         int b = Convert.ToInt32(num2.text);
         int c = Convert.ToInt32(Ans.text);
         dropdistance = Vector3.Distance(AnsB.transform.position, Crt_ans.transform.position);
-        if (dropdistance <= PROXIMITY_SENSITIVITY) // Check to idenfity correct answer
+        if (c == a - b) // Check to idenfity correct answer
         {
             islocked = true;
             AnsB.transform.position = Crt_ans.transform.position; // Correct answer will be fixed in answer panel
