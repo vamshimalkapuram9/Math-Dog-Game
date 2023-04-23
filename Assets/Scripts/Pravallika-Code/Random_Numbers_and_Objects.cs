@@ -34,9 +34,8 @@ public class Random_Numbers_and_Objects : MonoBehaviour
     public GameObject RandomAddGameObjects; // parent of all the game objects for this game
 
     // Green Board and Objects List Declaration
-
-    GameObject greenBoardPanel;
     List<GameObject> transparentObjects;
+    Image panelImage;
 
     public List<int> easyMathList = new List<int>();
 
@@ -73,8 +72,7 @@ public class Random_Numbers_and_Objects : MonoBehaviour
 
         transparentObjects = new List<GameObject>();
 
-        greenBoardPanel = GameObject.FindWithTag(Tags.GREEN_BOARD_FUN_PANEL);
-
+        
         transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_1));
         transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_2));
         transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_3));
@@ -85,6 +83,9 @@ public class Random_Numbers_and_Objects : MonoBehaviour
         transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_8));
         transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_9));
         transparentObjects.Add(GameObject.FindWithTag(Tags.FUN_OBJECT_10));
+
+
+       
     }
 
     private (int, int) GetTwoRandomDiff() // Return tuple of two random numbers
@@ -169,154 +170,74 @@ public class Random_Numbers_and_Objects : MonoBehaviour
         // panel objects
         if (randomFirstNumber == 1)
         {
-            GameObject obj = Object1.transform.GetChild(0).gameObject;
-            obj.GetComponentInChildren<Image>().sprite = newSprite;
-            Object1.SetActive(true);
+
+            displaySprite(Object1, randomFirstNumber, newSprite);
+
         }
         else if (randomFirstNumber == 2)
         {
-            GameObject obj1 = Object2.transform.GetChild(0).gameObject;
-            GameObject obj2 = Object2.transform.GetChild(1).gameObject;
-            obj1.GetComponentInChildren<Image>().sprite = newSprite;
-            obj2.GetComponentInChildren<Image>().sprite = newSprite;
-            Object2.SetActive(true);
+            displaySprite(Object2, randomFirstNumber, newSprite);
+
         }
         else if (randomFirstNumber == 3)
         {
-            GameObject obj1 = Object3.transform.GetChild(0).gameObject;
-            GameObject obj2 = Object3.transform.GetChild(1).gameObject;
-            GameObject obj3 = Object3.transform.GetChild(2).gameObject;
-            obj1.GetComponentInChildren<Image>().sprite = newSprite;
-            obj2.GetComponentInChildren<Image>().sprite = newSprite;
-            obj3.GetComponentInChildren<Image>().sprite = newSprite;
-            Object3.SetActive(true);
+            displaySprite(Object3, randomFirstNumber, newSprite);
+
         }
         else if (randomFirstNumber == 4)
         {
-            GameObject obj1 = Object4.transform.GetChild(0).gameObject;
-            GameObject obj2 = Object4.transform.GetChild(1).gameObject;
-            GameObject obj3 = Object4.transform.GetChild(2).gameObject;
-            GameObject obj4 = Object4.transform.GetChild(3).gameObject;
-            obj1.GetComponentInChildren<Image>().sprite = newSprite;
-            obj2.GetComponentInChildren<Image>().sprite = newSprite;
-            obj3.GetComponentInChildren<Image>().sprite = newSprite;
-            obj4.GetComponentInChildren<Image>().sprite = newSprite;
-            Object4.SetActive(true);
+            displaySprite(Object4, randomFirstNumber, newSprite);
         }
         else if (randomFirstNumber == 5)
         {
-            GameObject obj = Object5.transform.GetChild(0).gameObject;
-            GameObject obj1 = Object5.transform.GetChild(1).gameObject;
-            GameObject obj2 = Object5.transform.GetChild(2).gameObject;
-            GameObject obj3 = Object5.transform.GetChild(3).gameObject;
-            GameObject obj4 = Object5.transform.GetChild(4).gameObject;
-            obj.GetComponentInChildren<Image>().sprite = newSprite;
-            obj1.GetComponentInChildren<Image>().sprite = newSprite;
-            obj2.GetComponentInChildren<Image>().sprite = newSprite;
-            obj3.GetComponentInChildren<Image>().sprite = newSprite;
-            obj4.GetComponentInChildren<Image>().sprite = newSprite;
-            Object5.SetActive(true);
-        }
+            displaySprite(Object5, randomFirstNumber, newSprite);
+}
         else if (randomFirstNumber == 6)
         {
-            GameObject obj1 = Object6.transform.GetChild(0).gameObject;
-            GameObject obj2 = Object6.transform.GetChild(1).gameObject;
-            GameObject obj3 = Object6.transform.GetChild(2).gameObject;
-            GameObject obj4 = Object6.transform.GetChild(3).gameObject;
-            GameObject obj5 = Object6.transform.GetChild(4).gameObject;
-            GameObject obj6 = Object6.transform.GetChild(5).gameObject;
-            obj1.GetComponentInChildren<Image>().sprite = newSprite;
-            obj2.GetComponentInChildren<Image>().sprite = newSprite;
-            obj3.GetComponentInChildren<Image>().sprite = newSprite;
-            obj4.GetComponentInChildren<Image>().sprite = newSprite;
-            obj5.GetComponentInChildren<Image>().sprite = newSprite;
-            obj6.GetComponentInChildren<Image>().sprite = newSprite;
-            Object6.SetActive(true);
-        }
+            displaySprite(Object6, randomFirstNumber,newSprite);
+}
         else if (randomFirstNumber == 7)
         {
-            GameObject obj1 = Object7.transform.GetChild(0).gameObject;
-            GameObject obj2 = Object7.transform.GetChild(1).gameObject;
-            GameObject obj3 = Object7.transform.GetChild(2).gameObject;
-            GameObject obj4 = Object7.transform.GetChild(3).gameObject;
-            GameObject obj5 = Object7.transform.GetChild(4).gameObject;
-            GameObject obj6 = Object7.transform.GetChild(5).gameObject;
-            GameObject obj7 = Object7.transform.GetChild(6).gameObject;
-            obj1.GetComponentInChildren<Image>().sprite = newSprite;
-            obj2.GetComponentInChildren<Image>().sprite = newSprite;
-            obj3.GetComponentInChildren<Image>().sprite = newSprite;
-            obj4.GetComponentInChildren<Image>().sprite = newSprite;
-            obj5.GetComponentInChildren<Image>().sprite = newSprite;
-            obj6.GetComponentInChildren<Image>().sprite = newSprite;
-            obj7.GetComponentInChildren<Image>().sprite = newSprite;
-            Object7.SetActive(true);
-        }
+            displaySprite(Object7, randomFirstNumber, newSprite);
+
+}
         else if (randomFirstNumber == 8)
         {
-            GameObject obj1 = Object8.transform.GetChild(0).gameObject;
-            GameObject obj2 = Object8.transform.GetChild(1).gameObject;
-            GameObject obj3 = Object8.transform.GetChild(2).gameObject;
-            GameObject obj4 = Object8.transform.GetChild(3).gameObject;
-            GameObject obj5 = Object8.transform.GetChild(4).gameObject;
-            GameObject obj6 = Object8.transform.GetChild(5).gameObject;
-            GameObject obj7 = Object8.transform.GetChild(6).gameObject;
-            GameObject obj8 = Object8.transform.GetChild(7).gameObject;
-            obj1.GetComponentInChildren<Image>().sprite = newSprite;
-            obj2.GetComponentInChildren<Image>().sprite = newSprite;
-            obj3.GetComponentInChildren<Image>().sprite = newSprite;
-            obj4.GetComponentInChildren<Image>().sprite = newSprite;
-            obj5.GetComponentInChildren<Image>().sprite = newSprite;
-            obj6.GetComponentInChildren<Image>().sprite = newSprite;
-            obj7.GetComponentInChildren<Image>().sprite = newSprite;
-            obj8.GetComponentInChildren<Image>().sprite = newSprite;
-            Object8.SetActive(true);
-        }
+            displaySprite(Object8, randomFirstNumber, newSprite);
+
+}
         else if (randomFirstNumber == 9)
         {
-            GameObject obj1 = Object9.transform.GetChild(0).gameObject;
-            GameObject obj2 = Object9.transform.GetChild(1).gameObject;
-            GameObject obj3 = Object9.transform.GetChild(2).gameObject;
-            GameObject obj4 = Object9.transform.GetChild(3).gameObject;
-            GameObject obj5 = Object9.transform.GetChild(4).gameObject;
-            GameObject obj6 = Object9.transform.GetChild(5).gameObject;
-            GameObject obj7 = Object9.transform.GetChild(6).gameObject;
-            GameObject obj8 = Object9.transform.GetChild(7).gameObject;
-            GameObject obj9 = Object9.transform.GetChild(8).gameObject;
-            obj1.GetComponentInChildren<Image>().sprite = newSprite;
-            obj2.GetComponentInChildren<Image>().sprite = newSprite;
-            obj3.GetComponentInChildren<Image>().sprite = newSprite;
-            obj4.GetComponentInChildren<Image>().sprite = newSprite;
-            obj5.GetComponentInChildren<Image>().sprite = newSprite;
-            obj6.GetComponentInChildren<Image>().sprite = newSprite;
-            obj7.GetComponentInChildren<Image>().sprite = newSprite;
-            obj8.GetComponentInChildren<Image>().sprite = newSprite;
-            obj9.GetComponentInChildren<Image>().sprite = newSprite;
-            Object9.SetActive(true);
-        }
+            displaySprite(Object9, randomFirstNumber, newSprite);
+}
         else if (randomFirstNumber == 10)
         {
-            GameObject obj1 = Object10.transform.GetChild(0).gameObject;
-            GameObject obj2 = Object10.transform.GetChild(1).gameObject;
-            GameObject obj3 = Object10.transform.GetChild(2).gameObject;
-            GameObject obj4 = Object10.transform.GetChild(3).gameObject;
-            GameObject obj5 = Object10.transform.GetChild(4).gameObject;
-            GameObject obj6 = Object10.transform.GetChild(5).gameObject;
-            GameObject obj7 = Object10.transform.GetChild(6).gameObject;
-            GameObject obj8 = Object10.transform.GetChild(7).gameObject;
-            GameObject obj9 = Object10.transform.GetChild(8).gameObject;
-            GameObject obj10 = Object10.transform.GetChild(9).gameObject;
-            obj1.GetComponentInChildren<Image>().sprite = newSprite;
-            obj2.GetComponentInChildren<Image>().sprite = newSprite;
-            obj3.GetComponentInChildren<Image>().sprite = newSprite;
-            obj4.GetComponentInChildren<Image>().sprite = newSprite;
-            obj5.GetComponentInChildren<Image>().sprite = newSprite;
-            obj6.GetComponentInChildren<Image>().sprite = newSprite;
-            obj7.GetComponentInChildren<Image>().sprite = newSprite;
-            obj8.GetComponentInChildren<Image>().sprite = newSprite;
-            obj9.GetComponentInChildren<Image>().sprite = newSprite;
-            obj10.GetComponentInChildren<Image>().sprite = newSprite;
-            Object10.SetActive(true);
+            displaySprite(Object10, randomFirstNumber, newSprite);
         }
+    }
+
+     void displaySprite(GameObject gameObject, int randomFirstNumber,Sprite tSprite)
+    {
+        
+        for(int i =0; i < randomFirstNumber; i++)
+        {
+            GameObject obj = gameObject.transform.GetChild(i).gameObject;
+            obj.GetComponentInChildren<Image>().sprite = tSprite;
+        }
+
+        //GameObject obj1 = gameObject.transform.GetChild(0).gameObject;
+        //GameObject obj2 = gameObject.transform.GetChild(1).gameObject;
+        //GameObject obj3 = gameObject.transform.GetChild(2).gameObject;
+        //GameObject obj4 = gameObject.transform.GetChild(3).gameObject;
+        //GameObject obj5 = gameObject.transform.GetChild(4).gameObject;
+        //GameObject obj6 = gameObject.transform.GetChild(5).gameObject;
+        //obj1.GetComponentInChildren<Image>().sprite = tSprite;
+        //obj2.GetComponentInChildren<Image>().sprite = tSprite;
+        //obj3.GetComponentInChildren<Image>().sprite = tSprite;
+        //obj4.GetComponentInChildren<Image>().sprite = tSprite;
+        //obj5.GetComponentInChildren<Image>().sprite = tSprite;
+        //obj6.GetComponentInChildren<Image>().sprite = tSprite;
+        gameObject.SetActive(true);
     }
 
     public void DisplayMathProblem()
@@ -419,5 +340,33 @@ public class Random_Numbers_and_Objects : MonoBehaviour
 
 
         yield return null;
+    }
+
+    /**
+     *  =======================================
+     *      Code for Panel Transparency
+     *  =======================================
+     **/
+
+    void changePanelTransparency(GameObject currentPanel)
+    {
+        //Generating Transparency
+        panelImage = currentPanel.GetComponent<Image>();
+        Color panelColor = panelImage.color;
+        panelColor.a = 0.3f;
+
+        panelImage.color = panelColor;
+
+    }
+
+    public void resetTransparency(GameObject currentPanel)
+    {
+        //Generating Transparency
+        panelImage = currentPanel.GetComponent<Image>();
+        Color panelColor = panelImage.color;
+        panelColor.a = 0f;
+
+        panelImage.color = panelColor;
+
     }
 }
