@@ -4286,12 +4286,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7230cde9d4d38e847b613e1db059284d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Crt_ans: {fileID: 0}
-  AnsB: {fileID: 0}
-  Ans: {fileID: 0}
-  num1: {fileID: 0}
-  num2: {fileID: 0}
-  nextButton: {fileID: 0}
+  Crt_ans: {fileID: 779058302}
+  AnsB: {fileID: 986279292}
+  Ans: {fileID: 1152999229}
+  num1: {fileID: 1771647934}
+  num2: {fileID: 1871095988}
+  nextButton: {fileID: 986279294}
   dropdistance: 0
   islocked: 0
 --- !u!1 &994520072

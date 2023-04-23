@@ -45,7 +45,7 @@ public class DragDrop : MonoBehaviour
         count++;
         if (count % 2 == 0)
         {
-            SceneManager.LoadScene("HarshitaConfetti");
+            SceneManager.LoadScene("PravallikaConfetti");
             Debug.Log("Confetti loading");
             count = 0;
         }
