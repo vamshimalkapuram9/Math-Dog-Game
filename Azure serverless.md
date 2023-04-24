@@ -1,5 +1,6 @@
 | DATE  | UPDATES |
 | ------------- | ------------- |
+| 04-24-2023 |Created register and login screen in Unity |
 | 04-10-2023 |deployed the code to azure so that it gets directly updated from git to azure |
 | 03-06-2023 | 1)Implementing HTTP API in azure function |
 | 02-26-2023 | 1)writing azure function code<BR>2)Testing Azure function portal |
