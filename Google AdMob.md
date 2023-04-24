@@ -3,6 +3,8 @@ Math Dog Game Using Unity
 
 | DATE | UPDATE  |
 |----------|----------|
+| (04/10/2023) |Game submission has been approved on Amazon app store, Now waiting for the game to go live to proceed further in Google AdMob.|
+| (04/03/2023) |Initialised the Google AdMob account and updated publisher Id in unity|
 | (03/26/2023) | 	Created the Google Admob account, I also got the publisher id. To proceed further I need the game .apk file to get the verification from Google Admob.|
 | (03/19/2023) | 	Created interstitial ad  |
 | (03/11/2023) | 	Successfully integrated the Ad Banner into the game.  |
