@@ -1,6 +1,6 @@
 | Date  | Updates |
 | ------------- | ------------- |
-|April 24 2023 ||Added background music for quiz screen. </br> Added voiceover for the dog. </br> Added butterfly animation to board subtraction quiz. </br> Added voices for numbers in quiz screen |
+|April 24 2023 | Added background music for quiz screen. </br> Added voiceover for the dog. </br> Added butterfly animation to board subtraction quiz. </br> Added voices for numbers in quiz screen |
 |April 17 2023 | Added background music for game. </br> Added voiceover for the dog. </br> Added butterfly animation to board. |
 |April 10 2023| Working on button animation and confetti screen |
 | Apr 03 2023 |	Created screen for confetti particles. |
