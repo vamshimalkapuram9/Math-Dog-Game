@@ -1,6 +1,7 @@
 | Date  | Updates |
 | ------------- | ------------- |
-| April 17 2023 |	Made the panels and buttons transparent after dropping <br> Moved the numbers to the middle of the screen after being dropped|
+| April 24 2023 |	Made the right answer button and answer panel transparent after dropping for Subtraction Quiz screen <br> Moved the numbers to the middle of the screen after being dropped for Subtraction Quiz screen<br> Made the other buttons transparent which are not right <br> Added "Good Job" screen for every 2 game screens|
+| April 17 2023 |	Made the panels and buttons transparent after dropping for Subtraction Puzzle <br> Moved the numbers to the middle of the screen after being dropped for Subtraction Puzzle <br> Added "Good Job" screen for every 2 game screens for Subtraction Puzzle|
 | April 10 2023 |	Made the buttons transparent after dropping |
 | April 3 2023 |	Moving to the next screen after dragging and dropping all buttons in the Subtraction Puzzle screen |
 | Mar 20 2023 |	Added drag and drop of buttons to the right panel |
