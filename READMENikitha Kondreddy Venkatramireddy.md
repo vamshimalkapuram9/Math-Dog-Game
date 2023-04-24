@@ -1,5 +1,6 @@
 | Date  | Updates |
 | ------------- | ------------- |
+| Apr 24 2023| Updated with latest puzzle screens<br>Updated with latest quiz screens<br>Updated with latest fun screens|
 | Apr 17 2023 | Updated wiki with puzzle screens<br> Added confetti to animations|
 | Apr 10 2023 | Updated wiki with latest screens and animations<br>Suggested with UI samples<br>Updated with relationsships in class diagram|
 | Mar 20 2023 | Updated wiki latest screens, Animations<br>Updated wiki with SRS, links<br>Suggested with Dog logo|
