@@ -105,6 +105,7 @@ public class QuizDrag : MonoBehaviour
 
             RectTransform noOneTxtRT = num1.GetComponent<RectTransform>();
             noOneTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 850), Screen.height / 2f - 250, 10f);
+            
 
             RectTransform minusTxtRT = Minus.GetComponent<RectTransform>();
             minusTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 750), Screen.height / 2f - 250, 10f);
