@@ -4,7 +4,7 @@ Math Dog Game Using Unity
 
 | DATE | UPDATE|
 |----------|----------|
-| (04/24/2023) | The expected date by Amazon App store to go live on is 30 April 2023.|
+| (04/24/2023) | The expected date for the Amazon App Store to go live on is 30 April 2023.|
 | (04/16/2023) | Submission approved. The app is ready to go live.|
 | (04/14/2023) | Submitted the app version 2.0|
 | (04/12/2023) | Corrected and shorten the description and also updated new UI pictures.|
