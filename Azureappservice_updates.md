@@ -1,5 +1,9 @@
 | Date  | Content |
 |--------| ---------|
+|(04/24/2023)|Able to resolve the Build error and succeeded in publishing the app from unity to Azure portal using visual studio and the application is working fine using below url like in unity.
+
+Now able to access the application using the url : https://mathdoggame12320230423005448.azurewebsites.net/
+
 |(04/02/2023)|Still getting build errors to host the web app in app service using visual studio code while publishing to azure. Tried the suggested player settings in unity to reslove the issue but unable to encounter the error.
 |(03/20/2023)|Tried to host the web app in app service using visual studio code but getting build related error while publishing to azure
 |(02/26/2023)|I have created an Azure app Service Account <br> Published the code through the deployment center in Azure app services from Azure repository.
