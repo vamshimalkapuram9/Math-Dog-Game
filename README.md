@@ -1,5 +1,6 @@
 | DATE  | UPDATES |
 | ------------- | ------------- |
+| 04-24-2023 | Updated <br> Sytem Features: Subtracting Puzzle Screen <br> Non Functional Requirements <br> Updated Sequence Diagram <br> Updated new screens
 | 04-17-2023 | Updated <br> Cohesiveness <br> Functional Requirements <br> Business Rules <br> Updated new screens
 | 04-10-2023 | Updated <br> Stimulus/Responses<br> Functional Requirements <br> Software quality attributes <br> Business Rules <br> Updated new screens
 | 04-03-2023 | Updated <br> 1.System Features <br> 2.Description and Priorities <br> 5.External Interface Requirements <br> 6.Other Non-Functional Requirements <br> 8.Updated new screens
