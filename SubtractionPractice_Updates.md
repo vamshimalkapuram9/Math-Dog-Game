@@ -1,5 +1,6 @@
 |Date  | Content |
 | ------------- | ------------- |
+| Apr 24 2023 | •	Worked on the UI part |
 | Apr 10 2023  | •	Worked on the next button in the practice screen |
 | Apr 03 2023  | •	Implemented moving background <br> •	Implemented a advanced practice screen |
 | Mar 20 2023  | •	Completed the generation of random numbers <br> •	Done with drag and drop |
