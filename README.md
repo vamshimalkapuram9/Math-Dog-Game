@@ -1,5 +1,7 @@
 | Date          | Updates |
 | ------------- | ------------- |
+|April 24 2023| implemented the test cases for the changes in the screens and worked on the dashboard|
+|April 17 2023| Completed working on the pipelines and inprogress on artifacts|
 |April 10 2023| Created pipelines for the main branch code |
 |April 2 2023| Created another test plan and worked on piplines|
 | March 20 2023| Worked and implemented the test plans for the coding team|
