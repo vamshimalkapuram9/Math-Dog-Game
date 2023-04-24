@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class Random_Numbers_and_Objects : MonoBehaviour
 {
-    public Text num1;
-    public Text num2;
+    public TMP_Text num1;
+    public TMP_Text num2;
 
     public Button answer1Button;
     public Button answer2Button;
@@ -279,9 +280,9 @@ public class Random_Numbers_and_Objects : MonoBehaviour
         answerThree = options.Item3;
         num1.text = "" + randomFirstNumber;
         num2.text = "" + randomSecondNumber;
-        answer1Button.GetComponentInChildren<Text>().text = "" + answerOne;
-        answer2Button.GetComponentInChildren<Text>().text = "" + answerTwo;
-        answer3Button.GetComponentInChildren<Text>().text = "" + answerThree;
+        answer1Button.GetComponentInChildren<TMP_Text>().text = "" + answerOne;
+        answer2Button.GetComponentInChildren<TMP_Text>().text = "" + answerTwo;
+        answer3Button.GetComponentInChildren<TMP_Text>().text = "" + answerThree;
         // Set which option is the correct answer (counting from 0)
         updateObjectSprites();
         correctAnswer = randomSub;
@@ -291,19 +292,19 @@ public class Random_Numbers_and_Objects : MonoBehaviour
 
     public void ButtonAnswer1()
     {
-        bool isButton1Correct = answer1Button.GetComponentInChildren<Text>().text.Equals(correctAnswer.ToString());
+        bool isButton1Correct = answer1Button.GetComponentInChildren<TMP_Text>().text.Equals(correctAnswer.ToString());
         //showResults(isButton1Correct);
     }
 
     public void ButtonAnswer2()
     {
-        bool isButton2Correct = answer2Button.GetComponentInChildren<Text>().text.Equals(correctAnswer.ToString());
+        bool isButton2Correct = answer2Button.GetComponentInChildren<TMP_Text>().text.Equals(correctAnswer.ToString());
         //showResults(isButton2Correct);
     }
 
     public void ButtonAnswer3()
     {
-        bool isButton3Correct = answer3Button.GetComponentInChildren<Text>().text.Equals(correctAnswer.ToString());
+        bool isButton3Correct = answer3Button.GetComponentInChildren<TMP_Text>().text.Equals(correctAnswer.ToString());
         //showResults(isButton3Correct);
     }
 
