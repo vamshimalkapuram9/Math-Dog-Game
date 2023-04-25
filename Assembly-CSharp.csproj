@@ -127,6 +127,10 @@
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\Harish-Code\SubHarish.cs" />
+    <Compile Include="Assets\Text_Animation.cs" />
+    <Compile Include="Assets\Scripts\Dogvoice.cs" />
+    <Compile Include="Assets\Scripts\TextVoice.cs" />
+    <Compile Include="Assets\Scripts\OperatorVoice.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Image-Assets\TextMesh Pro\Shaders\TMPro.cginc" />
