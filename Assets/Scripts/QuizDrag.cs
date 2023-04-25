@@ -104,20 +104,20 @@ public class QuizDrag : MonoBehaviour
 
 
             RectTransform noOneTxtRT = num1.GetComponent<RectTransform>();
-            noOneTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 850), Screen.height / 2f - 250, 10f);
+            noOneTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 1560), Screen.height / 2f - Screen.height / 2f, 10f);
             
 
             RectTransform minusTxtRT = Minus.GetComponent<RectTransform>();
-            minusTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 750), Screen.height / 2f - 250, 10f);
+            minusTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 1480), Screen.height / 2f - Screen.height / 2f, 10f);
 
             RectTransform noTwoTxtRT = num2.GetComponent<RectTransform>();
-            noTwoTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 660), Screen.height / 2f - 250, 10f);
+            noTwoTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 1380), Screen.height / 2f - Screen.height / 2f, 10f);
 
             RectTransform equalTxtRT = Equal.GetComponent<RectTransform>();
-            equalTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 550), Screen.height / 2f - 250, 10f);
+            equalTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 1280), Screen.height / 2f - Screen.height / 2f, 10f);
             
             RectTransform AnswerTxtRT = AnsB.GetComponent<RectTransform>();
-            AnswerTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 450), Screen.height / 2f - 250, 10f);
+            AnswerTxtRT.anchoredPosition = new Vector3((Screen.width / 2f - 1180), Screen.height / 2f - Screen.height / 2f, 10f);
 
             //OnMouseUp();
 
