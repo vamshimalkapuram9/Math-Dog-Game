@@ -107,10 +107,12 @@ public class Random_Numbers_and_Objects : MonoBehaviour
     {
         int answer = firstNum - nextNum;
 
-        if (answer < 1 || answer > 10)
-        {
-            throw new System.Exception("GetDiffOptions received invalid values to perform difference");
-        }
+        //if (answer < 1 || answer > 10)
+        //{
+        //    throw new System.Exception("GetDiffOptions received invalid values to perform difference");
+        //}
+
+
 
         var possibilities = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         possibilities.Remove(answer); // Ensure only one correct answer offered
