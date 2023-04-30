@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 
     //For Drag and Drop
@@ -48,7 +48,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     //}
 
 
-    
+
     void initTextsAndVariables()
     {
         //First of all I get a currently active panel
@@ -171,9 +171,9 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         else
         {
             subInterHarishScript.resetTransparency(cPanel);
-           
+
             subInterHarishScript.nextBtn.gameObject.SetActive(true);
-            
+
             // Need some code for nextBtn click
         }
     }
@@ -199,6 +199,6 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
      */
 
 
-    
-    
+
+
 }
