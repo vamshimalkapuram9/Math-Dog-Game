@@ -20,9 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sub-Practice-Levels.unity
     guid: 60e6ba75d41644101a149a005f61d15a
-  - enabled: 1
-    path: Assets/Scenes/Sub-Begin.unity
-    guid: 53a7146cda5d7460e9ac6c0611c0484a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Sub-Intemediate.unity
     guid: 8ab9319bebb1a48309b75ae7ef4e1966

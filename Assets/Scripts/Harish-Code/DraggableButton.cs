@@ -1,16 +1,21 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
-using TMPro;
-using System;
 using UnityEngine.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq.Expressions;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 
     //For Drag and Drop
+    static int count = 0;
+
     private Vector2 originalPosition;
 
     public SubHarish subHarishScript;
@@ -172,7 +177,20 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             // Need some code for nextBtn click
         }
     }
-
+    public void restartPuzzle()
+    {
+        count++;
+        if (count % 2 == 0)
+        {
+            SceneManager.LoadScene("PracticeConfetti");
+            Debug.Log("Confetti loading");
+            count = 0;
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
 
     /**
      * =========================================================================
