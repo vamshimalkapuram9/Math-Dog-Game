@@ -18,7 +18,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     private Vector2 originalPosition;
 
-    public SubInterHarish subInterHarishScript;
+    public SubHarish subHarishScript;
 
     GameObject answerPanelObject;
     TextMeshProUGUI FirstNumberText;
@@ -52,7 +52,7 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     void initTextsAndVariables()
     {
         //First of all I get a currently active panel
-        cPanel = subInterHarishScript.getCurrentlyActivePanel();
+        cPanel = subHarishScript.getCurrentlyActivePanel();
 
         Transform firstChild = cPanel.transform.GetChild(0);
 
@@ -163,16 +163,16 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         transform.position = originalPosition;
 
 
-        if (subInterHarishScript.panelCount < 5)
+        if (subHarishScript.panelCount < 5)
         {
-            subInterHarishScript.changeCurrentlyActivePanel();
+            subHarishScript.changeCurrentlyActivePanel();
         }
 
         else
         {
-            subInterHarishScript.resetTransparency(cPanel);
+            subHarishScript.resetTransparency(cPanel);
            
-            subInterHarishScript.nextBtn.gameObject.SetActive(true);
+            subHarishScript.nextBtn.gameObject.SetActive(true);
             
             // Need some code for nextBtn click
         }
