@@ -139,7 +139,7 @@ public class SubHarish : MonoBehaviour
             //TIA Code
             Transform TIATransform = answerPanelObject.transform.GetChild(0);
            TextMeshProUGUI TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
-            TextInAnswerPanel.text = "";
+            TextInAnswerPanel.text = "?";
         }
     }
 
