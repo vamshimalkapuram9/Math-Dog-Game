@@ -32,6 +32,7 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     void Start()
     {
+        Debug.Log("drag start called");
         initAnswersPanelsandAnswersLists();
     }
   

@@ -19,13 +19,13 @@ public class SubInterHarish : MonoBehaviour
 
     public int panelCount = 0;
 
-    int[] correctAnswersList;
+    public int[] correctAnswersList;
 
     public Button nextBtn;
 
     //Initialise an Answer Panel Queue
     List<GameObject> panelsList;
-    List<GameObject> answerPanelsList;
+    public List<GameObject> answerPanelsList;
 
     //Dictionary<Vector2, GameObject> panelsMap;
 
