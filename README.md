@@ -1,5 +1,6 @@
 | Date  | Updates |
 | ------------- | ------------- |
+|May 01 2023 | Added background music for all Practice Screens </br> Added butterflies  for Practice screens </br>  Added voice for numbers in beginner screen |
 |April 24 2023 | Added background music for quiz screen. </br> Added voiceover for the dog. </br> Added butterfly animation to board subtraction quiz. </br> Added voices for numbers in quiz screen |
 |April 17 2023 | Added background music for game. </br> Added voiceover for the dog. </br> Added butterfly animation to board. |
 |April 10 2023| Working on button animation and confetti screen |
