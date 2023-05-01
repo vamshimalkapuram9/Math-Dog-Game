@@ -1,5 +1,6 @@
 | DATE  | UPDATES |
 | ------------- | ------------- |
+| 05-01-2023 |1) Modified the code in login and register scripts <br> 2) Added a popup window for register and login in unity|
 | 04-24-2023 |Created register and login screen in Unity |
 | 04-10-2023 |deployed the code to azure so that it gets directly updated from git to azure |
 | 03-06-2023 | 1)Implementing HTTP API in azure function |
