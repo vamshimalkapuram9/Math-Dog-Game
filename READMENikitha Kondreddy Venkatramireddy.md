@@ -1,5 +1,6 @@
 | Date  | Updates |
 | ------------- | ------------- |
+| May 1 2023 | Updated with latest practice screens of beginner and intermediate screen<br>added with register and login page|
 | Apr 24 2023| Updated with latest puzzle screens<br>Updated with latest quiz screens<br>Updated with latest fun screens|
 | Apr 17 2023 | Updated wiki with puzzle screens<br> Added confetti to animations|
 | Apr 10 2023 | Updated wiki with latest screens and animations<br>Suggested with UI samples<br>Updated with relationsships in class diagram|
