@@ -8,123 +8,32 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
 {
-
-    //For Drag and Drop
-    static int count = 0;
+    private Vector3 startPosition;
+    private Transform startParent;
 
     private Vector3 originalPosition;
-
-    public SubInterHarish subInterHarish;
+ 
+    private float snapDistance = 1f;
 
     public Text buttonText;
 
-    List<Button> draggableBtns = new();
+    public SubInterHarish SubInterHarish;
 
 
-    //List of AnswerPanel Game Object
-    List<GameObject> answerPanelsList;
-
-    //Correct Answers List
-    public int[] correctAnswersList;
-
-
-    void Start()
+    private void Start()
     {
-        Debug.Log("drag start called");
-        initAnswersPanelsandAnswersLists();
+        originalPosition = transform.position;
     }
-  
-
-    void initAnswersPanelsandAnswersLists()
-    {
-        answerPanelsList = new List<GameObject>();
-
-        answerPanelsList = subInterHarish.getAnswerPanels();
-
-        //foreach(GameObject aPanelObject in answerPanelsList)
-        //{
-        //    Debug.Log("APanel Tag: " + aPanelObject.gameObject.tag);
-        //}
-
-        Debug.Log("APanel Count: " + answerPanelsList.Count);
-
-        correctAnswersList = subInterHarish.getCorrectAnswersList();
-
-       // Debug.Log("Drag Answers List: " + string.Join(", ", correctAnswersList));
-
-
-        getButtons();
-
-
-    }
-
-   
-
-
-
-
-    //void initTextsAndVariables()
-    //{
-
-    //    Transform firstChild = cPanel.transform.GetChild(0);
-
-    //    //FirstNumberText TMP
-    //    FirstNumberText = firstChild.GetComponent<TextMeshProUGUI>();
-
-    //    Transform secondChild = cPanel.transform.GetChild(2);
-
-    //    //SecondNumberText TMP
-    //    SecondNumberText = secondChild.GetComponent<TextMeshProUGUI>();
-
-    //    //Debug.Log(" "+cPanel.transform.GetChild(4).tag);
-
-    //    answerPanelObject = cPanel.transform.GetChild(4).gameObject;
-
-
-    //    //TIA Code
-    //    Transform TIATransform = answerPanelObject.transform.GetChild(0);
-    //    TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
-    //    TextInAnswerPanel.enabled = false;
-
-    //    /**
-    //     * ========================================
-    //     *          Button Panel Code 
-    //     *=========================================
-    //    */
-
-    //    // Get AnswerButtons Panel Object
-
-    //    getButtons();
-
-
-    //}
-
-    void getButtons()
-    {
-        GameObject buttonsPanel = GameObject.FindGameObjectWithTag(Tags.ANSWER_BUTTONS_PANEL);
-
-        Button[] buttons = buttonsPanel.GetComponentsInChildren<Button>();
-
-        foreach (Button button in buttons)
-        {
-            draggableBtns.Add(button);
-        }
-
-        //foreach (Button button in draggableBtns)
-        //{
-        //    Debug.Log("Btn Tag: " + button.tag);
-        //}
-
-    }
-
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-     
-        originalPosition = transform.position;
 
+        startPosition = transform.position;
+        
+        startParent = transform.parent;
+        GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -138,122 +47,64 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
-       
+        /**
+         * Now we use this script to drag and drop buttons into the Answer Panels. Each button already has a value
+         * TODO: If the button value matches panel's value. We get the panel's value like this: Get index of the panel and get correctAnswersList[index]
+         * 
+         * finally if the button's value = correctAnswersList[index]
+         * Then show a Debug.Log with correct value and return the button to it's original position
+         * */
 
-        int givenValue = Convert.ToInt32(buttonText.text);
+        //Debug.Log("Final Mouse Position: " + Input.mousePosition);
 
-        bool isAnswered = false;
+        //Debug.Log("Mouse 3D Position: " + Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        //for(int i =0; i < 6; i++)
+        //{
+        //    Debug.Log(i+" APanel Pos: " + Camera.main.WorldToScreenPoint(SubInterHarish.answerPanelsList[i].transform.position));
+        //}
 
-        foreach (GameObject panel in answerPanelsList)
+        //Debug.Log("Drag Answers List: " + string.Join(", ", SubInterHarish.correctAnswersList));
+
+
+        // get the position of the mouse cursor in world space
+        //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(transform.position);
+
+        Vector3 mousePosition = transform.position;
+
+
+        bool snapped = false;
+        mousePosition.z = 90f;
+
+        int index = 0;
+        
+        // loop through all the panels and check if the mouse cursor is within the snap distance
+        foreach (GameObject panel in SubInterHarish.answerPanelsList)
         {
-            if (RectTransformUtility.RectangleContainsScreenPoint(panel.GetComponent<RectTransform>(), Input.mousePosition))
+            Debug.Log("Distance: " + Vector3.Distance(mousePosition, panel.transform.position));
+            if (Vector3.Distance(mousePosition, panel.transform.position) <= snapDistance)
             {
-                int index = answerPanelsList.IndexOf(panel);
+                //GET PANELS index
+                int answer = SubInterHarish.correctAnswersList[index];
 
-                if(givenValue == correctAnswersList[index])
+                if (buttonText.text == answer.ToString())
+
                 {
+                    snapped = true;
+                    // if the mouse cursor is within the snap distance, snap the button to the center of the panel
                     transform.position = panel.transform.position;
-                    StartCoroutine(WaitOneSecond(panel,index));
-                    setTIAText(panel, correctAnswersList[index]);
-                    isAnswered = true;
-
                     break;
-
                 }
-
+                
             }
 
+            index++;
+        
         }
 
-
-        if (!isAnswered)
-        {
+        if(!snapped) {
             transform.position = originalPosition;
         }
+        
 
-
-    }
-
-    void setTIAText(GameObject panel,int answerInt)
-    {
-        GameObject answerPanelObject = panel.transform.GetChild(4).gameObject;
-
-
-        //TIA Code
-        Transform TIATransform = answerPanelObject.transform.GetChild(0);
-        TextMeshProUGUI TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
-        TextInAnswerPanel.text = ""+answerInt;
-        TextInAnswerPanel.enabled = true;
-
-
-    }
-
-    IEnumerator WaitOneSecond(GameObject currentAnswerPanel, int index)
-    {
-        Debug.Log("Coroutine started");
-
-
-        yield return new WaitForSeconds(0.5f);
-
-        transform.position = originalPosition;
-
-
-        answerPanelsList.Remove(currentAnswerPanel);
-
-
-        if (correctAnswersList.Length != 0)
-        {
-            correctAnswersList = ArrayExtensions.RemoveAt(correctAnswersList, index);
-        }
-
-        else
-        {
-            //subInterHarish.resetTransparency(cPanel);
-
-            subInterHarish.nextBtn.gameObject.SetActive(true);
-
-            // Need some code for nextBtn click
-        }
-    }
-    public void restartPuzzle()
-    {
-        count++;
-        if (count % 2 == 0)
-        {
-            SceneManager.LoadScene("PracticeConfetti");
-            Debug.Log("Confetti loading");
-            count = 0;
-        }
-        else
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
-
-
-   
-    /**
-     * =========================================================================
-     *                          Code For Animation
-     * =========================================================================
-     */
-
-
-
-
-}
-
-public static class ArrayExtensions
-{
-    public static T[] RemoveAt<T>(this T[] source, int index)
-    {
-        T[] dest = new T[source.Length - 1];
-        if (index > 0)
-            Array.Copy(source, 0, dest, 0, index);
-
-        if (index < source.Length - 1)
-            Array.Copy(source, index + 1, dest, index, source.Length - index - 1);
-
-        return dest;
     }
 }

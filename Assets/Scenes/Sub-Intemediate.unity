@@ -706,6 +706,7 @@ GameObject:
   - component: {fileID: 194458585}
   - component: {fileID: 194458584}
   - component: {fileID: 194458587}
+  - component: {fileID: 194458588}
   m_Layer: 5
   m_Name: Ans3
   m_TagString: Ans3Btn
@@ -828,9 +829,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 1471217827}
-  correctAnswersList: 
+  SubInterHarish: {fileID: 817777120}
+--- !u!225 &194458588
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194458581}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &223153980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1202,7 @@ GameObject:
   - component: {fileID: 260232945}
   - component: {fileID: 260232944}
   - component: {fileID: 260232943}
+  - component: {fileID: 260232947}
   - component: {fileID: 260232946}
   m_Layer: 5
   m_Name: Ans1
@@ -1313,9 +1326,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 1035551511}
-  correctAnswersList: 
+  SubInterHarish: {fileID: 817777120}
+--- !u!225 &260232947
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260232940}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &268889823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,6 +1839,7 @@ GameObject:
   - component: {fileID: 304504091}
   - component: {fileID: 304504090}
   - component: {fileID: 304504093}
+  - component: {fileID: 304504094}
   m_Layer: 5
   m_Name: Ans7
   m_TagString: Ans7Btn
@@ -1937,9 +1962,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 1508945374}
-  correctAnswersList: 
+  SubInterHarish: {fileID: 817777120}
+--- !u!225 &304504094
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304504087}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &341211465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,6 +2695,7 @@ GameObject:
   - component: {fileID: 589355841}
   - component: {fileID: 589355840}
   - component: {fileID: 589355843}
+  - component: {fileID: 589355844}
   m_Layer: 5
   m_Name: Ans4
   m_TagString: Ans4Btn
@@ -2781,9 +2818,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 2028373610}
-  correctAnswersList: 
+  SubInterHarish: {fileID: 817777120}
+--- !u!225 &589355844
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589355837}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &659321273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3290,8 +3338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalAnswers: 
   panelCount: 0
+  correctAnswersList: 
   nextBtn: {fileID: 393951691}
-  selectedPanel: {fileID: 0}
+  answerPanelsList: []
 --- !u!1 &825743037
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,6 +6082,7 @@ GameObject:
   - component: {fileID: 1415708554}
   - component: {fileID: 1415708553}
   - component: {fileID: 1415708556}
+  - component: {fileID: 1415708557}
   m_Layer: 5
   m_Name: Ans6
   m_TagString: Ans6Btn
@@ -6155,9 +6205,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 884132561}
-  correctAnswersList: 
+  SubInterHarish: {fileID: 817777120}
+--- !u!225 &1415708557
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415708550}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1432318161
 GameObject:
   m_ObjectHideFlags: 0
@@ -6466,6 +6527,7 @@ GameObject:
   - component: {fileID: 1520487237}
   - component: {fileID: 1520487236}
   - component: {fileID: 1520487239}
+  - component: {fileID: 1520487240}
   m_Layer: 5
   m_Name: Ans5
   m_TagString: Ans5Btn
@@ -6588,9 +6650,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 1840458436}
-  correctAnswersList: 
+  SubInterHarish: {fileID: 817777120}
+--- !u!225 &1520487240
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520487233}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1543513705
 GameObject:
   m_ObjectHideFlags: 0
@@ -6942,6 +7015,7 @@ GameObject:
   - component: {fileID: 1657988074}
   - component: {fileID: 1657988073}
   - component: {fileID: 1657988076}
+  - component: {fileID: 1657988077}
   m_Layer: 5
   m_Name: Ans2
   m_TagString: Ans2Btn
@@ -7064,9 +7138,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 1192112395}
-  correctAnswersList: 
+  SubInterHarish: {fileID: 817777120}
+--- !u!225 &1657988077
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657988070}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1773168886
 GameObject:
   m_ObjectHideFlags: 0

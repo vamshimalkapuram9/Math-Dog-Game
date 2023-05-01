@@ -118,8 +118,11 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnDrag(PointerEventData eventData)
     {
+        var screenPoint = Input.mousePosition;
+        screenPoint.z = 10.0f;
 
-        transform.position = Input.mousePosition;
+
+        transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
     }
 
     public void OnEndDrag(PointerEventData eventData)
