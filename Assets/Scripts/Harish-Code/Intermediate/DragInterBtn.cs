@@ -7,14 +7,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
 {
-    private Vector3 startPosition;
-    private Transform startParent;
 
+
+    //For Drag and Drop
+    static int count = 0;
     private Vector3 originalPosition;
- 
+
     private float snapDistance = 1f;
 
     public Text buttonText;
@@ -22,17 +24,17 @@ public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
     public SubInterHarish SubInterHarish;
 
 
+
     private void Start()
     {
+        
         originalPosition = transform.position;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
 
-        startPosition = transform.position;
         
-        startParent = transform.parent;
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
@@ -47,40 +49,20 @@ public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        /**
-         * Now we use this script to drag and drop buttons into the Answer Panels. Each button already has a value
-         * TODO: If the button value matches panel's value. We get the panel's value like this: Get index of the panel and get correctAnswersList[index]
-         * 
-         * finally if the button's value = correctAnswersList[index]
-         * Then show a Debug.Log with correct value and return the button to it's original position
-         * */
-
-        //Debug.Log("Final Mouse Position: " + Input.mousePosition);
-
-        //Debug.Log("Mouse 3D Position: " + Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        //for(int i =0; i < 6; i++)
-        //{
-        //    Debug.Log(i+" APanel Pos: " + Camera.main.WorldToScreenPoint(SubInterHarish.answerPanelsList[i].transform.position));
-        //}
-
-        //Debug.Log("Drag Answers List: " + string.Join(", ", SubInterHarish.correctAnswersList));
-
-
-        // get the position of the mouse cursor in world space
-        //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(transform.position);
-
+       
         Vector3 mousePosition = transform.position;
 
+        GameObject cPanel;
 
         bool snapped = false;
         mousePosition.z = 90f;
 
         int index = 0;
-        
+
         // loop through all the panels and check if the mouse cursor is within the snap distance
         foreach (GameObject panel in SubInterHarish.answerPanelsList)
         {
-            Debug.Log("Distance: " + Vector3.Distance(mousePosition, panel.transform.position));
+            //Debug.Log("Distance: " + Vector3.Distance(mousePosition, panel.transform.position));
             if (Vector3.Distance(mousePosition, panel.transform.position) <= snapDistance)
             {
                 //GET PANELS index
@@ -89,22 +71,81 @@ public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
                 if (buttonText.text == answer.ToString())
 
                 {
+                    count++;
+
+                    Debug.Log("Panel Count: " + count);
                     snapped = true;
+
+                    cPanel = panel;
+
+
                     // if the mouse cursor is within the snap distance, snap the button to the center of the panel
                     transform.position = panel.transform.position;
+
+
+                    StartCoroutine(WaitOneSecond(index));
+
+                    SetTIA(panel, buttonText.text);
+
+
                     break;
                 }
-                
+
             }
 
             index++;
-        
+
         }
 
-        if(!snapped) {
+        //TODO: Remove the panel from the list. If snapped.
+
+        if (!snapped)
+        {
             transform.position = originalPosition;
         }
-        
 
     }
+
+    private void SetTIA(GameObject answerPanelObject, String buttonString)
+    {
+        Transform TIATransform = answerPanelObject.transform.GetChild(0);
+        TextMeshProUGUI TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
+        TextInAnswerPanel.text = buttonString;
+        TextInAnswerPanel.enabled = true;
+    }
+
+    IEnumerator WaitOneSecond(int index)
+
+    {
+        yield return new WaitForSeconds(0.2f);
+        transform.position = originalPosition;
+
+        if(count < 6)
+        {
+            SubInterHarish.callNewAnswerButtons(index);
+        }
+        else
+        {
+           SubInterHarish.nextBtn.gameObject.SetActive(true);
+            count = 0;
+            Debug.Log("Nxt btn pos: "+SubInterHarish.nextBtn.transform.position);
+
+        }
+    }
+
 }
+
+//public static class ArrayExtensions
+//{
+//    public static T[] RemoveAt<T>(this T[] source, int index)
+//    {
+//        T[] dest = new T[source.Length - 1];
+//        if (index > 0)
+//            Array.Copy(source, 0, dest, 0, index);
+
+//        if (index < source.Length - 1)
+//            Array.Copy(source, index + 1, dest, index, source.Length - index - 1);
+
+//        return dest;
+//    }
+//}

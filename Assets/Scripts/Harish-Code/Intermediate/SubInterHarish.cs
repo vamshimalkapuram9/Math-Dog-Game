@@ -27,12 +27,8 @@ public class SubInterHarish : MonoBehaviour
     List<GameObject> panelsList;
     public List<GameObject> answerPanelsList;
 
-    //Dictionary<Vector2, GameObject> panelsMap;
-
   
-    //I have added this in order to change the Alpha of the @param presentlyActivePanel
-    Image panelImage;
-
+    
     //Answer Buttons Panel
     GameObject buttonsPanel;
 
@@ -203,6 +199,17 @@ public class SubInterHarish : MonoBehaviour
 
     }
 
+    public void callNewAnswerButtons(int index)
+    {
+        List<int> ansList = correctAnswersList.ToList();
+
+        ansList.RemoveAt(index);
+
+        int[] currentAnsArray = ansList.ToArray();
+
+        GenerateAnswerButtons(currentAnsArray);
+    }
+
   
 
     public int[] GenerateRandomNumbers()
@@ -302,6 +309,11 @@ public class SubInterHarish : MonoBehaviour
      *          Code For After Clicking the Next Btn
      *=====================================================
      */
+
+    public void callNextBtn()
+    {
+        nextBtn.gameObject.SetActive(true);
+    }
 
 
     private void resetPanelsAndButtons()
