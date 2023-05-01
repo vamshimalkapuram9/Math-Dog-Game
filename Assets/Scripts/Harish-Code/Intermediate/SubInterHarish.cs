@@ -178,6 +178,8 @@ public class SubInterHarish : MonoBehaviour
 
 
 
+
+
     void getFirstandSecondTMPList()
     {
         foreach (GameObject panel in panelsList)
@@ -238,6 +240,8 @@ public class SubInterHarish : MonoBehaviour
         }
 
 
+        Debug.Log("SubInter Answers List: " + string.Join(", ", correctAnswersList));
+
         GenerateAnswerButtons(correctAnswersList);
 
 
@@ -248,56 +252,41 @@ public class SubInterHarish : MonoBehaviour
     }
 
 
-    /**
-     * Shuffle Array
-     **/
-
-     static void Shuffle<T>(T[] array)
-    {
-        System.Random _random = new System.Random();
-        int n = array.Length;
-        for (int i = 0; i < (n - 1); i++)
-        {
-            // Use Next on random instance with an argument.
-            // ... The argument is an exclusive bound.
-            //     So we will not go past the end of the array.
-            int r = i + _random.Next(n - i);
-            T t = array[r];
-            array[r] = array[i];
-            array[i] = t;
-        }
-    }
-
-
+   
 
 
 
     public void GenerateAnswerButtons(int[] buttonAnswersList)
     {
-        int[] answerChoices = new int[7];
+        List<int> answerChoices = new();
 
         int randomValue = Random.Range(1, 10);
 
-        foreach (int i in buttonAnswersList)
+        for (int i = 0; i < buttonAnswersList.Length; i++)
         {
-            answerChoices.Append(i);
+            answerChoices.Append(buttonAnswersList[i]);
         }
 
-        while (answerChoices.Length < 7)
+        int j = answerChoices.Count;
+
+
+        
+        while (j < 7)
         {
-            while (answerChoices.Contains(randomValue))
+           while (answerChoices.Contains(randomValue))
             {
                 randomValue = Random.Range(1, 10);
             }
 
             // Since random value is unique I'll add it to the list
             answerChoices.Append(randomValue);
+            j++;
         }
 
         Debug.Log("First Answers List: " + string.Join(", ", answerChoices));
         //Shuffle The array;
 
-        Shuffle(answerChoices);
+        RandomExtensions.Shuffle(answerChoices);
         Debug.Log("Randomised Answers List: " + string.Join(", ", answerChoices));
 
 
@@ -403,6 +392,30 @@ public class SubInterHarish : MonoBehaviour
 
     }
 
+
+
+}
+
+public static class RandomExtensions
+{
+    /**
+    * Shuffle Array
+    **/
+
+
+    public static void Shuffle<T>(this IList<T> list)
+    {
+        System.Random rng = new System.Random();
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            T value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
+    }
 
 
 }

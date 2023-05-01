@@ -99,6 +99,7 @@
     <Compile Include="Assets/Scripts/LoadingSlider.cs" />
     <Compile Include="Assets/Scripts/Confetti.cs" />
     <Compile Include="Assets/Scripts/Dogvoice.cs" />
+    <Compile Include="Assets/Scenes/Login.cs" />
     <Compile Include="Assets/Scripts/RandNum.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="Assets/Scripts/TextVoice.cs" />
     <Compile Include="Assets/Scripts/Pravallika-Code/Random_Numbers_and_Objects.cs" />
     <Compile Include="Assets/Scripts/Drag.cs" />
+    <Compile Include="Assets/Scenes/Register.cs" />
     <Compile Include="Assets/FunTextVoice.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
@@ -151,6 +153,7 @@
     <None Include="Assets/Image-Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+    <None Include="Assets/credentials.txt" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />

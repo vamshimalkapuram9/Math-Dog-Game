@@ -18,10 +18,6 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public SubInterHarish subInterHarish;
 
-    GameObject answerPanelObject;
-    TextMeshProUGUI FirstNumberText;
-    TextMeshProUGUI SecondNumberText;
-    TextMeshProUGUI TextInAnswerPanel;
     public Text buttonText;
 
     List<Button> draggableBtns = new();
@@ -35,20 +31,30 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     void initAnswersPanelsandAnswersLists()
     {
-        answerPanelsList = new();
+        answerPanelsList = new List<GameObject>();
         
         answerPanelsList = subInterHarish.getAnswerPanels();
 
         correctAnswersList = subInterHarish.getCorrectAnswersList();
+
+        Debug.Log("Correct Answers List: " + string.Join(", ", correctAnswersList));
+
+
+        getButtons();
+
         
     }
 
+    void Start()
+    {
+        initAnswersPanelsandAnswersLists();
+    }
 
-    
+
 
     //void initTextsAndVariables()
     //{
-      
+
     //    Transform firstChild = cPanel.transform.GetChild(0);
 
     //    //FirstNumberText TMP
@@ -103,7 +109,6 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //initTextsAndVariables();
 
         originalPosition = transform.position;
 
@@ -122,48 +127,72 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
-
-        //transform.position = eventData.pointerCurrentRaycast.gameObject.transform.position;
-
-        int firstNo = Convert.ToInt32(FirstNumberText.text);
-        int secondNo = Convert.ToInt32(SecondNumberText.text);
+       
 
         int givenValue = Convert.ToInt32(buttonText.text);
 
-        int correctAnswerValue = firstNo - secondNo;
+        bool isAnswered = false;
 
-
-        if (givenValue == correctAnswerValue)
+        foreach (GameObject panel in answerPanelsList)
         {
-            transform.position = answerPanelObject.transform.position;
+            if (RectTransformUtility.RectangleContainsScreenPoint(panel.GetComponent<RectTransform>(), Input.mousePosition))
+            {
+                int index = answerPanelsList.IndexOf(panel);
 
-            StartCoroutine(WaitOneSecond());
+                if(givenValue == correctAnswersList[index])
+                {
+                    transform.position = panel.transform.position;
+                    StartCoroutine(WaitOneSecond(panel,index));
+                    setTIAText(panel, correctAnswersList[index]);
+                    isAnswered = true;
 
-            TextInAnswerPanel.text = correctAnswerValue.ToString();
+                    break;
 
-            TextInAnswerPanel.enabled = true;
+                }
 
+            }
 
         }
 
-        else
+
+        if (!isAnswered)
         {
             transform.position = originalPosition;
         }
 
 
     }
-    IEnumerator WaitOneSecond()
+
+    void setTIAText(GameObject panel,int answerInt)
+    {
+        GameObject answerPanelObject = panel.transform.GetChild(4).gameObject;
+
+
+        //TIA Code
+        Transform TIATransform = answerPanelObject.transform.GetChild(0);
+        TextMeshProUGUI TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
+        TextInAnswerPanel.text = ""+answerInt;
+        TextInAnswerPanel.enabled = true;
+
+
+    }
+
+    IEnumerator WaitOneSecond(GameObject currentAnswerPanel, int index)
     {
         Debug.Log("Coroutine started");
+
+
         yield return new WaitForSeconds(0.5f);
 
         transform.position = originalPosition;
 
 
-        if (subInterHarish.panelCount < 5)
+        answerPanelsList.Remove(currentAnswerPanel);
+
+
+        if (correctAnswersList.Length != 0)
         {
-            //subInterHarish.changeCurrentlyActivePanel();
+            correctAnswersList = ArrayExtensions.RemoveAt(correctAnswersList, index);
         }
 
         else
@@ -190,6 +219,8 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         }
     }
 
+
+   
     /**
      * =========================================================================
      *                          Code For Animation
@@ -199,4 +230,19 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
 
 
+}
+
+public static class ArrayExtensions
+{
+    public static T[] RemoveAt<T>(this T[] source, int index)
+    {
+        T[] dest = new T[source.Length - 1];
+        if (index > 0)
+            Array.Copy(source, 0, dest, 0, index);
+
+        if (index < source.Length - 1)
+            Array.Copy(source, index + 1, dest, index, source.Length - index - 1);
+
+        return dest;
+    }
 }
