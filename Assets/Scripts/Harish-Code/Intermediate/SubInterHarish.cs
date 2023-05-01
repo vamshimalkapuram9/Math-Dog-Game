@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 public class SubInterHarish : MonoBehaviour
 {
     static int count = 0;
@@ -22,17 +23,13 @@ public class SubInterHarish : MonoBehaviour
 
     public Button nextBtn;
 
-    // Text In Answer Panel List
-
-
     //Initialise an Answer Panel Queue
-    Queue<GameObject> panelsQueue;
+    List<GameObject> panelsList;
+    List<GameObject> answerPanelsList;
 
     //Dictionary<Vector2, GameObject> panelsMap;
 
-    //This is the panel that is being answered at the moment
-    GameObject presentlyActivePanel;
-
+  
     //I have added this in order to change the Alpha of the @param presentlyActivePanel
     Image panelImage;
 
@@ -41,6 +38,16 @@ public class SubInterHarish : MonoBehaviour
 
     //Green Board Panel
     GameObject greenBoardPanel;
+
+    /// ============================
+    /// Panel Selection Code
+    /// ============================
+
+    public GameObject selectedPanel;
+
+    
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,11 +58,18 @@ public class SubInterHarish : MonoBehaviour
 
     }
 
+    //Function to get correct AnswersList
+    public int[] getCorrectAnswersList()
+    {
+        return correctAnswersList;
+    }
+
     //Here is the function to generate the Answer Panels Queue
     void initPanelsAndVariables()
     {
 
-        panelsQueue = new Queue<GameObject>();
+        panelsList = new List<GameObject>();
+        answerPanelsList = new List<GameObject>();
 
         getPanels();
 
@@ -94,13 +108,6 @@ public class SubInterHarish : MonoBehaviour
             answerTexts.Add(currentAnsText);
         }
 
-
-
-        presentlyActivePanel = panelsQueue.Dequeue();
-
-        changePanelTransparency(presentlyActivePanel);
-
-
         // Connect the Board to Tag
 
         greenBoardPanel = GameObject.FindGameObjectWithTag(Tags.GREEN_BOARD_PANEL);
@@ -117,22 +124,46 @@ public class SubInterHarish : MonoBehaviour
      */
 
     void getPanels()
-    {
-        panelCount = 0;
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FIRST_PANEL));
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.SECOND_PANEL));
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.THIRD_PANEL));
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FOURTH_PANEL));
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.FIFTH_PANEL));
-        panelsQueue.Enqueue(GameObject.FindWithTag(Tags.SIXTH_PANEL));
+    { 
 
-        resetTIAText(panelsQueue);
+        panelCount = 0;
+        panelsList.Add(GameObject.FindWithTag(Tags.FIRST_PANEL));
+        panelsList.Add(GameObject.FindWithTag(Tags.SECOND_PANEL));
+        panelsList.Add(GameObject.FindWithTag(Tags.THIRD_PANEL));
+        panelsList.Add(GameObject.FindWithTag(Tags.FOURTH_PANEL));
+        panelsList.Add(GameObject.FindWithTag(Tags.FIFTH_PANEL));
+        panelsList.Add(GameObject.FindWithTag(Tags.SIXTH_PANEL));
+
+
+        addAnswersPanels();
+        //Apply Question Mark to all the Answer Panels intially
+        resetTIAText(panelsList);
     }
 
 
-    void resetTIAText(Queue<GameObject> panelsQueue)
+    void addAnswersPanels()
     {
-        foreach (GameObject panel in panelsQueue)
+        GameObject tempPanel = new();
+
+        foreach(GameObject panel in panelsList)
+        {
+
+            tempPanel = panel.transform.GetChild(4).gameObject;
+            answerPanelsList.Add(tempPanel);
+
+        }
+    }
+
+    public List<GameObject> getAnswerPanels()
+    {
+        return answerPanelsList;
+    }
+
+
+
+    void resetTIAText(List<GameObject> panelsList)
+    {
+        foreach (GameObject panel in panelsList)
         {
             GameObject answerPanelObject = panel.transform.GetChild(4).gameObject;
 
@@ -149,7 +180,7 @@ public class SubInterHarish : MonoBehaviour
 
     void getFirstandSecondTMPList()
     {
-        foreach (GameObject panel in panelsQueue)
+        foreach (GameObject panel in panelsList)
         {
             Transform leftSideNumber = panel.transform.GetChild(0);
 
@@ -173,63 +204,7 @@ public class SubInterHarish : MonoBehaviour
 
     }
 
-    void checkFirstChild()
-    {
-
-        //Transform firstChild = PresentlyActivePanel.transform.GetChild(0);
-
-        //TextMeshProUGUI firstText = firstChild.GetComponent<TextMeshProUGUI>();
-
-        //Debug.Log(firstText.text);
-        ////Debug.Log(PresentlyActivePanel.transform.childCount);
-
-    }
-
-
-    void changePanelTransparency(GameObject currentPanel)
-    {
-        //Generating Transparency
-        panelImage = currentPanel.GetComponent<Image>();
-        Color panelColor = panelImage.color;
-        panelColor.a = 0.3f;
-
-        panelImage.color = panelColor;
-
-    }
-
-    public void resetTransparency(GameObject currentPanel)
-    {
-        //Generating Transparency
-        panelImage = currentPanel.GetComponent<Image>();
-        Color panelColor = panelImage.color;
-        panelColor.a = 0f;
-
-        panelImage.color = panelColor;
-
-    }
-
-    public GameObject getCurrentlyActivePanel()
-    {
-        if (this.presentlyActivePanel == null)
-        {
-            Debug.Log("Panel is null");
-            return null;
-        }
-        return this.presentlyActivePanel;
-    }
-
-    public void changeCurrentlyActivePanel()
-    {
-
-        resetTransparency(presentlyActivePanel);
-
-        presentlyActivePanel = panelsQueue.Dequeue();
-
-        changePanelTransparency(presentlyActivePanel);
-        panelCount++;
-        GenerateAnswerButtons(finalAnswers[panelCount]);
-
-    }
+  
 
     public int[] GenerateRandomNumbers()
     {
@@ -263,7 +238,7 @@ public class SubInterHarish : MonoBehaviour
         }
 
 
-        GenerateAnswerButtons(correctAnswersList[panelCount]);
+        GenerateAnswerButtons(correctAnswersList);
 
 
 
@@ -273,37 +248,58 @@ public class SubInterHarish : MonoBehaviour
     }
 
 
+    /**
+     * Shuffle Array
+     **/
+
+     static void Shuffle<T>(T[] array)
+    {
+        System.Random _random = new System.Random();
+        int n = array.Length;
+        for (int i = 0; i < (n - 1); i++)
+        {
+            // Use Next on random instance with an argument.
+            // ... The argument is an exclusive bound.
+            //     So we will not go past the end of the array.
+            int r = i + _random.Next(n - i);
+            T t = array[r];
+            array[r] = array[i];
+            array[i] = t;
+        }
+    }
 
 
 
-    public void GenerateAnswerButtons(int correctAnswer)
+
+
+    public void GenerateAnswerButtons(int[] buttonAnswersList)
     {
         int[] answerChoices = new int[7];
 
-        int randomPlace = Random.Range(0, 7);
+        int randomValue = Random.Range(1, 10);
 
-        answerChoices[randomPlace] = correctAnswer;
-
-        int randomAnswer;
-
-        for (int i = 0; i < 7; i++)
+        foreach (int i in buttonAnswersList)
         {
-            if (i == randomPlace)
-            {
-                continue;
-            }
-            //Ensure that the new random number isn't repeted and isn't the correct answer
-
-            randomAnswer = Random.Range(1, 9);
-
-            while (randomAnswer == correctAnswer || answerChoices.Contains(randomAnswer))
-            {
-                randomAnswer = Random.Range(1, 9);
-            }
-
-            answerChoices[i] = randomAnswer;
-
+            answerChoices.Append(i);
         }
+
+        while (answerChoices.Length < 7)
+        {
+            while (answerChoices.Contains(randomValue))
+            {
+                randomValue = Random.Range(1, 10);
+            }
+
+            // Since random value is unique I'll add it to the list
+            answerChoices.Append(randomValue);
+        }
+
+        Debug.Log("First Answers List: " + string.Join(", ", answerChoices));
+        //Shuffle The array;
+
+        Shuffle(answerChoices);
+        Debug.Log("Randomised Answers List: " + string.Join(", ", answerChoices));
+
 
         for (int i = 0; i < 7; i++)
         {
@@ -315,9 +311,9 @@ public class SubInterHarish : MonoBehaviour
 
 
     /**
-     *==========================================
-     *          Code For Animation 
-     *============================================ 
+     *==================================================
+     *          Code For After Clicking the Next Btn
+     *=====================================================
      */
 
 

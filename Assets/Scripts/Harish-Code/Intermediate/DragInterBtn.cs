@@ -5,8 +5,6 @@ using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq.Expressions;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -16,9 +14,9 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     //For Drag and Drop
     static int count = 0;
 
-    private Vector2 originalPosition;
+    private Vector3 originalPosition;
 
-    public SubInterHarish subInterHarishScript;
+    public SubInterHarish subInterHarish;
 
     GameObject answerPanelObject;
     TextMeshProUGUI FirstNumberText;
@@ -28,64 +26,61 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     List<Button> draggableBtns = new();
 
-    public GameObject cPanel;
+
+    //List of AnswerPanel Game Object
+    List<GameObject> answerPanelsList;
+
+    //Correct Answers List
+    public int[] correctAnswersList;
+
+    void initAnswersPanelsandAnswersLists()
+    {
+        answerPanelsList = new();
+        
+        answerPanelsList = subInterHarish.getAnswerPanels();
+
+        correctAnswersList = subInterHarish.getCorrectAnswersList();
+        
+    }
 
 
-    // void CheckPanel()
+    
+
+    //void initTextsAndVariables()
     //{
+      
+    //    Transform firstChild = cPanel.transform.GetChild(0);
+
+    //    //FirstNumberText TMP
+    //    FirstNumberText = firstChild.GetComponent<TextMeshProUGUI>();
+
+    //    Transform secondChild = cPanel.transform.GetChild(2);
+
+    //    //SecondNumberText TMP
+    //    SecondNumberText = secondChild.GetComponent<TextMeshProUGUI>();
+
+    //    //Debug.Log(" "+cPanel.transform.GetChild(4).tag);
+
+    //    answerPanelObject = cPanel.transform.GetChild(4).gameObject;
 
 
+    //    //TIA Code
+    //    Transform TIATransform = answerPanelObject.transform.GetChild(0);
+    //    TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
+    //    TextInAnswerPanel.enabled = false;
 
-    //    Transform firstChild = PresentlyActivePanel.transform.GetChild(0);
+    //    /**
+    //     * ========================================
+    //     *          Button Panel Code 
+    //     *=========================================
+    //    */
 
-    //    TextMeshProUGUI firstText = firstChild.GetComponent<TextMeshProUGUI>();
+    //    // Get AnswerButtons Panel Object
 
-    //    Debug.Log("drag " + firstText.text);
-    //    //Debug.Log(PresentlyActivePanel.transform.childCount);
-
+    //    getButtons();
 
 
     //}
-
-
-
-    void initTextsAndVariables()
-    {
-        //First of all I get a currently active panel
-        cPanel = subInterHarishScript.getCurrentlyActivePanel();
-
-        Transform firstChild = cPanel.transform.GetChild(0);
-
-        //FirstNumberText TMP
-        FirstNumberText = firstChild.GetComponent<TextMeshProUGUI>();
-
-        Transform secondChild = cPanel.transform.GetChild(2);
-
-        //SecondNumberText TMP
-        SecondNumberText = secondChild.GetComponent<TextMeshProUGUI>();
-
-        //Debug.Log(" "+cPanel.transform.GetChild(4).tag);
-
-        answerPanelObject = cPanel.transform.GetChild(4).gameObject;
-
-
-        //TIA Code
-        Transform TIATransform = answerPanelObject.transform.GetChild(0);
-        TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
-        TextInAnswerPanel.enabled = false;
-
-        /**
-         * ========================================
-         *          Button Panel Code 
-         *=========================================
-        */
-
-        // Get AnswerButtons Panel Object
-
-        getButtons();
-
-
-    }
 
     void getButtons()
     {
@@ -108,7 +103,7 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        initTextsAndVariables();
+        //initTextsAndVariables();
 
         originalPosition = transform.position;
 
@@ -118,8 +113,11 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnDrag(PointerEventData eventData)
     {
+        var screenPoint = Input.mousePosition;
+        screenPoint.z = 10.0f;
 
-        transform.position = Input.mousePosition;
+
+        transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -163,16 +161,16 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         transform.position = originalPosition;
 
 
-        if (subInterHarishScript.panelCount < 5)
+        if (subInterHarish.panelCount < 5)
         {
-            subInterHarishScript.changeCurrentlyActivePanel();
+            //subInterHarish.changeCurrentlyActivePanel();
         }
 
         else
         {
-            subInterHarishScript.resetTransparency(cPanel);
+            //subInterHarish.resetTransparency(cPanel);
 
-            subInterHarishScript.nextBtn.gameObject.SetActive(true);
+            subInterHarish.nextBtn.gameObject.SetActive(true);
 
             // Need some code for nextBtn click
         }
