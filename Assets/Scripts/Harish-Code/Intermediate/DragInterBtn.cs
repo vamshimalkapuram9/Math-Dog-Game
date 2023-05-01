@@ -5,8 +5,6 @@ using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq.Expressions;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -16,76 +14,91 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     //For Drag and Drop
     static int count = 0;
 
-    private Vector2 originalPosition;
+    private Vector3 originalPosition;
 
-    public SubInterHarish subInterHarishScript;
+    public SubInterHarish subInterHarish;
 
-    GameObject answerPanelObject;
-    TextMeshProUGUI FirstNumberText;
-    TextMeshProUGUI SecondNumberText;
-    TextMeshProUGUI TextInAnswerPanel;
     public Text buttonText;
 
     List<Button> draggableBtns = new();
 
-    public GameObject cPanel;
+
+    //List of AnswerPanel Game Object
+    List<GameObject> answerPanelsList;
+
+    //Correct Answers List
+    public int[] correctAnswersList;
 
 
-    // void CheckPanel()
-    //{
-
-
-
-    //    Transform firstChild = PresentlyActivePanel.transform.GetChild(0);
-
-    //    TextMeshProUGUI firstText = firstChild.GetComponent<TextMeshProUGUI>();
-
-    //    Debug.Log("drag " + firstText.text);
-    //    //Debug.Log(PresentlyActivePanel.transform.childCount);
-
-
-
-    //}
-
-
-
-    void initTextsAndVariables()
+    void Start()
     {
-        //First of all I get a currently active panel
-        cPanel = subInterHarishScript.getCurrentlyActivePanel();
+        initAnswersPanelsandAnswersLists();
+    }
+  
 
-        Transform firstChild = cPanel.transform.GetChild(0);
+    void initAnswersPanelsandAnswersLists()
+    {
+        answerPanelsList = new List<GameObject>();
 
-        //FirstNumberText TMP
-        FirstNumberText = firstChild.GetComponent<TextMeshProUGUI>();
+        answerPanelsList = subInterHarish.getAnswerPanels();
 
-        Transform secondChild = cPanel.transform.GetChild(2);
+        //foreach(GameObject aPanelObject in answerPanelsList)
+        //{
+        //    Debug.Log("APanel Tag: " + aPanelObject.gameObject.tag);
+        //}
 
-        //SecondNumberText TMP
-        SecondNumberText = secondChild.GetComponent<TextMeshProUGUI>();
+        Debug.Log("APanel Count: " + answerPanelsList.Count);
 
-        //Debug.Log(" "+cPanel.transform.GetChild(4).tag);
+        correctAnswersList = subInterHarish.getCorrectAnswersList();
 
-        answerPanelObject = cPanel.transform.GetChild(4).gameObject;
+       // Debug.Log("Drag Answers List: " + string.Join(", ", correctAnswersList));
 
-
-        //TIA Code
-        Transform TIATransform = answerPanelObject.transform.GetChild(0);
-        TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
-        TextInAnswerPanel.enabled = false;
-
-        /**
-         * ========================================
-         *          Button Panel Code 
-         *=========================================
-        */
-
-        // Get AnswerButtons Panel Object
 
         getButtons();
 
 
     }
+
+   
+
+
+
+
+    //void initTextsAndVariables()
+    //{
+
+    //    Transform firstChild = cPanel.transform.GetChild(0);
+
+    //    //FirstNumberText TMP
+    //    FirstNumberText = firstChild.GetComponent<TextMeshProUGUI>();
+
+    //    Transform secondChild = cPanel.transform.GetChild(2);
+
+    //    //SecondNumberText TMP
+    //    SecondNumberText = secondChild.GetComponent<TextMeshProUGUI>();
+
+    //    //Debug.Log(" "+cPanel.transform.GetChild(4).tag);
+
+    //    answerPanelObject = cPanel.transform.GetChild(4).gameObject;
+
+
+    //    //TIA Code
+    //    Transform TIATransform = answerPanelObject.transform.GetChild(0);
+    //    TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
+    //    TextInAnswerPanel.enabled = false;
+
+    //    /**
+    //     * ========================================
+    //     *          Button Panel Code 
+    //     *=========================================
+    //    */
+
+    //    // Get AnswerButtons Panel Object
+
+    //    getButtons();
+
+
+    //}
 
     void getButtons()
     {
@@ -108,71 +121,95 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        initTextsAndVariables();
-
+     
         originalPosition = transform.position;
-
-
 
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        var screenPoint = Input.mousePosition;
+        screenPoint.z = 10.0f;
 
-        transform.position = Input.mousePosition;
+
+        transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-
-        //transform.position = eventData.pointerCurrentRaycast.gameObject.transform.position;
-
-        int firstNo = Convert.ToInt32(FirstNumberText.text);
-        int secondNo = Convert.ToInt32(SecondNumberText.text);
+       
 
         int givenValue = Convert.ToInt32(buttonText.text);
 
-        int correctAnswerValue = firstNo - secondNo;
+        bool isAnswered = false;
 
-
-        if (givenValue == correctAnswerValue)
+        foreach (GameObject panel in answerPanelsList)
         {
-            transform.position = answerPanelObject.transform.position;
+            if (RectTransformUtility.RectangleContainsScreenPoint(panel.GetComponent<RectTransform>(), Input.mousePosition))
+            {
+                int index = answerPanelsList.IndexOf(panel);
 
-            StartCoroutine(WaitOneSecond());
+                if(givenValue == correctAnswersList[index])
+                {
+                    transform.position = panel.transform.position;
+                    StartCoroutine(WaitOneSecond(panel,index));
+                    setTIAText(panel, correctAnswersList[index]);
+                    isAnswered = true;
 
-            TextInAnswerPanel.text = correctAnswerValue.ToString();
+                    break;
 
-            TextInAnswerPanel.enabled = true;
+                }
 
+            }
 
         }
 
-        else
+
+        if (!isAnswered)
         {
             transform.position = originalPosition;
         }
 
 
     }
-    IEnumerator WaitOneSecond()
+
+    void setTIAText(GameObject panel,int answerInt)
+    {
+        GameObject answerPanelObject = panel.transform.GetChild(4).gameObject;
+
+
+        //TIA Code
+        Transform TIATransform = answerPanelObject.transform.GetChild(0);
+        TextMeshProUGUI TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
+        TextInAnswerPanel.text = ""+answerInt;
+        TextInAnswerPanel.enabled = true;
+
+
+    }
+
+    IEnumerator WaitOneSecond(GameObject currentAnswerPanel, int index)
     {
         Debug.Log("Coroutine started");
+
+
         yield return new WaitForSeconds(0.5f);
 
         transform.position = originalPosition;
 
 
-        if (subInterHarishScript.panelCount < 5)
+        answerPanelsList.Remove(currentAnswerPanel);
+
+
+        if (correctAnswersList.Length != 0)
         {
-            subInterHarishScript.changeCurrentlyActivePanel();
+            correctAnswersList = ArrayExtensions.RemoveAt(correctAnswersList, index);
         }
 
         else
         {
-            subInterHarishScript.resetTransparency(cPanel);
+            //subInterHarish.resetTransparency(cPanel);
 
-            subInterHarishScript.nextBtn.gameObject.SetActive(true);
+            subInterHarish.nextBtn.gameObject.SetActive(true);
 
             // Need some code for nextBtn click
         }
@@ -192,6 +229,8 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         }
     }
 
+
+   
     /**
      * =========================================================================
      *                          Code For Animation
@@ -201,4 +240,19 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
 
 
+}
+
+public static class ArrayExtensions
+{
+    public static T[] RemoveAt<T>(this T[] source, int index)
+    {
+        T[] dest = new T[source.Length - 1];
+        if (index > 0)
+            Array.Copy(source, 0, dest, 0, index);
+
+        if (index < source.Length - 1)
+            Array.Copy(source, index + 1, dest, index, source.Length - index - 1);
+
+        return dest;
+    }
 }
