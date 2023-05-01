@@ -4939,28 +4939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde68e80411de42b2940f68d0a5121ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstRandomNumbers:
-  - {fileID: 1799861483}
-  - {fileID: 294728454}
-  - {fileID: 444637725}
-  - {fileID: 1797987692}
-  - {fileID: 1201516610}
-  - {fileID: 1432318163}
-  secondRandomNumbers:
-  - {fileID: 1118122953}
-  - {fileID: 1387962865}
-  - {fileID: 899367734}
-  - {fileID: 2083225942}
-  - {fileID: 1892803584}
-  - {fileID: 65778478}
-  answerTexts:
-  - {fileID: 1035551511}
-  - {fileID: 1192112395}
-  - {fileID: 1471217827}
-  - {fileID: 2028373610}
-  - {fileID: 1840458436}
-  - {fileID: 884132561}
-  - {fileID: 1508945374}
 --- !u!1 &1840458434
 GameObject:
   m_ObjectHideFlags: 0

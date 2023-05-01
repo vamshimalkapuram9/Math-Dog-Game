@@ -5,15 +5,16 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DragDrop : MonoBehaviour
 {
 
     public GameObject Crt_ans;
     public GameObject AnsB;
-    public Text Ans;
-    public Text num1;
-    public Text num2;
+    public TMP_Text Ans;
+    public TMP_Text num1;
+    public TMP_Text num2;
     public Button nextButton;
 
     public float dropdistance;

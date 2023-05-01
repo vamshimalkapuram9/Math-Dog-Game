@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SubHarish : MonoBehaviour
 {
-
+    static int count = 0;
     List<TextMeshProUGUI> firstRandomNumbers;
     List<TextMeshProUGUI> secondRandomNumbers;
   
@@ -139,7 +140,7 @@ public class SubHarish : MonoBehaviour
             //TIA Code
             Transform TIATransform = answerPanelObject.transform.GetChild(0);
            TextMeshProUGUI TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
-            TextInAnswerPanel.text = "";
+            TextInAnswerPanel.text = "?";
         }
     }
 
@@ -333,7 +334,17 @@ public class SubHarish : MonoBehaviour
 
     public void RefreshPuzzle()
     {
-       
+       count++;
+        if (count % 2 == 0)
+        {
+            SceneManager.LoadScene("PracticeConfetti");
+            Debug.Log("Confetti loading");
+            count = 0;
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
 
         //Start NewBoard Couroutine
