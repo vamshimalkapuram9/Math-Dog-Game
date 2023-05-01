@@ -42,9 +42,6 @@ public class SubInterHarish : MonoBehaviour
     /// ============================
     /// Panel Selection Code
     /// ============================
-
-    public GameObject selectedPanel;
-
     
 
 
@@ -252,41 +249,42 @@ public class SubInterHarish : MonoBehaviour
     }
 
 
-   
+    
+
 
 
 
     public void GenerateAnswerButtons(int[] buttonAnswersList)
     {
-        List<int> answerChoices = new();
+        int[] answerChoices = new int[7];
 
         int randomValue = Random.Range(1, 10);
 
         for (int i = 0; i < buttonAnswersList.Length; i++)
         {
-            answerChoices.Append(buttonAnswersList[i]);
+            answerChoices[i] = buttonAnswersList[i];
         }
 
-        int j = answerChoices.Count;
 
 
-        
-        while (j < 7)
+
+        for(int i = buttonAnswersList.Length; i< 7; i++)
         {
-           while (answerChoices.Contains(randomValue))
+            while (answerChoices.Contains(randomValue))
             {
                 randomValue = Random.Range(1, 10);
             }
+            answerChoices[i] = randomValue;
 
-            // Since random value is unique I'll add it to the list
-            answerChoices.Append(randomValue);
-            j++;
         }
+
+
+     
 
         Debug.Log("First Answers List: " + string.Join(", ", answerChoices));
         //Shuffle The array;
 
-        RandomExtensions.Shuffle(answerChoices);
+        RandomExtensions.Shuffle<int[]>(answerChoices);
         Debug.Log("Randomised Answers List: " + string.Join(", ", answerChoices));
 
 
@@ -391,31 +389,23 @@ public class SubInterHarish : MonoBehaviour
 
 
     }
-
-
-
 }
 
 public static class RandomExtensions
 {
-    /**
-    * Shuffle Array
-    **/
-
-
-    public static void Shuffle<T>(this IList<T> list)
+    public static void Shuffle<T>(int[] array)
     {
         System.Random rng = new System.Random();
-        int n = list.Count;
+        int n = array.Length;
         while (n > 1)
         {
-            n--;
-            int k = rng.Next(n + 1);
-            T value = list[k];
-            list[k] = list[n];
-            list[n] = value;
+            int k = rng.Next(n--);
+            int temp = array[n];
+            array[n] = array[k];
+            array[k] = temp;
         }
     }
-
-
 }
+
+
+

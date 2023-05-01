@@ -828,9 +828,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarishScript: {fileID: 817777120}
+  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 1471217827}
-  cPanel: {fileID: 0}
+  correctAnswersList: 
 --- !u!1 &223153980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,9 +1313,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarishScript: {fileID: 817777120}
+  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 1035551511}
-  cPanel: {fileID: 0}
+  correctAnswersList: 
 --- !u!1 &268889823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,9 +1937,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarishScript: {fileID: 817777120}
+  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 1508945374}
-  cPanel: {fileID: 0}
+  correctAnswersList: 
 --- !u!1 &341211465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2781,9 +2781,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarishScript: {fileID: 817777120}
+  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 2028373610}
-  cPanel: {fileID: 0}
+  correctAnswersList: 
 --- !u!1 &659321273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,6 +3291,7 @@ MonoBehaviour:
   finalAnswers: 
   panelCount: 0
   nextBtn: {fileID: 393951691}
+  selectedPanel: {fileID: 0}
 --- !u!1 &825743037
 GameObject:
   m_ObjectHideFlags: 0
@@ -6154,9 +6155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarishScript: {fileID: 817777120}
+  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 884132561}
-  cPanel: {fileID: 0}
+  correctAnswersList: 
 --- !u!1 &1432318161
 GameObject:
   m_ObjectHideFlags: 0
@@ -6587,9 +6588,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarishScript: {fileID: 817777120}
+  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 1840458436}
-  cPanel: {fileID: 0}
+  correctAnswersList: 
 --- !u!1 &1543513705
 GameObject:
   m_ObjectHideFlags: 0
@@ -7063,9 +7064,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad54928a3037496a97583d82ab4cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subInterHarishScript: {fileID: 817777120}
+  subInterHarish: {fileID: 817777120}
   buttonText: {fileID: 1192112395}
-  cPanel: {fileID: 0}
+  correctAnswersList: 
 --- !u!1 &1773168886
 GameObject:
   m_ObjectHideFlags: 0

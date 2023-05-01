@@ -29,26 +29,38 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     //Correct Answers List
     public int[] correctAnswersList;
 
-    void initAnswersPanelsandAnswersLists()
-    {
-        answerPanelsList = new List<GameObject>();
-        
-        answerPanelsList = subInterHarish.getAnswerPanels();
-
-        correctAnswersList = subInterHarish.getCorrectAnswersList();
-
-        Debug.Log("Correct Answers List: " + string.Join(", ", correctAnswersList));
-
-
-        getButtons();
-
-        
-    }
 
     void Start()
     {
         initAnswersPanelsandAnswersLists();
     }
+  
+
+    void initAnswersPanelsandAnswersLists()
+    {
+        answerPanelsList = new List<GameObject>();
+
+        answerPanelsList = subInterHarish.getAnswerPanels();
+
+        //foreach(GameObject aPanelObject in answerPanelsList)
+        //{
+        //    Debug.Log("APanel Tag: " + aPanelObject.gameObject.tag);
+        //}
+
+        Debug.Log("APanel Count: " + answerPanelsList.Count);
+
+        correctAnswersList = subInterHarish.getCorrectAnswersList();
+
+       // Debug.Log("Drag Answers List: " + string.Join(", ", correctAnswersList));
+
+
+        getButtons();
+
+
+    }
+
+   
+
 
 
 
@@ -109,10 +121,8 @@ public class DragInterBtn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-
+     
         originalPosition = transform.position;
-
-
 
     }
 
