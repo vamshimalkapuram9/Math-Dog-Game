@@ -1,5 +1,6 @@
 | Date          | Updates |
 | ------------- | ------------- |
+|May 1 2023| worked on the test plans on puzzle, quiz, practise, fun screens|
 |April 24 2023| implemented the test cases for the changes in the screens and worked on the dashboard|
 |April 17 2023| Completed working on the pipelines and inprogress on artifacts|
 |April 10 2023| Created pipelines for the main branch code |
