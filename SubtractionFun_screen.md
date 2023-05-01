@@ -1,5 +1,7 @@
 | Date  | Updates |
 | ------------- | ------------- |
+| May 01 2023 | Worked on Dog animations of all Practice screens <br> Worked on Intermediate code fix and also creating Advanced screen <br> Fixed most of the bugs in those screens|
+| April 24 2023 | Worked on Dog animations of Quiz and Fun screen <br> Worked on fade-in and fade-out for animations in Fun screen <br> Also fixed bugs in Quiz and Fun screen|
 | April 17 2023 | Worked on animations of Home, Splash and also Subtraction Puzzle screens <br> Fixed bugs in puzzle screen code |
 | April 10 2023 | Added a new Dog logo to Home screen <br> Worked on complete UI for all screens |
 | April 03 2023 | Worked on Fade_in and Fade_out part of 2d sprite in Subtraction Fun screen <br> Added character Ruby in Subtraction Fun sreen |
