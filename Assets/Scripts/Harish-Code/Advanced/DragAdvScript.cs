@@ -1,17 +1,11 @@
-
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine.SceneManagement;
-using System.Linq;
 
-public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
+public class DragAdvScript : MonoBehaviour, IDragHandler, IEndDragHandler
 {
-
 
     //For Drag and Drop
     static int count = 0;
@@ -21,20 +15,20 @@ public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public Text buttonText;
 
-    public SubInterHarish SubInterHarish;
+    public SubAdvHarish SubAdvHarish;
 
 
 
     private void Start()
     {
-        
+
         originalPosition = transform.position;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
 
-        
+
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
@@ -49,7 +43,7 @@ public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
-       
+
         Vector3 mousePosition = transform.position;
 
         GameObject cPanel;
@@ -60,13 +54,13 @@ public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
         int index = 0;
 
         // loop through all the panels and check if the mouse cursor is within the snap distance
-        foreach (GameObject panel in SubInterHarish.answerPanelsList)
+        foreach (GameObject panel in SubAdvHarish.RandomPanels)
         {
             //Debug.Log("Distance: " + Vector3.Distance(mousePosition, panel.transform.position));
             if (Vector3.Distance(mousePosition, panel.transform.position) <= snapDistance)
             {
                 //GET PANELS index
-                int answer = SubInterHarish.correctAnswersList[index];
+                int answer = SubAdvHarish.correctAnswersList[index];
 
                 if (buttonText.text == answer.ToString())
 
@@ -120,32 +114,17 @@ public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
         yield return new WaitForSeconds(0.2f);
         transform.position = originalPosition;
 
-        if(count < 6)
+        if (count < 6)
         {
-            SubInterHarish.callNewAnswerButtons(index);
+            SubAdvHarish.callNewAnswerButtons(index);
         }
         else
         {
-           SubInterHarish.nextBtn.gameObject.SetActive(true);
+            SubAdvHarish.nextBtn.gameObject.SetActive(true);
             count = 0;
-            Debug.Log("Nxt btn pos: "+SubInterHarish.nextBtn.transform.position);
+            Debug.Log("Nxt btn pos: " + SubAdvHarish.nextBtn.transform.position);
 
         }
     }
 
 }
-
-//public static class ArrayExtensions
-//{
-//    public static T[] RemoveAt<T>(this T[] source, int index)
-//    {
-//        T[] dest = new T[source.Length - 1];
-//        if (index > 0)
-//            Array.Copy(source, 0, dest, 0, index);
-
-//        if (index < source.Length - 1)
-//            Array.Copy(source, index + 1, dest, index, source.Length - index - 1);
-
-//        return dest;
-//    }
-//}
