@@ -30,6 +30,10 @@ public class SubAdvHarish : MonoBehaviour
     public List<GameObject> answerPanelsList;
 
 
+    //I have added this in order to change the Alpha of the @param presentlyActivePanel
+    Image panelImage;
+
+
 
     //Answer Buttons Panel
     GameObject buttonsPanel;
@@ -113,9 +117,30 @@ public class SubAdvHarish : MonoBehaviour
 
         greenBoardPanel = GameObject.FindGameObjectWithTag(Tags.GREEN_BOARD_PANEL);
 
+    }
 
+    void changePanelTransparency(GameObject currentPanel)
+    {
+        //Generating Transparency
+        panelImage = currentPanel.GetComponent<Image>();
+        Color panelColor = panelImage.color;
+        panelColor.a = 0.3f;
+
+        panelImage.color = panelColor;
 
     }
+
+    public void resetTransparency(GameObject currentPanel)
+    {
+        //Generating Transparency
+        panelImage = currentPanel.GetComponent<Image>();
+        Color panelColor = panelImage.color;
+        panelColor.a = 0f;
+
+        panelImage.color = panelColor;
+
+    }
+
 
 
 

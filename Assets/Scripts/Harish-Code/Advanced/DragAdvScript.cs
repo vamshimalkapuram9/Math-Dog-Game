@@ -17,6 +17,8 @@ public class DragAdvScript : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public SubAdvHarish SubAdvHarish;
 
+    //I have added this in order to change the Alpha of the @param presentlyActivePanel
+    Image panelImage;
 
 
     private void Start()
