@@ -12,7 +12,13 @@ public class LevelLoader : MonoBehaviour
 
     public void GoToHomePage()
     {
-        SceneManager.LoadScene(homePageIndex);
+        SceneManager.LoadScene("HomeScreen");
+    }
+
+    public void subFun()
+    {
+        SceneManager.LoadScene("Sub-Fun");
+
     }
 
     public void subPractice()
@@ -25,6 +31,66 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene("Sub-Begin");
 
     }
+    public void subInter()
+    {
+        SceneManager.LoadScene("Sub-Intermediate");
 
-    
+    }
+    public void subAdv()
+    {
+        SceneManager.LoadScene("Sub-Advanced");
+
+    }
+
+
+    public void subPuzzle()
+    {
+        SceneManager.LoadScene("Sub-Puzzle");
+
+    }
+        public void subQuiz()
+        {
+            SceneManager.LoadScene("Sub-Quiz");
+
+        }
+
+
+    public void register()
+    {
+        SceneManager.LoadScene("Register");
+
+    }
+
+    public void login()
+    {
+        SceneManager.LoadScene("Login");
+
+    }
+
+    /**
+     * =======================================
+     *          CONFETTI LEVELS
+     * =======================================
+     * */
+
+    public void practiceConfetti()
+    {
+        SceneManager.LoadScene("PracticeConfetti");
+
+    }
+
+    public void pravallikaConfetti()
+    {
+        SceneManager.LoadScene("PravallikaConfetti");
+
+    }
+
+    public void Confetti()
+    {
+        SceneManager.LoadScene("Confetti");
+
+    }
+
+
+
 }
