@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Register.unity
-    guid: 8129a99069b7bcc4eb7c36511da27f0a
-  - enabled: 1
-    path: Assets/Scenes/Login.unity
-    guid: 34b7c18c6fda46e4d8222d55477d0689
+    path: Assets/Scenes/SplashScreen.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/HomeScreen.unity
     guid: 6d4285809cc1b4d8e9856d96cee0837c
@@ -47,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PracticeConfetti.unity
     guid: 44c6a69251012da478472c657eac9de2
+  - enabled: 1
+    path: Assets/Scenes/Register.unity
+    guid: 8129a99069b7bcc4eb7c36511da27f0a
+  - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: 34b7c18c6fda46e4d8222d55477d0689
   m_configObjects: {}

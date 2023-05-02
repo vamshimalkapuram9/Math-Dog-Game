@@ -6,12 +6,14 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-
-public class SubInterHarish : MonoBehaviour
+public class SubAdvHarish : MonoBehaviour
 {
+
     static int count = 0;
     List<TextMeshProUGUI> firstRandomNumbers;
     List<TextMeshProUGUI> secondRandomNumbers;
+    List<TextMeshProUGUI> AnswerPanelTexts;
+    public List<GameObject> RandomPanels;
 
     List<Text> answerTexts;
 
@@ -28,7 +30,11 @@ public class SubInterHarish : MonoBehaviour
     public List<GameObject> answerPanelsList;
 
 
+    //I have added this in order to change the Alpha of the @param presentlyActivePanel
     Image panelImage;
+
+
+
     //Answer Buttons Panel
     GameObject buttonsPanel;
 
@@ -38,7 +44,7 @@ public class SubInterHarish : MonoBehaviour
     /// ============================
     /// Panel Selection Code
     /// ============================
-    
+    public List<SinglePanel> singlePanels;
 
 
 
@@ -60,9 +66,11 @@ public class SubInterHarish : MonoBehaviour
     //Here is the function to generate the Answer Panels Queue
     void initPanelsAndVariables()
     {
-
+        singlePanels = new List<SinglePanel>();
         panelsList = new List<GameObject>();
         answerPanelsList = new List<GameObject>();
+
+        RandomPanels = new List<GameObject>();
 
         getPanels();
 
@@ -73,7 +81,11 @@ public class SubInterHarish : MonoBehaviour
         //Intialise @param secondRandomNumbers
         secondRandomNumbers = new List<TextMeshProUGUI>();
 
+        //Intialise @param AnswerPanelTexts
+        AnswerPanelTexts = new List<TextMeshProUGUI>();
+
         getFirstandSecondTMPList();
+        getAnswerPanelTexts();
 
 
         /**
@@ -105,10 +117,9 @@ public class SubInterHarish : MonoBehaviour
 
         greenBoardPanel = GameObject.FindGameObjectWithTag(Tags.GREEN_BOARD_PANEL);
 
-
-
     }
 
+   
     public void resetTransparency(GameObject currentPanel)
     {
         //Generating Transparency
@@ -123,12 +134,13 @@ public class SubInterHarish : MonoBehaviour
 
 
 
+
     /**
      * Since Panels Get Dequeued we need to call them again in the animation function
      */
 
     void getPanels()
-    { 
+    {
 
         panelCount = 0;
         panelsList.Add(GameObject.FindWithTag(Tags.FIRST_PANEL));
@@ -138,18 +150,19 @@ public class SubInterHarish : MonoBehaviour
         panelsList.Add(GameObject.FindWithTag(Tags.FIFTH_PANEL));
         panelsList.Add(GameObject.FindWithTag(Tags.SIXTH_PANEL));
 
-
         addAnswersPanels();
-        //Apply Question Mark to all the Answer Panels intially
-        resetTIAText(panelsList);
+
+
     }
+
+    
 
 
     void addAnswersPanels()
     {
         GameObject tempPanel = new();
 
-        foreach(GameObject panel in panelsList)
+        foreach (GameObject panel in panelsList)
         {
 
             tempPanel = panel.transform.GetChild(4).gameObject;
@@ -188,7 +201,9 @@ public class SubInterHarish : MonoBehaviour
     {
         foreach (GameObject panel in panelsList)
         {
-            Transform leftSideNumber = panel.transform.GetChild(0);
+            GameObject firstPanelObject = panel.transform.GetChild(0).gameObject;
+
+            Transform leftSideNumber = firstPanelObject.transform.GetChild(0);
 
             //Get the TMP Text from the currentChild
             TextMeshProUGUI firstNumberTMP = leftSideNumber.GetComponent<TextMeshProUGUI>();
@@ -196,8 +211,10 @@ public class SubInterHarish : MonoBehaviour
             //Add it to our @param firstRandomNumbers
             firstRandomNumbers.Add(firstNumberTMP);
 
+
+            GameObject secondPanelObject = panel.transform.GetChild(2).gameObject;
             //Now let's focus on the right side Numbers
-            Transform rightSideNumber = panel.transform.GetChild(2);
+            Transform rightSideNumber = secondPanelObject.transform.GetChild(0);
 
             //Get the TMP Text from the currentChild
             TextMeshProUGUI secondNumberTMP = rightSideNumber.GetComponent<TextMeshProUGUI>();
@@ -206,6 +223,20 @@ public class SubInterHarish : MonoBehaviour
             secondRandomNumbers.Add(secondNumberTMP);
 
 
+        }
+
+    }
+
+    void getAnswerPanelTexts() {
+        foreach (GameObject panel in panelsList)
+        {
+            GameObject answerPanelObject = panel.transform.GetChild(4).gameObject;
+
+
+            //TIA Code
+            Transform TIATransform = answerPanelObject.transform.GetChild(0);
+            TextMeshProUGUI TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
+            AnswerPanelTexts.Add(TextInAnswerPanel);
         }
 
     }
@@ -221,7 +252,7 @@ public class SubInterHarish : MonoBehaviour
         GenerateAnswerButtons(currentAnsArray);
     }
 
-  
+
 
     public int[] GenerateRandomNumbers()
     {
@@ -251,11 +282,47 @@ public class SubInterHarish : MonoBehaviour
 
         for (int i = 0; i < 6; i++)
         {
-            correctAnswersList[i] = firstNosList[i] - secondNosList[i];
+            AnswerPanelTexts[i].text = (firstNosList[i] - secondNosList[i]).ToString();
+           
+        }
+
+        //Create Random Placements for the texts and rememeber them
+
+        GameObject rndPnlObject;
+
+        for(int i = 0; i < 6; i++)
+        {
+            randomNumber = Random.Range(1, 4);
+
+            switch(randomNumber)
+            { 
+                case 1: correctAnswersList[i] = firstNosList[i];
+                    firstRandomNumbers[i].text = "?";
+                    rndPnlObject = panelsList[i].transform.GetChild(0).gameObject;
+                    rndPnlObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.3f);
+                    RandomPanels.Add(rndPnlObject);
+                    break;
+
+                case 2: correctAnswersList[i] = secondNosList[i];
+                    secondRandomNumbers[i].text = "?";
+                    rndPnlObject = panelsList[i].transform.GetChild(2).gameObject;
+                    rndPnlObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.3f);
+                    RandomPanels.Add(rndPnlObject);
+                    break;
+
+                case 3: correctAnswersList[i] = firstNosList[i] - secondNosList[i];
+                    AnswerPanelTexts[i].text = "?";
+                    rndPnlObject = panelsList[i].transform.GetChild(4).gameObject;
+                    rndPnlObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.3f);
+                    RandomPanels.Add(rndPnlObject);
+                    break;
+
+
+            }
+
         }
 
 
-        Debug.Log("SubInter Answers List: " + string.Join(", ", correctAnswersList));
 
         GenerateAnswerButtons(correctAnswersList);
 
@@ -267,7 +334,7 @@ public class SubInterHarish : MonoBehaviour
     }
 
 
-    
+
 
 
 
@@ -286,7 +353,7 @@ public class SubInterHarish : MonoBehaviour
 
 
 
-        for(int i = buttonAnswersList.Length; i< 7; i++)
+        for (int i = buttonAnswersList.Length; i < 7; i++)
         {
             while (answerChoices.Contains(randomValue))
             {
@@ -297,7 +364,7 @@ public class SubInterHarish : MonoBehaviour
         }
 
 
-     
+
 
         Debug.Log("First Answers List: " + string.Join(", ", answerChoices));
         //Shuffle The array;
@@ -413,6 +480,7 @@ public class SubInterHarish : MonoBehaviour
 
     }
 }
+
 
 
 

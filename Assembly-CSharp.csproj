@@ -59,7 +59,7 @@
     <Compile Include="Assets/Scripts/Divya-Code/Drag_Drop.cs" />
     <Compile Include="Assets/Scripts/Divya-Code/Random_numbers.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
-    <Compile Include="Assets/Scripts/Harish-Code/SubAdvHarish.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/Advanced/SubAdvHarish.cs" />
     <Compile Include="Assets/Scripts/Harshita-code/PuzzleRightdragdrop.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
     <Compile Include="Assets/Scripts/Harshita-code/HarshitaRandomNo.cs" />
@@ -97,6 +97,8 @@
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Scripts/Harish-Code/Intermediate/DragInterBtn.cs" />
     <Compile Include="Assets/Scripts/LoadingSlider.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/Advanced/DragAdvScript.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/RandomExtensions.cs" />
     <Compile Include="Assets/Scripts/Confetti.cs" />
     <Compile Include="Assets/Scripts/Dogvoice.cs" />
     <Compile Include="Assets/Scenes/Login.cs" />
@@ -124,6 +126,7 @@
     <Compile Include="Assets/Scripts/Beginner_BtnRandom.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
     <Compile Include="Assets/Scripts/Advanced_BtnPractice.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/Advanced/SinglePanel.cs" />
     <Compile Include="Assets/Scripts/TextVoice.cs" />
     <Compile Include="Assets/Scripts/Pravallika-Code/Random_Numbers_and_Objects.cs" />
     <Compile Include="Assets/Scripts/Drag.cs" />
