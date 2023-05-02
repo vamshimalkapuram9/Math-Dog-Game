@@ -123,6 +123,164 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &46808071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46808072}
+  - component: {fileID: 46808074}
+  - component: {fileID: 46808073}
+  m_Layer: 5
+  m_Name: GameObjectText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &46808072
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46808071}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9998039, y: 0.9998039, z: 0.9998039}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 825743038}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &46808073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46808071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7baa2f4c5bc4740a75124cfdef34ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: f676805b3cb369a418570c4be0f47905, type: 3}
+  clip1: {fileID: 8300000, guid: fa922564ac84a874dacb9a65dbf307c7, type: 3}
+  clip2: {fileID: 8300000, guid: 65a91fcdb4b8b9748af27290f71ebd6a, type: 3}
+  clip3: {fileID: 8300000, guid: 40af06aba9cd9524bba91fa7ff0cb1f5, type: 3}
+  clip4: {fileID: 8300000, guid: ab83c21c6432b4348a4d57e484332708, type: 3}
+  clip5: {fileID: 8300000, guid: 1e6342c3b6fe6ec4b939386cb36d3580, type: 3}
+  clip6: {fileID: 8300000, guid: 258cf23647f5eb24ea0f2b6e88e46322, type: 3}
+  clip7: {fileID: 8300000, guid: bb5f69fffd66e034a80bc87720d483b3, type: 3}
+  clip8: {fileID: 8300000, guid: e1488784f574d0246aac7ae179819f00, type: 3}
+  clip9: {fileID: 8300000, guid: bd9182a0dbf72ab4b87a8ebe8013afb6, type: 3}
+  clip10: {fileID: 8300000, guid: fe0a70945e565b746a3ae9e788698c1d, type: 3}
+  clip11: {fileID: 8300000, guid: abc04c69f38e67c4299f0569505da59b, type: 3}
+--- !u!82 &46808074
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46808071}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f676805b3cb369a418570c4be0f47905, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &60443850
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +292,7 @@ GameObject:
   - component: {fileID: 60443851}
   - component: {fileID: 60443853}
   - component: {fileID: 60443852}
+  - component: {fileID: 60443854}
   m_Layer: 5
   m_Name: Equals to Symbol (4)
   m_TagString: Untagged
@@ -258,6 +417,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60443850}
   m_CullTransparentMesh: 1
+--- !u!114 &60443854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60443850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 60443852}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &62340897
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +538,7 @@ GameObject:
   - component: {fileID: 65778477}
   - component: {fileID: 65778479}
   - component: {fileID: 65778478}
+  - component: {fileID: 65778480}
   m_Layer: 5
   m_Name: 3-4
   m_TagString: Untagged
@@ -474,6 +663,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65778476}
   m_CullTransparentMesh: 1
+--- !u!114 &65778480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65778476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 65778478}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &83883216
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +703,7 @@ GameObject:
   - component: {fileID: 83883217}
   - component: {fileID: 83883219}
   - component: {fileID: 83883218}
+  - component: {fileID: 83883220}
   m_Layer: 5
   m_Name: Equals to Symbol (6)
   m_TagString: Untagged
@@ -609,6 +828,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83883216}
   m_CullTransparentMesh: 1
+--- !u!114 &83883220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83883216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 83883218}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &169042794
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +955,7 @@ GameObject:
   - component: {fileID: 194458584}
   - component: {fileID: 194458587}
   - component: {fileID: 194458588}
+  - component: {fileID: 194458589}
   m_Layer: 5
   m_Name: Ans3
   m_TagString: Ans3Btn
@@ -843,6 +1092,35 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &194458589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194458581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1790345128}
+          m_TargetAssemblyTypeName: Dogvoice, Assembly-CSharp
+          m_MethodName: PlayClipForButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 194458584}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &223153980
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +1209,7 @@ GameObject:
   - component: {fileID: 236902567}
   - component: {fileID: 236902569}
   - component: {fileID: 236902568}
+  - component: {fileID: 236902570}
   m_Layer: 5
   m_Name: Minus Symbol (1)
   m_TagString: Untagged
@@ -1055,6 +1334,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236902566}
   m_CullTransparentMesh: 1
+--- !u!114 &236902570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236902566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 236902568}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &243747663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,6 +1512,7 @@ GameObject:
   - component: {fileID: 260232943}
   - component: {fileID: 260232947}
   - component: {fileID: 260232946}
+  - component: {fileID: 260232948}
   m_Layer: 5
   m_Name: Ans1
   m_TagString: Ans1Btn
@@ -1340,6 +1649,35 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &260232948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260232940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1790345128}
+          m_TargetAssemblyTypeName: Dogvoice, Assembly-CSharp
+          m_MethodName: PlayClipForButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 260232943}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &268889823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,6 +1689,7 @@ GameObject:
   - component: {fileID: 268889824}
   - component: {fileID: 268889826}
   - component: {fileID: 268889825}
+  - component: {fileID: 268889827}
   m_Layer: 5
   m_Name: Equals to Symbol (2)
   m_TagString: Untagged
@@ -1475,6 +1814,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268889823}
   m_CullTransparentMesh: 1
+--- !u!114 &268889827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268889823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 268889825}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &276934746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,6 +1854,7 @@ GameObject:
   - component: {fileID: 276934747}
   - component: {fileID: 276934749}
   - component: {fileID: 276934748}
+  - component: {fileID: 276934750}
   m_Layer: 5
   m_Name: Minus Symbol
   m_TagString: Untagged
@@ -1610,6 +1979,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276934746}
   m_CullTransparentMesh: 1
+--- !u!114 &276934750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276934746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 276934748}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &284512625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,6 +2100,7 @@ GameObject:
   - component: {fileID: 294728453}
   - component: {fileID: 294728455}
   - component: {fileID: 294728454}
+  - component: {fileID: 294728456}
   m_Layer: 5
   m_Name: 2-1
   m_TagString: Untagged
@@ -1826,6 +2225,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294728452}
   m_CullTransparentMesh: 1
+--- !u!114 &294728456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294728452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 294728454}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &304504087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,6 +2268,7 @@ GameObject:
   - component: {fileID: 304504090}
   - component: {fileID: 304504093}
   - component: {fileID: 304504094}
+  - component: {fileID: 304504095}
   m_Layer: 5
   m_Name: Ans7
   m_TagString: Ans7Btn
@@ -1976,6 +2405,35 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &304504095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304504087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1790345128}
+          m_TargetAssemblyTypeName: Dogvoice, Assembly-CSharp
+          m_MethodName: PlayClipForButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 304504090}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &341211465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,7 +2694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -24, y: -198}
+  m_AnchoredPosition: {x: -24, y: -198.00003}
   m_SizeDelta: {x: -859.361, y: -748.6542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425582563
@@ -2288,6 +2746,7 @@ GameObject:
   - component: {fileID: 444637724}
   - component: {fileID: 444637726}
   - component: {fileID: 444637725}
+  - component: {fileID: 444637727}
   m_Layer: 5
   m_Name: 3-1
   m_TagString: Untagged
@@ -2412,6 +2871,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444637723}
   m_CullTransparentMesh: 1
+--- !u!114 &444637727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444637723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 444637725}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &448859004
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,6 +3184,7 @@ GameObject:
   - component: {fileID: 589355840}
   - component: {fileID: 589355843}
   - component: {fileID: 589355844}
+  - component: {fileID: 589355845}
   m_Layer: 5
   m_Name: Ans4
   m_TagString: Ans4Btn
@@ -2832,6 +3321,35 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &589355845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589355837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1790345128}
+          m_TargetAssemblyTypeName: Dogvoice, Assembly-CSharp
+          m_MethodName: PlayClipForButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 589355840}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &659321273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,6 +3681,7 @@ GameObject:
   - component: {fileID: 788355039}
   - component: {fileID: 788355041}
   - component: {fileID: 788355040}
+  - component: {fileID: 788355042}
   m_Layer: 5
   m_Name: Equals to Symbol (5)
   m_TagString: Untagged
@@ -3287,6 +3806,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788355038}
   m_CullTransparentMesh: 1
+--- !u!114 &788355042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788355038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 788355040}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &817777118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,6 +3926,9 @@ RectTransform:
   - {fileID: 393951690}
   - {fileID: 866897922}
   - {fileID: 659321274}
+  - {fileID: 1790345126}
+  - {fileID: 46808072}
+  - {fileID: 1915005194}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3975,6 +4526,7 @@ GameObject:
   - component: {fileID: 899367733}
   - component: {fileID: 899367735}
   - component: {fileID: 899367734}
+  - component: {fileID: 899367736}
   m_Layer: 5
   m_Name: 3-2
   m_TagString: Untagged
@@ -4099,6 +4651,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899367732}
   m_CullTransparentMesh: 1
+--- !u!114 &899367736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899367732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 899367734}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &940109879
 GameObject:
   m_ObjectHideFlags: 0
@@ -4372,6 +4953,7 @@ GameObject:
   - component: {fileID: 1037551491}
   - component: {fileID: 1037551493}
   - component: {fileID: 1037551492}
+  - component: {fileID: 1037551494}
   m_Layer: 5
   m_Name: Equals to Symbol (1)
   m_TagString: Untagged
@@ -4496,6 +5078,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037551490}
   m_CullTransparentMesh: 1
+--- !u!114 &1037551494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037551490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1037551492}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1076558049
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,6 +5223,7 @@ GameObject:
   - component: {fileID: 1092528826}
   - component: {fileID: 1092528828}
   - component: {fileID: 1092528827}
+  - component: {fileID: 1092528829}
   m_Layer: 5
   m_Name: Minus Symbol (4)
   m_TagString: Untagged
@@ -4736,6 +5348,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092528825}
   m_CullTransparentMesh: 1
+--- !u!114 &1092528829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092528825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1092528827}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1096075171
 GameObject:
   m_ObjectHideFlags: 0
@@ -4959,6 +5600,7 @@ GameObject:
   - component: {fileID: 1118122952}
   - component: {fileID: 1118122954}
   - component: {fileID: 1118122953}
+  - component: {fileID: 1118122955}
   m_Layer: 5
   m_Name: 1-2
   m_TagString: Untagged
@@ -5083,6 +5725,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118122951}
   m_CullTransparentMesh: 1
+--- !u!114 &1118122955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118122951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1118122953}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1121704481
 GameObject:
   m_ObjectHideFlags: 0
@@ -5247,6 +5918,7 @@ GameObject:
   - component: {fileID: 1201516609}
   - component: {fileID: 1201516611}
   - component: {fileID: 1201516610}
+  - component: {fileID: 1201516612}
   m_Layer: 5
   m_Name: 2-3
   m_TagString: Untagged
@@ -5371,6 +6043,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201516608}
   m_CullTransparentMesh: 1
+--- !u!114 &1201516612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201516608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1201516610}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1207203460
 GameObject:
   m_ObjectHideFlags: 0
@@ -5459,6 +6160,7 @@ GameObject:
   - component: {fileID: 1387962864}
   - component: {fileID: 1387962866}
   - component: {fileID: 1387962865}
+  - component: {fileID: 1387962867}
   m_Layer: 5
   m_Name: 2-2
   m_TagString: Untagged
@@ -5583,6 +6285,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387962863}
   m_CullTransparentMesh: 1
+--- !u!114 &1387962867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387962863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1387962865}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1391719721
 GameObject:
   m_ObjectHideFlags: 0
@@ -5945,6 +6676,7 @@ GameObject:
   - component: {fileID: 1400462196}
   - component: {fileID: 1400462198}
   - component: {fileID: 1400462197}
+  - component: {fileID: 1400462199}
   m_Layer: 5
   m_Name: Minus Symbol (6)
   m_TagString: Untagged
@@ -6069,6 +6801,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400462195}
   m_CullTransparentMesh: 1
+--- !u!114 &1400462199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400462195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1400462197}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1415708550
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,6 +6844,7 @@ GameObject:
   - component: {fileID: 1415708553}
   - component: {fileID: 1415708556}
   - component: {fileID: 1415708557}
+  - component: {fileID: 1415708558}
   m_Layer: 5
   m_Name: Ans6
   m_TagString: Ans6Btn
@@ -6219,6 +6981,35 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1415708558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415708550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1790345128}
+          m_TargetAssemblyTypeName: Dogvoice, Assembly-CSharp
+          m_MethodName: PlayClipForButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1415708553}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1432318161
 GameObject:
   m_ObjectHideFlags: 0
@@ -6230,6 +7021,7 @@ GameObject:
   - component: {fileID: 1432318162}
   - component: {fileID: 1432318164}
   - component: {fileID: 1432318163}
+  - component: {fileID: 1432318165}
   m_Layer: 5
   m_Name: 3-3
   m_TagString: Untagged
@@ -6354,6 +7146,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432318161}
   m_CullTransparentMesh: 1
+--- !u!114 &1432318165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432318161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1432318163}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1471217825
 GameObject:
   m_ObjectHideFlags: 0
@@ -6528,6 +7349,7 @@ GameObject:
   - component: {fileID: 1520487236}
   - component: {fileID: 1520487239}
   - component: {fileID: 1520487240}
+  - component: {fileID: 1520487241}
   m_Layer: 5
   m_Name: Ans5
   m_TagString: Ans5Btn
@@ -6664,6 +7486,35 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1520487241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520487233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1790345128}
+          m_TargetAssemblyTypeName: Dogvoice, Assembly-CSharp
+          m_MethodName: PlayClipForButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1520487236}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1543513705
 GameObject:
   m_ObjectHideFlags: 0
@@ -6743,6 +7594,7 @@ GameObject:
   - component: {fileID: 1574974214}
   - component: {fileID: 1574974216}
   - component: {fileID: 1574974215}
+  - component: {fileID: 1574974217}
   m_Layer: 5
   m_Name: Minus Symbol (2)
   m_TagString: Untagged
@@ -6867,6 +7719,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574974213}
   m_CullTransparentMesh: 1
+--- !u!114 &1574974217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574974213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1574974215}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1651712357
 GameObject:
   m_ObjectHideFlags: 0
@@ -6878,6 +7759,7 @@ GameObject:
   - component: {fileID: 1651712358}
   - component: {fileID: 1651712360}
   - component: {fileID: 1651712359}
+  - component: {fileID: 1651712361}
   m_Layer: 5
   m_Name: Equals to Symbol
   m_TagString: Untagged
@@ -7002,6 +7884,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651712357}
   m_CullTransparentMesh: 1
+--- !u!114 &1651712361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651712357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1651712359}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1657988070
 GameObject:
   m_ObjectHideFlags: 0
@@ -7016,6 +7927,7 @@ GameObject:
   - component: {fileID: 1657988073}
   - component: {fileID: 1657988076}
   - component: {fileID: 1657988077}
+  - component: {fileID: 1657988078}
   m_Layer: 5
   m_Name: Ans2
   m_TagString: Ans2Btn
@@ -7152,6 +8064,35 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1657988078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657988070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1790345128}
+          m_TargetAssemblyTypeName: Dogvoice, Assembly-CSharp
+          m_MethodName: PlayClipForButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1657988073}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1773168886
 GameObject:
   m_ObjectHideFlags: 0
@@ -7244,6 +8185,7 @@ GameObject:
   - component: {fileID: 1776983125}
   - component: {fileID: 1776983127}
   - component: {fileID: 1776983126}
+  - component: {fileID: 1776983128}
   m_Layer: 5
   m_Name: Minus Symbol (5)
   m_TagString: Untagged
@@ -7368,6 +8310,193 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776983124}
   m_CullTransparentMesh: 1
+--- !u!114 &1776983128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776983124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1915005196}
+          m_TargetAssemblyTypeName: OperatorFun, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1776983126}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &1790345125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790345126}
+  - component: {fileID: 1790345128}
+  - component: {fileID: 1790345127}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1790345126
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790345125}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9998039, y: 0.9998039, z: 0.9998039}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 825743038}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &1790345127
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790345125}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f676805b3cb369a418570c4be0f47905, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1790345128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790345125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9a09268910da54db833230a6c48f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: f676805b3cb369a418570c4be0f47905, type: 3}
+  clip1: {fileID: 8300000, guid: fa922564ac84a874dacb9a65dbf307c7, type: 3}
+  clip2: {fileID: 8300000, guid: 65a91fcdb4b8b9748af27290f71ebd6a, type: 3}
+  clip3: {fileID: 8300000, guid: 40af06aba9cd9524bba91fa7ff0cb1f5, type: 3}
+  clip4: {fileID: 8300000, guid: ab83c21c6432b4348a4d57e484332708, type: 3}
+  clip5: {fileID: 8300000, guid: 1e6342c3b6fe6ec4b939386cb36d3580, type: 3}
+  clip6: {fileID: 8300000, guid: 258cf23647f5eb24ea0f2b6e88e46322, type: 3}
+  clip7: {fileID: 8300000, guid: bb5f69fffd66e034a80bc87720d483b3, type: 3}
+  clip8: {fileID: 8300000, guid: e1488784f574d0246aac7ae179819f00, type: 3}
+  clip9: {fileID: 8300000, guid: bd9182a0dbf72ab4b87a8ebe8013afb6, type: 3}
+  clip10: {fileID: 8300000, guid: fe0a70945e565b746a3ae9e788698c1d, type: 3}
+  clip11: {fileID: 8300000, guid: abc04c69f38e67c4299f0569505da59b, type: 3}
 --- !u!1 &1797987690
 GameObject:
   m_ObjectHideFlags: 0
@@ -7379,6 +8508,7 @@ GameObject:
   - component: {fileID: 1797987691}
   - component: {fileID: 1797987693}
   - component: {fileID: 1797987692}
+  - component: {fileID: 1797987694}
   m_Layer: 5
   m_Name: 1-3
   m_TagString: Untagged
@@ -7503,6 +8633,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797987690}
   m_CullTransparentMesh: 1
+--- !u!114 &1797987694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797987690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1797987692}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1799861481
 GameObject:
   m_ObjectHideFlags: 0
@@ -7514,6 +8673,7 @@ GameObject:
   - component: {fileID: 1799861482}
   - component: {fileID: 1799861484}
   - component: {fileID: 1799861483}
+  - component: {fileID: 1799861485}
   m_Layer: 5
   m_Name: 1-1
   m_TagString: Untagged
@@ -7638,6 +8798,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799861481}
   m_CullTransparentMesh: 1
+--- !u!114 &1799861485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799861481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1799861483}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1817806385
 GameObject:
   m_ObjectHideFlags: 0
@@ -7888,6 +9077,7 @@ GameObject:
   - component: {fileID: 1892803583}
   - component: {fileID: 1892803585}
   - component: {fileID: 1892803584}
+  - component: {fileID: 1892803586}
   m_Layer: 5
   m_Name: 2-4
   m_TagString: Untagged
@@ -8012,6 +9202,184 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892803582}
   m_CullTransparentMesh: 1
+--- !u!114 &1892803586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892803582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1892803584}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &1915005193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1915005194}
+  - component: {fileID: 1915005196}
+  - component: {fileID: 1915005195}
+  m_Layer: 5
+  m_Name: GameObjectOperator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1915005194
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915005193}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9998039, y: 0.9998039, z: 0.9998039}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 825743038}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &1915005195
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915005193}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f676805b3cb369a418570c4be0f47905, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1915005196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915005193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776bf083640e4024e97d3d2332f3cc08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: f676805b3cb369a418570c4be0f47905, type: 3}
+  clip1: {fileID: 8300000, guid: ffe707ac31a865f429731db3e89670fd, type: 3}
+  clip2: {fileID: 8300000, guid: 60f1896d318da3e409829b60a31508fa, type: 3}
 --- !u!1 &1955861507
 GameObject:
   m_ObjectHideFlags: 0
@@ -8187,6 +9555,7 @@ GameObject:
   - component: {fileID: 2083225941}
   - component: {fileID: 2083225943}
   - component: {fileID: 2083225942}
+  - component: {fileID: 2083225944}
   m_Layer: 5
   m_Name: 1-4
   m_TagString: Untagged
@@ -8311,6 +9680,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083225940}
   m_CullTransparentMesh: 1
+--- !u!114 &2083225944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083225940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46808073}
+          m_TargetAssemblyTypeName: FunTextVoice, Assembly-CSharp
+          m_MethodName: PlayClipForText
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2083225942}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2088798350
 GameObject:
   m_ObjectHideFlags: 0
