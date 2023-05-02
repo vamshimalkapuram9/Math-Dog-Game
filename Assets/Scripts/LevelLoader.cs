@@ -91,6 +91,11 @@ public class LevelLoader : MonoBehaviour
 
     }
 
+    public void InterConfetti()
+    {
+        SceneManager.LoadScene("interConfetti");
+
+    }
 
 
 }

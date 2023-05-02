@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DragAdvScript : MonoBehaviour, IDragHandler, IEndDragHandler
 {
@@ -16,6 +17,8 @@ public class DragAdvScript : MonoBehaviour, IDragHandler, IEndDragHandler
     public Text buttonText;
 
     public SubAdvHarish SubAdvHarish;
+
+     public int count1 = 0;
 
     private void Start()
     {
