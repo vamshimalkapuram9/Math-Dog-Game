@@ -21,27 +21,6 @@ public class LevelLoader : MonoBehaviour
 
     }
 
-    public void subPractice()
-    {
-        SceneManager.LoadScene("Sub-Practice-Levels");
-    }
-
-    public void subBegin()
-    {
-        SceneManager.LoadScene("Sub-Begin");
-
-    }
-    public void subInter()
-    {
-        SceneManager.LoadScene("Sub-Intermediate");
-
-    }
-    public void subAdv()
-    {
-        SceneManager.LoadScene("Sub-Advanced");
-
-    }
-
 
     public void subPuzzle()
     {
@@ -94,6 +73,32 @@ public class LevelLoader : MonoBehaviour
     public void InterConfetti()
     {
         SceneManager.LoadScene("interConfetti");
+
+    }
+
+    /**
+     * =======================================
+     *          PRACTICE LEVELS
+     * =======================================
+     * */
+    public void subPractice()
+    {
+        SceneManager.LoadScene("Sub-Practice-Levels");
+    }
+
+    public void subBegin()
+    {
+        SceneManager.LoadScene("Sub-Begin");
+
+    }
+    public void subInter()
+    {
+        SceneManager.LoadScene("Sub-Intemediate");
+
+    }
+    public void subAdv()
+    {
+        SceneManager.LoadScene("Sub-Advanced");
 
     }
 
