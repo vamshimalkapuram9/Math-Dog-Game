@@ -221,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150634259}
   m_LocalRotation: {x: -0, y: -0, z: 0.23514973, w: 0.97195923}
-  m_LocalPosition: {x: 8.85, y: -6.73, z: 0}
+  m_LocalPosition: {x: 10.38, y: -3.32, z: 0}
   m_LocalScale: {x: 1.5403125, y: 1.4231249, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -719,7 +719,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521517415}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.43, y: 1.4, z: 0.05727055}
+  m_LocalPosition: {x: -15.2133, y: 1.6259, z: 0.05727055}
   m_LocalScale: {x: 2.6279936, y: 2.6500916, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2566,8 +2566,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1481887089}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: LoadLevel
-        m_Mode: 3
+        m_MethodName: GoToHomePage
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3238,7 +3238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627658888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.02, y: -1.5, z: 4.92}
+  m_LocalPosition: {x: -7.81, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3783,7 +3783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -634, y: -59}
+  m_AnchoredPosition: {x: -607, y: -59}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1907888172
