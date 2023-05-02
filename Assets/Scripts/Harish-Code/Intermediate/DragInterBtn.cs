@@ -82,6 +82,7 @@ public class DragInterBtn : MonoBehaviour, IDragHandler, IEndDragHandler
                     // if the mouse cursor is within the snap distance, snap the button to the center of the panel
                     transform.position = panel.transform.position;
 
+                    SubInterHarish.resetTransparency(panel);
 
                     StartCoroutine(WaitOneSecond(index));
 
