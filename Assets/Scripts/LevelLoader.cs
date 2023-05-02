@@ -15,5 +15,16 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(homePageIndex);
     }
 
+    public void subPractice()
+    {
+        SceneManager.LoadScene("Sub-Practice-Levels");
+    }
+
+    public void subBegin()
+    {
+        SceneManager.LoadScene("Sub-Begin");
+
+    }
+
     
 }
