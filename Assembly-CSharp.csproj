@@ -53,7 +53,7 @@
     <UnityVersion>2021.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Divya-Code\Drag_Drop.cs" />
@@ -97,6 +97,8 @@
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\Harish-Code\Intermediate\DragInterBtn.cs" />
     <Compile Include="Assets\Scripts\LoadingSlider.cs" />
+    <Compile Include="Assets\Scripts\Harish-Code\Advanced\DragAdvScript.cs" />
+    <Compile Include="Assets\Scripts\Harish-Code\RandomExtensions.cs" />
     <Compile Include="Assets\Scripts\Confetti.cs" />
     <Compile Include="Assets\Scripts\Dogvoice.cs" />
     <Compile Include="Assets\Scenes\Login.cs" />
@@ -124,6 +126,7 @@
     <Compile Include="Assets\Scripts\Beginner_BtnRandom.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\Advanced_BtnPractice.cs" />
+    <Compile Include="Assets\Scripts\Harish-Code\Advanced\SinglePanel.cs" />
     <Compile Include="Assets\Scripts\TextVoice.cs" />
     <Compile Include="Assets\Scripts\Pravallika-Code\Random_Numbers_and_Objects.cs" />
     <Compile Include="Assets\Scripts\Drag.cs" />
@@ -140,9 +143,6 @@
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\TechnoGami\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\Harish-Code\Beginner\SubHarish.cs" />
-    <Compile Include="Assets\Scripts\Harish-Code\Advanced\DragAdvScript.cs" />
-    <Compile Include="Assets\Scripts\Harish-Code\Advanced\SinglePanel.cs" />
-    <Compile Include="Assets\Scripts\Harish-Code\RandomExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Image-Assets\TextMesh Pro\Shaders\TMPro.cginc" />
