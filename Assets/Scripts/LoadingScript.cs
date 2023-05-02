@@ -12,14 +12,14 @@ public class LoadingScript : MonoBehaviour
     // public Text progressText;
     public void Start()
     {
-        StartCoroutine(LoadAsyncOperation());
+        StartCoroutine(LoadAsyncOperation(1));
     }
 
 
-    IEnumerator LoadAsyncOperation()
+    IEnumerator LoadAsyncOperation(int sceneIndex)
     {
         yield return new WaitForSeconds(3);
-        AsyncOperation gameLevel = SceneManager.LoadSceneAsync("HomeScreen");
+        AsyncOperation gameLevel = SceneManager.LoadSceneAsync(sceneIndex);
         loadingPanel.SetActive(true);
 
         while (!gameLevel.isDone)

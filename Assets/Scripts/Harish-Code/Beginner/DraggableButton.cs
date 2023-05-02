@@ -142,8 +142,6 @@ public class DraggableButton : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             transform.position = answerPanelObject.transform.position;
 
-          
-
             StartCoroutine(WaitOneSecond());
 
             TextInAnswerPanel.text = correctAnswerValue.ToString();

@@ -461,8 +461,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 308035311}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: GoToHomePage
-        m_Mode: 1
+        m_MethodName: LoadLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1362,8 +1362,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1878519400}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: subAdv
-        m_Mode: 1
+        m_MethodName: LoadLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1644,8 +1644,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2000474413}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: subInter
-        m_Mode: 1
+        m_MethodName: LoadLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

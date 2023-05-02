@@ -27,8 +27,12 @@ public class SubInterHarish : MonoBehaviour
     List<GameObject> panelsList;
     public List<GameObject> answerPanelsList;
 
+    //Dictionary<Vector2, GameObject> panelsMap;
 
+  
+    //I have added this in order to change the Alpha of the @param presentlyActivePanel
     Image panelImage;
+
     //Answer Buttons Panel
     GameObject buttonsPanel;
 
@@ -106,17 +110,6 @@ public class SubInterHarish : MonoBehaviour
         greenBoardPanel = GameObject.FindGameObjectWithTag(Tags.GREEN_BOARD_PANEL);
 
 
-
-    }
-
-    public void resetTransparency(GameObject currentPanel)
-    {
-        //Generating Transparency
-        panelImage = currentPanel.GetComponent<Image>();
-        Color panelColor = panelImage.color;
-        panelColor.a = 0f;
-
-        panelImage.color = panelColor;
 
     }
 
@@ -208,17 +201,6 @@ public class SubInterHarish : MonoBehaviour
 
         }
 
-    }
-
-    public void callNewAnswerButtons(int index)
-    {
-        List<int> ansList = correctAnswersList.ToList();
-
-        ansList.RemoveAt(index);
-
-        int[] currentAnsArray = ansList.ToArray();
-
-        GenerateAnswerButtons(currentAnsArray);
     }
 
   
@@ -321,11 +303,6 @@ public class SubInterHarish : MonoBehaviour
      *=====================================================
      */
 
-    public void callNextBtn()
-    {
-        nextBtn.gameObject.SetActive(true);
-    }
-
 
     private void resetPanelsAndButtons()
     {
@@ -414,7 +391,21 @@ public class SubInterHarish : MonoBehaviour
     }
 }
 
-
+public static class RandomExtensions
+{
+    public static void Shuffle<T>(int[] array)
+    {
+        System.Random rng = new System.Random();
+        int n = array.Length;
+        while (n > 1)
+        {
+            int k = rng.Next(n--);
+            int temp = array[n];
+            array[n] = array[k];
+            array[k] = temp;
+        }
+    }
+}
 
 
 
