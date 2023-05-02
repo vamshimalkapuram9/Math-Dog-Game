@@ -119,17 +119,7 @@ public class SubAdvHarish : MonoBehaviour
 
     }
 
-    void changePanelTransparency(GameObject currentPanel)
-    {
-        //Generating Transparency
-        panelImage = currentPanel.GetComponent<Image>();
-        Color panelColor = panelImage.color;
-        panelColor.a = 0.3f;
-
-        panelImage.color = panelColor;
-
-    }
-
+   
     public void resetTransparency(GameObject currentPanel)
     {
         //Generating Transparency
@@ -309,18 +299,21 @@ public class SubAdvHarish : MonoBehaviour
                 case 1: correctAnswersList[i] = firstNosList[i];
                     firstRandomNumbers[i].text = "?";
                     rndPnlObject = panelsList[i].transform.GetChild(0).gameObject;
+                    rndPnlObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.3f);
                     RandomPanels.Add(rndPnlObject);
                     break;
 
                 case 2: correctAnswersList[i] = secondNosList[i];
                     secondRandomNumbers[i].text = "?";
                     rndPnlObject = panelsList[i].transform.GetChild(2).gameObject;
+                    rndPnlObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.3f);
                     RandomPanels.Add(rndPnlObject);
                     break;
 
                 case 3: correctAnswersList[i] = firstNosList[i] - secondNosList[i];
                     AnswerPanelTexts[i].text = "?";
                     rndPnlObject = panelsList[i].transform.GetChild(4).gameObject;
+                    rndPnlObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.3f);
                     RandomPanels.Add(rndPnlObject);
                     break;
 
