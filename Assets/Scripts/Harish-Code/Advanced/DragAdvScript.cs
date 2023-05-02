@@ -101,6 +101,10 @@ public class DragAdvScript : MonoBehaviour, IDragHandler, IEndDragHandler
     private void SetTIA(GameObject answerPanelObject, string buttonString)
     {
         Transform TIATransform = answerPanelObject.transform.GetChild(0);
+
+        //Reset the Color of the Panel
+
+        SubAdvHarish.resetTransparency(answerPanelObject);
         TextMeshProUGUI TextInAnswerPanel = TIATransform.GetComponent<TextMeshProUGUI>();
         TextInAnswerPanel.text = buttonString;
         TextInAnswerPanel.enabled = true;
