@@ -406,10 +406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad233c4e38ebb87439bbc9dc334a2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amp: 25
+  amp: 20
   Object_: {fileID: 127218884}
-  x: 1300
-  y: 600
+  x: 600
+  y: 275
 --- !u!61 &127218887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -516,10 +516,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad233c4e38ebb87439bbc9dc334a2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amp: 25
+  amp: 20
   Object_: {fileID: 147378888}
-  x: 1300
-  y: 600
+  x: 600
+  y: 275
 --- !u!1 &158366485
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,10 +825,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad233c4e38ebb87439bbc9dc334a2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amp: 25
+  amp: 15
   Object_: {fileID: 240746169}
-  x: 1300
-  y: 600
+  x: 630
+  y: 275
 --- !u!1 &252128575
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,10 +885,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad233c4e38ebb87439bbc9dc334a2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amp: 25
+  amp: 20
   Object_: {fileID: 252128575}
-  x: 1300
-  y: 600
+  x: 600
+  y: 275
 --- !u!50 &252128578
 Rigidbody2D:
   serializedVersion: 4
@@ -993,10 +993,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad233c4e38ebb87439bbc9dc334a2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amp: 25
+  amp: 15
   Object_: {fileID: 256247923}
-  x: 1300
-  y: 600
+  x: 600
+  y: 275
 --- !u!1 &279028814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2330,10 +2330,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad233c4e38ebb87439bbc9dc334a2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amp: 25
+  amp: 20
   Object_: {fileID: 0}
-  x: 1100
-  y: 600
+  x: 570
+  y: 275
 --- !u!61 &488567042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2511,10 +2511,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad233c4e38ebb87439bbc9dc334a2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amp: 25
+  amp: 20
   Object_: {fileID: 507629539}
-  x: 1300
-  y: 600
+  x: 600
+  y: 275
 --- !u!50 &507629542
 Rigidbody2D:
   serializedVersion: 4
@@ -4467,7 +4467,7 @@ RectTransform:
   m_GameObject: {fileID: 863038583}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 23.603125, y: 22, z: 1}
+  m_LocalScale: {x: 7.686487, y: 7.2255926, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1175968238}
@@ -4495,7 +4495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69, y: 0}
+  m_AnchoredPosition: {x: -38, y: -10}
   m_SizeDelta: {x: 19.9225, y: 19.8451}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &863038585
@@ -5088,7 +5088,7 @@ RectTransform:
   m_GameObject: {fileID: 986279292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1125977, y: 2.1065626, z: 1}
+  m_LocalScale: {x: 1.0047792, y: 1.086752, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1152999228}
@@ -5097,7 +5097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 809, y: -528}
+  m_AnchoredPosition: {x: 277, y: -160}
   m_SizeDelta: {x: 64.162, y: 49.1706}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986279294
@@ -6043,10 +6043,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad233c4e38ebb87439bbc9dc334a2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amp: 25
+  amp: 20
   Object_: {fileID: 0}
-  x: 1300
-  y: 600
+  x: 600
+  y: 275
 --- !u!50 &1175968240
 Rigidbody2D:
   serializedVersion: 4
@@ -12069,10 +12069,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad233c4e38ebb87439bbc9dc334a2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amp: 25
+  amp: 15
   Object_: {fileID: 1643350834}
-  x: 1300
-  y: 600
+  x: 600
+  y: 275
 --- !u!1 &1654592884
 GameObject:
   m_ObjectHideFlags: 0
@@ -13205,10 +13205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad233c4e38ebb87439bbc9dc334a2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amp: 25
+  amp: 20
   Object_: {fileID: 1931736930}
-  x: 1300
-  y: 600
+  x: 600
+  y: 275
 --- !u!1 &1955741204
 GameObject:
   m_ObjectHideFlags: 0
