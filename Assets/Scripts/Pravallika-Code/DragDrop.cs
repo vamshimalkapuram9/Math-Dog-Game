@@ -37,7 +37,9 @@ public class DragDrop : MonoBehaviour
     {
         if (!islocked)
         {
-            AnsB.transform.position = Input.mousePosition; // To move with mouse position
+            var screenPoint = Input.mousePosition;
+            screenPoint.z = 10.0f;
+            AnsB.transform.position = Camera.main.ScreenToWorldPoint(screenPoint); // To move with mouse position
         }
     }
 
