@@ -102,7 +102,6 @@
     <Compile Include="Assets/Scripts/Harish-Code/RandomExtensions.cs" />
     <Compile Include="Assets/Scripts/Confetti.cs" />
     <Compile Include="Assets/Scripts/Dogvoice.cs" />
-    <Compile Include="Assets/Scenes/Login.cs" />
     <Compile Include="Assets/Scripts/RandNum.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
@@ -118,6 +117,7 @@
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/Scripts/Sparrow.cs" />
     <Compile Include="Assets/Scripts/DragandDrop.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/RegisterScript.cs" />
     <Compile Include="Assets/Scripts/DogVoiceFun.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
     <Compile Include="Assets/Scripts/LoadingScript.cs" />
@@ -131,7 +131,6 @@
     <Compile Include="Assets/Scripts/TextVoice.cs" />
     <Compile Include="Assets/Scripts/Pravallika-Code/Random_Numbers_and_Objects.cs" />
     <Compile Include="Assets/Scripts/Drag.cs" />
-    <Compile Include="Assets/Scenes/Register.cs" />
     <Compile Include="Assets/FunTextVoice.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
