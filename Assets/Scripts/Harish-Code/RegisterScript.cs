@@ -10,15 +10,17 @@ public class RegisterScript : MonoBehaviour
     public TextMeshProUGUI userNameTMP;
     // Start is called before the first frame update
 
+    public TextMeshProUGUI warningText;
+
     public void loadHomeScreen()
     {
         string username = userNameTMP.text;
 
 
 
-        if (username.Length == 1 || username.Length == 0)
+        if (username.Length < 5)
         {
-            Debug.Log("We ain't going anywhere");
+            warningText.gameObject.SetActive(true);
         }
         else
         {
