@@ -62,6 +62,7 @@
     <Compile Include="Assets/Scripts/Harish-Code/Advanced/SubAdvHarish.cs" />
     <Compile Include="Assets/Scripts/Harshita-code/PuzzleRightdragdrop.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/Ads/Banner.cs" />
     <Compile Include="Assets/Scripts/Harshita-code/HarshitaRandomNo.cs" />
     <Compile Include="Assets/ButtonHandler.cs" />
     <Compile Include="Assets/Scripts/Divya_randomnumbers.cs" />
@@ -97,6 +98,8 @@
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Scripts/Harish-Code/Intermediate/DragInterBtn.cs" />
     <Compile Include="Assets/Scripts/LoadingSlider.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/Advanced/DragAdvScript.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/RandomExtensions.cs" />
     <Compile Include="Assets/Scripts/Confetti.cs" />
     <Compile Include="Assets/Scripts/Dogvoice.cs" />
     <Compile Include="Assets/Scenes/Login.cs" />
@@ -124,6 +127,7 @@
     <Compile Include="Assets/Scripts/Beginner_BtnRandom.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
     <Compile Include="Assets/Scripts/Advanced_BtnPractice.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/Advanced/SinglePanel.cs" />
     <Compile Include="Assets/Scripts/TextVoice.cs" />
     <Compile Include="Assets/Scripts/Pravallika-Code/Random_Numbers_and_Objects.cs" />
     <Compile Include="Assets/Scripts/Drag.cs" />
@@ -140,10 +144,6 @@
     <Compile Include="Assets/Scripts/LevelLoader.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/Scripts/Harish-Code/Beginner/SubHarish.cs" />
-    <Compile Include="Assets/Scripts/Harish-Code/Advanced/DragAdvScript.cs" />
-    <Compile Include="Assets/Scripts/Harish-Code/Advanced/SinglePanel.cs" />
-    <Compile Include="Assets/Scripts/Harish-Code/RandomExtensions.cs" />
-    <Compile Include="Assets/Scripts/Harish-Code/Ads/Banner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -982,6 +982,10 @@
       <Project>{5BB650E2-3FF6-AF29-57DE-F91BD9B3560D}</Project>
       <Name>Unity.2D.SpriteShape.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="GoogleMobileAds.Editor.csproj">
+      <Project>{FA3D7874-064C-B8D0-16D8-5F6D243D3942}</Project>
+      <Name>GoogleMobileAds.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Editor.csproj">
       <Project>{D9865CAD-2250-FE92-3F4D-0407C40526CE}</Project>
       <Name>Unity.2D.Common.Editor</Name>
@@ -993,10 +997,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{04A2CDC2-D728-992F-3F5E-52948A0B2878}</Project>
       <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="GoogleMobileAds.Editor.csproj">
-      <Project>{FA3D7874-064C-B8D0-16D8-5F6D243D3942}</Project>
-      <Name>GoogleMobileAds.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
