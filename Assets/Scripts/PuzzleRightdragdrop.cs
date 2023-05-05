@@ -7,8 +7,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
-public class PuzzleRightdragdrop : MonoBehaviour
+public class NewPuzzleRightdragdrop : MonoBehaviour
 {
     public GameObject NumberOne;
     public GameObject NumberTwo;
@@ -29,9 +30,11 @@ public class PuzzleRightdragdrop : MonoBehaviour
     static bool AnswerLocked;
     static bool MinusLocked;
 
+    static bool showConfetti = false;
+
     public Text NumberOneButtonText, NumberTwoButtonText, MinusButtonText, EqualButtonText, AnswerButtonText;
 
-    const float PROXIMITY_SENSITIVITY = 20;
+    const float PROXIMITY_SENSITIVITY = 100;
 
     private Text CurrentTextLoc;
     public Vector2 NumberOneInitialPos, NumberTwoIntialPos, MinusInitialPos, EqualInitialPos, AnswerInitialPos;
@@ -48,14 +51,25 @@ public class PuzzleRightdragdrop : MonoBehaviour
         nextButton.gameObject.SetActive(false);
     }
 
+    
+
     public void restartPuzzle()
     {
+        StartCoroutine(RestartPuzzleCoroutine());
+    }
+
+    private IEnumerator RestartPuzzleCoroutine()
+    {
+        yield return new WaitForSeconds(1f); // wait for 1 second
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void DragObject(GameObject obj)
     {
-        obj.transform.position = Input.mousePosition;
+        //obj.transform.position = Input.mousePosition;
+        var screenPoint = Input.mousePosition;
+        screenPoint.z = 10.0f; //distance of the plane from the camera
+        transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
     }
 
     private Text WhichTextIsNearToThisObject(GameObject obj)
@@ -122,7 +136,15 @@ public class PuzzleRightdragdrop : MonoBehaviour
             Debug.Log("All Locked");
             EqualLocked = NumberOneLocked = NumberTwoLocked = AnswerLocked = MinusLocked = false;
             nextButton.gameObject.SetActive(true);
+            OnMouseClick();
         }
+    }
+
+    private void OnMouseClick()
+    {
+        showConfetti = true;
+        SceneManager.LoadScene("HarshitaConfetti", LoadSceneMode.Additive);
+
     }
 
     public void DropObject(GameObject obj)

@@ -22,6 +22,17 @@ TagManager:
   - APanel
   - NextBtn
   - BoardTag
+  - 1Object
+  - 2Object
+  - 3Object
+  - 4Object
+  - 5Object
+  - 6Object
+  - 7Object
+  - 8Object
+  - 9Object
+  - 10Object
+  - GreenBoard
   layers:
   - Default
   - TransparentFX
