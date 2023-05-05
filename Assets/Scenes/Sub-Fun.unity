@@ -469,7 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amp: 0.3
   Object_: {fileID: 147378888}
-  x: 0
+  x: 0.5
   y: -0.2
 --- !u!1 &158366485
 GameObject:
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amp: 0.3
   Object_: {fileID: 240746169}
-  x: 0
+  x: 0.5
   y: -0.2
 --- !u!1 &252128575
 GameObject:
@@ -880,7 +880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amp: 0.3
   Object_: {fileID: 252128575}
-  x: 0
+  x: 0.5
   y: -0.2
 --- !u!1 &256247923
 GameObject:
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amp: 0.1
   Object_: {fileID: 256247923}
-  x: 0
+  x: 0.5
   y: -0.2
 --- !u!1 &279028814
 GameObject:
@@ -2276,7 +2276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amp: 0.3
   Object_: {fileID: 0}
-  x: -1.5
+  x: -1
   y: -0.2
 --- !u!1 &497918906
 GameObject:
@@ -11871,7 +11871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amp: 0.1
   Object_: {fileID: 1643350834}
-  x: 0
+  x: 0.5
   y: -0.2
 --- !u!1 &1654592884
 GameObject:
