@@ -143,6 +143,7 @@
     <Compile Include="Assets/Scripts/Harish-Code/Advanced/DragAdvScript.cs" />
     <Compile Include="Assets/Scripts/Harish-Code/Advanced/SinglePanel.cs" />
     <Compile Include="Assets/Scripts/Harish-Code/RandomExtensions.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/Ads/Banner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro.cginc" />
