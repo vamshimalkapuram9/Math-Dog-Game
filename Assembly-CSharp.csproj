@@ -54,6 +54,48 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/it/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/tr/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/pl/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/System.Text.Json.SourceGeneration.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/pl/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/ja/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/pl/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/cs/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/ru/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/ko/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/ko/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/fr/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/ru/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/fr/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/ru/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/ja/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/de/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/tr/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/es/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/tr/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/System.Text.Json.SourceGeneration.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/de/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/ja/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/it/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/es/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/cs/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/fr/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/ko/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/it/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/de/System.Text.Json.SourceGeneration.resources.dll" />
+    <Analyzer Include="/Users/khkr/Coding/UnityProjects/Math-Dog-Game/Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/es/System.Text.Json.SourceGeneration.resources.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/Divya-Code/Drag_Drop.cs" />
@@ -145,41 +187,126 @@
     <Compile Include="Assets/Scripts/Harish-Code/Beginner/SubHarish.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/Packages/System.Text.Encodings.Web.7.0.0/lib/netstandard2.0/System.Text.Encodings.Web.dll" />
+    <None Include="Assets/Packages/Microsoft.IdentityModel.JsonWebTokens.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro.cginc" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/ru/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/it/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/tr/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/Azure.Core.1.31.0/lib/netstandard2.0/Azure.Core.xml" />
+    <None Include="Assets/Packages/Microsoft.Bcl.AsyncInterfaces.7.0.0/THIRD-PARTY-NOTICES.TXT" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds.Common.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/ja/System.Text.Json.SourceGeneration.resources.dll" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds.Ump.iOS.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/fr/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/Microsoft.IdentityModel.Logging.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/pl/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/LICENSE.TXT" />
     <None Include="Assets/Beamable/Resources/config-defaults.txt" />
+    <None Include="Assets/Packages/Microsoft.IdentityModel.Tokens.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/THIRD-PARTY-NOTICES.TXT" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/cs/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Diagnostics.DiagnosticSource.4.6.0/LICENSE.TXT" />
+    <None Include="Assets/Packages/System.Text.Encodings.Web.7.0.0/LICENSE.TXT" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds.dll" />
+    <None Include="Assets/Packages/System.Security.Cryptography.Cng.4.5.0/version.txt" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/Microsoft.Bcl.AsyncInterfaces.7.0.0/useSharedDesignerContext.txt" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/lib/netstandard2.0/System.Text.Json.dll" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds.iOS.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/de/System.Text.Json.SourceGeneration.resources.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/System.Text.Json.SourceGeneration.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/es/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/ko/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/System.Text.Json.SourceGeneration.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Diagnostics.DiagnosticSource.4.6.0/useSharedDesignerContext.txt" />
+    <None Include="Assets/Packages/Microsoft.IdentityModel.Logging.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/useSharedDesignerContext.txt" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds.Core.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/es/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Security.Cryptography.Cng.4.5.0/useSharedDesignerContext.txt" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/lib/netstandard2.0/System.Text.Json.xml" />
     <None Include="Assets/GoogleMobileAds/link.xml" />
+    <None Include="Assets/Packages/System.Security.Cryptography.Cng.4.5.0/LICENSE.TXT" />
+    <None Include="Assets/Packages/Microsoft.IdentityModel.Abstractions.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml" />
+    <None Include="Assets/Packages/Microsoft.Bcl.AsyncInterfaces.7.0.0/LICENSE.TXT" />
+    <None Include="Assets/Packages/System.Diagnostics.DiagnosticSource.4.6.0/version.txt" />
+    <None Include="Assets/Packages/Microsoft.Bcl.AsyncInterfaces.7.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll" />
+    <None Include="Assets/Packages/System.Diagnostics.DiagnosticSource.4.6.0/lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets/Packages/System.Memory.Data.1.0.2/lib/netstandard2.0/System.Memory.Data.xml" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+    <None Include="Assets/Packages/System.Text.Encodings.Web.7.0.0/THIRD-PARTY-NOTICES.TXT" />
     <None Include="Assets/credentials.txt" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/fr/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/es/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Memory.Data.1.0.2/lib/netstandard2.0/System.Memory.Data.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/it/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/pl/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/Microsoft.IdentityModel.JsonWebTokens.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml" />
+    <None Include="Assets/Packages/Microsoft.IdentityModel.Tokens.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/de/System.Text.Json.SourceGeneration.resources.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll" />
+    <None Include="Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/LICENSE.TXT" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/ko/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/cs/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/de/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/fr/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll" />
+    <None Include="Assets/Packages/System.Security.Cryptography.Cng.4.5.0/THIRD-PARTY-NOTICES.TXT" />
+    <None Include="Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/ko/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/pl/System.Text.Json.SourceGeneration.resources.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets/Packages/Azure.Core.1.31.0/lib/netstandard2.0/Azure.Core.dll" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds_version-8.1.0_manifest.txt" />
+    <None Include="Assets/Packages/Microsoft.IdentityModel.Abstractions.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds.Android.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/tr/System.Text.Json.SourceGeneration.resources.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+    <None Include="Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/useSharedDesignerContext.txt" />
+    <None Include="Assets/Packages/System.Text.Encodings.Web.7.0.0/lib/netstandard2.0/System.Text.Encodings.Web.xml" />
+    <None Include="Assets/Packages/System.Security.Cryptography.Cng.4.5.0/lib/netstandard2.0/System.Security.Cryptography.Cng.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/ru/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Diagnostics.DiagnosticSource.4.6.0/THIRD-PARTY-NOTICES.TXT" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.0/cs/tr/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/Microsoft.Bcl.AsyncInterfaces.7.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml" />
+    <None Include="Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/THIRD-PARTY-NOTICES.TXT" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/ja/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn4.4/cs/it/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Encodings.Web.7.0.0/useSharedDesignerContext.txt" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Diagnostics.DiagnosticSource.4.6.0/lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds.Ump.Android.dll" />
     <None Include="Assets/Image-Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/ja/System.Text.Json.SourceGeneration.resources.dll" />
+    <None Include="Assets/Packages/System.Text.Json.7.0.2/analyzers/dotnet/roslyn3.11/cs/ru/System.Text.Json.SourceGeneration.resources.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -454,6 +581,42 @@
     </Reference>
     <Reference Include="GoogleMobileAds.Ump">
       <HintPath>Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>Assets/Packages/System.Diagnostics.DiagnosticSource.4.6.0/lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data">
+      <HintPath>Assets/Packages/System.Memory.Data.1.0.2/lib/netstandard2.0/System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core">
+      <HintPath>Assets/Packages/Azure.Core.1.31.0/lib/netstandard2.0/Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions">
+      <HintPath>Assets/Packages/Microsoft.IdentityModel.Abstractions.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging">
+      <HintPath>Assets/Packages/Microsoft.IdentityModel.Logging.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Cng">
+      <HintPath>Assets/Packages/System.Security.Cryptography.Cng.4.5.0/lib/netstandard2.0/System.Security.Cryptography.Cng.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>Assets/Packages/Microsoft.IdentityModel.Tokens.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
+      <HintPath>Assets/Packages/Microsoft.IdentityModel.JsonWebTokens.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>Assets/Packages/Microsoft.Bcl.AsyncInterfaces.7.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>Assets/Packages/System.Text.Encodings.Web.7.0.0/lib/netstandard2.0/System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>Assets/Packages/System.Text.Json.7.0.2/lib/netstandard2.0/System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.19f1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
