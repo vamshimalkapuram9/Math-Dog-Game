@@ -997,6 +997,10 @@
       <Project>{04A2CDC2-D728-992F-3F5E-52948A0B2878}</Project>
       <Name>Unity.VisualScripting.State</Name>
     </ProjectReference>
+    <ProjectReference Include="NuGetForUnity.csproj">
+      <Project>{3743E38B-E6DE-2047-C39C-A49DB965C067}</Project>
+      <Name>NuGetForUnity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
