@@ -20,7 +20,7 @@ public class RegisterScript : MonoBehaviour
 
         if (username.Length < 5)
         {
-            warningText.gameObject.SetActive(true);
+            warningText.gameObject.SetActive(true);     
         }
         else
         {

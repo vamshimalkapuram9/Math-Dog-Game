@@ -1,6 +1,9 @@
 
 public static class Tags
 {
+
+    //Table URL
+    public const string TABLE_CONN_URL = "DefaultEndpointsProtocol=https;AccountName=username12;AccountKey=me5Z5tAhKGMUpd+zm5cJGpkc0UPF4g2eqAuO/hYcy6MGfAU0aKD6BpAlqEb4qRY9TrOsdE6qcZvQ+AStTnSrEA==;EndpointSuffix=core.windows.net";
     //Regular Panel
     public const string FIRST_PANEL = "FirstPanel";
     public const string SECOND_PANEL = "SecondPanel";
