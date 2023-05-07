@@ -185,6 +185,7 @@
     <Compile Include="Assets/Scripts/LevelLoader.cs" />
     <Compile Include="Assets/TechnoGami/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/Scripts/Harish-Code/Beginner/SubHarish.cs" />
+    <Compile Include="Assets/Scripts/Harish-Code/Networking/WebRequests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Packages/System.Text.Encodings.Web.7.0.0/lib/netstandard2.0/System.Text.Encodings.Web.dll" />
@@ -546,14 +547,32 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.19f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
+      <HintPath>Assets/Packages/Microsoft.IdentityModel.JsonWebTokens.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="GoogleMobileAds.Common">
       <HintPath>Assets/GoogleMobileAds/GoogleMobileAds.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging">
+      <HintPath>Assets/Packages/Microsoft.IdentityModel.Logging.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>Assets/Packages/Microsoft.Bcl.AsyncInterfaces.7.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>Assets/Packages/System.Text.Encodings.Web.7.0.0/lib/netstandard2.0/System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data">
+      <HintPath>Assets/Packages/System.Memory.Data.1.0.2/lib/netstandard2.0/System.Memory.Data.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds">
       <HintPath>Assets/GoogleMobileAds/GoogleMobileAds.dll</HintPath>
@@ -561,8 +580,23 @@
     <Reference Include="GoogleMobileAds.Unity">
       <HintPath>Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
     </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>Assets/Packages/System.Text.Json.7.0.2/lib/netstandard2.0/System.Text.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>Assets/Packages/System.Diagnostics.DiagnosticSource.4.6.0/lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core">
+      <HintPath>Assets/Packages/Azure.Core.1.31.0/lib/netstandard2.0/Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions">
+      <HintPath>Assets/Packages/Microsoft.IdentityModel.Abstractions.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>Assets/Packages/Microsoft.IdentityModel.Tokens.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Core">
       <HintPath>Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
@@ -573,6 +607,9 @@
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
+    <Reference Include="System.Security.Cryptography.Cng">
+      <HintPath>Assets/Packages/System.Security.Cryptography.Cng.4.5.0/lib/netstandard2.0/System.Security.Cryptography.Cng.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
     </Reference>
@@ -581,42 +618,6 @@
     </Reference>
     <Reference Include="GoogleMobileAds.Ump">
       <HintPath>Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.DiagnosticSource">
-      <HintPath>Assets/Packages/System.Diagnostics.DiagnosticSource.4.6.0/lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Memory.Data">
-      <HintPath>Assets/Packages/System.Memory.Data.1.0.2/lib/netstandard2.0/System.Memory.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Azure.Core">
-      <HintPath>Assets/Packages/Azure.Core.1.31.0/lib/netstandard2.0/Azure.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Abstractions">
-      <HintPath>Assets/Packages/Microsoft.IdentityModel.Abstractions.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging">
-      <HintPath>Assets/Packages/Microsoft.IdentityModel.Logging.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Cng">
-      <HintPath>Assets/Packages/System.Security.Cryptography.Cng.4.5.0/lib/netstandard2.0/System.Security.Cryptography.Cng.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens">
-      <HintPath>Assets/Packages/Microsoft.IdentityModel.Tokens.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
-      <HintPath>Assets/Packages/Microsoft.IdentityModel.JsonWebTokens.6.30.0/lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
-      <HintPath>Assets/Packages/Microsoft.Bcl.AsyncInterfaces.7.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Encodings.Web">
-      <HintPath>Assets/Packages/System.Text.Encodings.Web.7.0.0/lib/netstandard2.0/System.Text.Encodings.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Json">
-      <HintPath>Assets/Packages/System.Text.Json.7.0.2/lib/netstandard2.0/System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.19f1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
@@ -1032,6 +1033,10 @@
       <Project>{6AF35F9F-00A6-E174-1D72-6932F2844330}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="NuGetForUnity.csproj">
+      <Project>{3743E38B-E6DE-2047-C39C-A49DB965C067}</Project>
+      <Name>NuGetForUnity</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{3881364B-DED6-D5C7-FA40-016EDD491403}</Project>
       <Name>Unity.Timeline</Name>
@@ -1159,10 +1164,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{04A2CDC2-D728-992F-3F5E-52948A0B2878}</Project>
       <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="NuGetForUnity.csproj">
-      <Project>{3743E38B-E6DE-2047-C39C-A49DB965C067}</Project>
-      <Name>NuGetForUnity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

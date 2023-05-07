@@ -19,7 +19,7 @@ public class LoadingScript : MonoBehaviour
     IEnumerator LoadAsyncOperation()
     {
         yield return new WaitForSeconds(3);
-        AsyncOperation gameLevel = SceneManager.LoadSceneAsync("Register");
+        AsyncOperation gameLevel = SceneManager.LoadSceneAsync("HomeScreen");
         loadingPanel.SetActive(true);
 
         while (!gameLevel.isDone)
