@@ -1,6 +1,8 @@
 | Date  | Content |
 |--------| ---------|
-|(04/24/2023)|Able to resolve the Build error and succeeded in publishing the app from unity to Azure portal using visual studio and the application is working fine using below url like in unity.<img width="956" alt="E" src="https://user-images.githubusercontent.com/126308392/233929852-aaa5bcc8-aa30-425e-a404-53c92502789c.png">Now able to access the application using the url : https://mathdoggame12320230423005448.azurewebsites.net/
+
+|(04/30/2023)|Unable to access the url published in last week due to my azure for students subscription disabled. after trying to resolve the problem i'm came to know that the credit limit finished and the alternate way is to use one of the teammembers account to avoid payment.Published the updated game to azure portal and the url is https://mathdoggame12320230502220042.azurewebsites.net/.  below is the reason that the microsoft support team provided for the disablility of my account <img width="544" alt="spending limit" src="https://user-images.githubusercontent.com/126308392/236658764-f5e3b5a6-5ebe-4eb9-8e0b-6c790b401a7b.png">
+|
 |(04/02/2023)|Still getting build errors to host the web app in app service using visual studio code while publishing to azure. Tried the suggested player settings in unity to reslove the issue but unable to encounter the error.
 |(03/20/2023)|Tried to host the web app in app service using visual studio code but getting build related error while publishing to azure
 |(02/26/2023)|I have created an Azure app Service Account <br> Published the code through the deployment center in Azure app services from Azure repository.
