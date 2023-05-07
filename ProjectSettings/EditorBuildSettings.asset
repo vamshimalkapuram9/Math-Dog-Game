@@ -46,8 +46,5 @@ EditorBuildSettings:
     guid: 44c6a69251012da478472c657eac9de2
   - enabled: 1
     path: Assets/Scenes/Register.unity
-    guid: 8129a99069b7bcc4eb7c36511da27f0a
-  - enabled: 1
-    path: Assets/Scenes/Register.unity
-    guid: 34b7c18c6fda46e4d8222d55477d0689
+    guid: c4aa7bbedfca943abb1d6eb69c1b624b
   m_configObjects: {}
