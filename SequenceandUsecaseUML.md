@@ -1,5 +1,6 @@
 | Date  | Progress |
 | ------------- | ------------- |
+| 08/05/2023 | Change are made to use case diagram according to the requirement |
 | 01/05/2023| Made change according to the requirements in the use case diagram |
 | 24/04/2023 | Upated the sequence diagram with some change |
 | 17/04/2023 | Created a case scenario for the another who can monitor, customise, view report in use case diagram |
@@ -15,6 +16,14 @@
 | 02/02/2023 | Connected with different teams to get an idea of the project workflow<br>Verified appendix and gone through the textbook for a better understanding|
 
 <br>Other Updates</br>
+08/05/2023
+
+![UseCaseLast](https://user-images.githubusercontent.com/127143699/236744999-5e9d8593-5ab9-4a16-8d53-2263a4963f9f.png)
+
+
+
+
+![April-last](https://user-images.githubusercontent.com/127143699/236745155-41a83b93-a638-4417-b579-8a0c870da957.png)
 01/05/2023
 
 ![Use Case (1) (1)](https://user-images.githubusercontent.com/127143699/235475118-08033f64-7f44-465e-8acb-e99f3e14caed.png)
