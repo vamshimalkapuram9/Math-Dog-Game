@@ -1,3 +1,4 @@
+[Azure_Updates.docx](https://github.com/CSUSB-Team2/Math-Dog-Game/files/11418039/Azure_Updates.docx)
 | DATE  | UPDATES |
 | ------------- | ------------- |
 | 05-01-2023 |1) Modified the code in login and register scripts <br> 2) Added a popup window for register and login in unity|
