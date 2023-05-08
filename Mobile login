@@ -1,1 +1,153 @@
-Here is the code for mobile login
+Here is the code for mobile Register screen
+
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class Register : MonoBehaviour
+{
+
+    public InputField usernameInput;
+    public InputField passwordInput;
+    public Button registerButton;
+    public Button goToLoginButton;
+
+    ArrayList credentials;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        registerButton.onClick.AddListener(writeStuffToFile);
+        goToLoginButton.onClick.AddListener(goToLoginScene);
+
+        if (File.Exists(Application.dataPath + "/credentials.txt"))
+        {
+            credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
+        }
+        else
+        {
+            File.WriteAllText(Application.dataPath + "/credentials.txt", "");
+        }
+
+    }
+
+    void goToLoginScene()
+    {
+        SceneManager.LoadScene("Login");
+    }
+
+
+    void writeStuffToFile()
+    {
+        bool isExists = false;
+
+        credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
+        foreach (var i in credentials)
+        {
+            if (i.ToString().Contains(usernameInput.text))
+            {
+                isExists = true;
+                break;
+            }
+        }
+
+        if (isExists)
+        {
+            Debug.Log($"Username '{usernameInput.text}' already exists");
+        }
+        else
+        {
+            credentials.Add(usernameInput.text + ":" + passwordInput.text);
+            File.WriteAllLines(Application.dataPath + "/credentials.txt", (String[])credentials.ToArray(typeof(string)));
+            Debug.Log("Account Registered");
+        }
+    }
+}
+
+
+Here is the code for mobile Login screen 
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class Login : MonoBehaviour
+{
+
+    public InputField usernameInput;
+    public InputField passwordInput;
+    public Button loginButton;
+    public Button goToRegisterButton;
+
+    ArrayList credentials;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        loginButton.onClick.AddListener(login);
+        goToRegisterButton.onClick.AddListener(moveToRegister);
+
+        if (File.Exists(Application.dataPath + "/credentials.txt"))
+        {
+            credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
+        }
+        else
+        {
+            Debug.Log("Credential file doesn't exist");
+        }
+
+    }
+
+
+
+    // Update is called once per frame
+    void login()
+    {
+        bool isExists = false;
+
+        credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
+
+        foreach (var i in credentials)
+        {
+            string line = i.ToString();
+            //Debug.Log(line);
+            //Debug.Log(line.Substring(11));
+            //substring 0-indexof(:) - indexof(:)+1 - i.length-1
+            if (i.ToString().Substring(0, i.ToString().IndexOf(":")).Equals(usernameInput.text) &&
+                i.ToString().Substring(i.ToString().IndexOf(":") + 1).Equals(passwordInput.text))
+            {
+                isExists = true;
+                break;
+            }
+        }
+
+        if (isExists)
+        {
+            Debug.Log($"Logging in '{usernameInput.text}'");
+            loadHomeScreen();
+        }
+        else
+        {
+            Debug.Log("Incorrect credentials");
+        }
+    }
+
+    void moveToRegister()
+    {
+        SceneManager.LoadScene("Register");
+    }
+
+    void loadHomeScreen()
+    {
+        SceneManager.LoadScene("HomeScreen");
+    }
+}
