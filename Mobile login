@@ -70,6 +70,7 @@ public class Register : MonoBehaviour
 }
 
 
+
 Here is the code for mobile Login screen 
 
 using System;
