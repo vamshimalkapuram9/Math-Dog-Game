@@ -1,5 +1,6 @@
 |Date  | Content |
 | ------------- | ------------- |
+| May 08 2023 |•	Worked on the artifacts in azure devops |
 | May 01 2023 |• Added confetti screens and worked on the UI part |
 | Apr 24 2023 | •	Worked on the UI part |
 | Apr 10 2023  | •	Worked on the next button in the practice screen |
